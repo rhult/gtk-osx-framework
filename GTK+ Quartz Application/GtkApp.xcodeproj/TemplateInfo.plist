@@ -1,0 +1,8 @@
+{
+	FilesToMacroExpand = (
+		"Info.plist",
+		"English.lproj/InfoPlist.strings",
+		"main.c",
+	);
+	Description = "This project builds a GTK+-based application written in C. (x86 only)";
+}
