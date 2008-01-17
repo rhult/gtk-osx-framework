@@ -5,6 +5,8 @@
     - The initializer needs to detect if it's running from /Library/Frameworks or
       from inside an application bundle.  Depending on this it should set the
       environment variables correctly.
+    - We need to include the dependencies of the GTK+ modules in the framework's
+      Libraries/ subdirectory.
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 * Build a proper installation package (.pkg) for distribution of the
