@@ -1,4 +1,3 @@
-* Add Info.plist to framework bundle.
 * Universal binaries.
 * Finish framework (some runtime modules are still missing).
 * Write Cocoa application/wrapper for creating stand-alone application
