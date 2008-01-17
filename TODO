@@ -1,6 +1,9 @@
 * Universal binaries.
-* Finish framework (some runtime modules are still missing).
+* Finish framework
+    - Include translations.
+    - Include theme and icon data.
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 * Build a proper installation package (.pkg) for distribution of the
   SDK.
+* prepare-for-system.sh and convert-to-app-bundle.sh can probably mostly be merged.
