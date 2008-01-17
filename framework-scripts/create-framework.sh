@@ -10,10 +10,34 @@
 # Constants
 starting_point="libgtk-quartz-2.0.0.dylib";
 
+# Helper functions
+
 print_help()
 {
 	echo "Usage: `basename $0` <prefix>"
 	exit 1
+}
+
+fix_library_prefixes()
+{
+	directory=$1;
+	old_prefix=$2;
+	new_prefix=$3;
+
+	pushd . > /dev/null
+	cd $directory
+
+	libs=`ls *{so,dylib}`;
+	for i in $libs; do
+		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`;
+
+		for j in $fixlibs; do
+			new=`echo $j | sed -e s@$old_prefix@$new_prefix@`;
+			install_name_tool -change $j $new $i;
+		done;
+	done
+
+	popd > /dev/null
 }
 
 #
@@ -120,19 +144,7 @@ cd ../..
 
 echo "Updating install-names..."
 
-cd ./Gtk.framework/Libraries/
-
-libs=`ls *dylib`;
-for i in $libs; do
-	fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`;
-
-	for j in $fixlibs; do
-		new=`echo $j | sed -e s@$libprefix@$new_prefix@`;
-		install_name_tool -change $j $new $i;
-	done;
-done
-
-cd ../..
+fix_library_prefixes "./Gtk.framework/Libraries" $libprefix $new_prefix
 
 # 4. Create Headers/ subdirectory, copy all needed header files.
 
@@ -187,26 +199,39 @@ sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/pango/pango.module
 mkdir -p Gtk.framework/Resources/lib/pango/1.6.0/modules/
 cp $libprefix/pango/1.6.0/modules/*so ./Gtk.framework/Resources/lib/pango/1.6.0/modules/
 
-pushd . > /dev/null
-cd ./Gtk.framework/Resources/lib/pango/1.6.0/modules/
+fix_library_prefixes "./Gtk.framework/Resources/lib/pango/1.6.0/modules" $libprefix $new_prefix
 
-libs=`ls *so`;
-for i in $libs; do
-	fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`;
+# 7. Setting up GTK+ modules
+echo "Setting up GTK+ modules ..."
 
-	for j in $fixlibs; do
-		new=`echo $j | sed -e s@$libprefix@$new_prefix@`;
-		install_name_tool -change $j $new $i;
-	done;
-done
+mkdir -p Gtk.framework/Resources/etc/gtk-2.0
 
-popd > /dev/null
+sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gdk-pixbuf.loaders > ./Gtk.framework/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
+sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gtk.immodules > ./Gtk.framework/Resources/etc/gtk-2.0/gtk.immodules
 
-# 7. Put Info.plist in place
+mkdir -p Gtk.framework/Resources/lib/gtk-2.0/2.10.0/{engines,immodules,loaders,printbackends}
 
+# FIXME: copying all engines for now
+cp -r $libprefix/gtk-2.0/2.10.0/engines/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines
+cp $libprefix/gtk-2.0/2.10.0/immodules/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules
+cp $libprefix/gtk-2.0/2.10.0/loaders/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders
+cp $libprefix/gtk-2.0/2.10.0/printbackends/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
+
+fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines" $libprefix $new_prefix
+fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules" $libprefix $new_prefix
+fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $libprefix $new_prefix
+fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
+
+# 8. Put Info.plist in place; set up small gtkrc
 cp ./Info.plist ./Gtk.framework/Resources/Info.plist
 
-# 8. Done?
+cat <<EOF > "./Gtk.framework/Resources/etc/gtk-2.0/gtkrc"
+gtk-icon-theme-name = "Tango"
+gtk-font-name = "Lucida Grande 11"
+gtk-enable-mnemonics = 0
+EOF
+
+# 9. Done?
 echo "Finished.";
 
 exit 0;
