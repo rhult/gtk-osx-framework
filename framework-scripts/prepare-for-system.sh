@@ -13,6 +13,45 @@ print_help()
 	exit 1
 }
 
+fix_library_prefixes()
+{
+	directory=$1
+	old_prefix=$2
+	new_prefix=$3
+
+	pushd . > /dev/null
+	cd $directory
+
+	libs=`ls *so`;
+	for i in $libs; do
+		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix/Libraries/"`;
+
+		for j in $fixlibs; do
+			new=`echo $j | sed -e s,$old_prefix/Libraries/,$new_prefix/Libraries/,`;
+			install_name_tool -change $j $new $i;
+		done;
+	done
+
+	popd > /dev/null
+}
+
+update_config()
+{
+	directory=$1
+	config_file=$2
+	old_prefix=$3
+	new_prefix=$4
+
+	pushd . > /dev/null
+	cd $directory
+
+	mv $config_file $config_file".old"
+	sed -e "s,$old_prefix,$new_prefix," ./$config_file".old" > $config_file
+	rm $config_file".old"
+
+	popd > /dev/null
+}
+
 #
 # Verify framework path
 #
@@ -87,31 +126,17 @@ done
 popd > /dev/null
 
 # 4. Update pango modules
-pushd . > /dev/null
-cd $prefix/Resources/lib/pango/1.6.0/modules/
+fix_library_prefixes "$prefix/Resources/lib/pango/1.6.0/modules/" $prefix $new_prefix
+update_config "$prefix/Resources/etc/pango" "pango.modules" $prefix $new_prefix
 
-libs=`ls *so`;
-for i in $libs; do
-        fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | 
-grep "$prefix/Libraries/"`;
+# 5. Update GTK+ modules
+fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/engines" $prefix $new_prefix
+fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/immodules" $prefix $new_prefix
+fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/loaders" $prefix $new_prefix
+fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/printbackends" $prefix $new_prefix
 
-        for j in $fixlibs; do
-                new=`echo $j | sed -e s,$prefix/Libraries/,$new_prefix/Libraries/,`;
-                install_name_tool -change $j $new $i;
-        done;
-done
-
-popd > /dev/null
-
-# 5. Update pango.modules
-pushd . > /dev/null
-cd $prefix/Resources/etc/pango
-
-mv pango.modules pango.modules.old
-sed -e "s,$prefix,$new_prefix," ./pango.modules.old > pango.modules
-rm pango.modules.old
-
-popd > /dev/null
+update_config "$prefix/Resources/etc/gtk-2.0/" "gdk-pixbuf.loaders" $prefix $new_prefix
+update_config "$prefix/Resources/etc/gtk-2.0/" "gtk.immodules" $prefix $new_prefix
 
 echo "Finished."
 
