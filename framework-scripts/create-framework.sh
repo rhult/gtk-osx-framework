@@ -202,6 +202,10 @@ done
 
 popd > /dev/null
 
+# 7. Put Info.plist in place
+
+cp ./Info.plist ./Gtk.framework/Resources/Info.plist
+
 # 8. Done?
 echo "Finished.";
 
