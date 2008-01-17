@@ -7,6 +7,9 @@
       environment variables correctly.
     - We need to include the dependencies of the GTK+ modules in the framework's
       Libraries/ subdirectory.
+    - On Leopard, the environment variables that we set in the framework
+      initializer function seem to be gone/cleared once we reach main.
+      Need to find out what's causing this and fix it or work around it.
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 * Build a proper installation package (.pkg) for distribution of the
