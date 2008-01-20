@@ -49,16 +49,20 @@ static void initializer (int argc, char **argv, char **envp)
       executable_path[i] = 0;
     }
 
+  /* NOTE: leave the setting of the environment variables in this order,
+   * otherwise things will fail in the Release builds for no obvious
+   * reason.
+   */
+  set_rc_environment ("PANGO_RC_FILE", executable_path, RELATIVE_PANGO_RC_FILE);
+  set_rc_environment ("GTK2_RC_FILES", executable_path, RELATIVE_GTK_RC_FILE);
+  set_rc_environment ("GTK_IM_MODULE_FILE", executable_path, RELATIVE_GTK_IMMODULE_FILE);
+  set_rc_environment ("GDK_PIXBUF_MODULE_FILE", executable_path, RELATIVE_GDK_PIXBUF_MODULE_FILE);
+
   setenv ("XDG_CONFIG_DIRS", BUNDLE_RESOURCES"/etc/xdg", 1);
   setenv ("XDG_DATA_DIRS", BUNDLE_RESOURCES"/share", 1);
   setenv ("GTK_DATA_PREFIX", BUNDLE_RESOURCES"/share", 1);
   setenv ("GTK_EXE_PREFIX", BUNDLE_RESOURCES, 1);
   setenv ("GTK_PATH", BUNDLE_RESOURCES, 1);
-
-  set_rc_environment ("PANGO_RC_FILE", executable_path, RELATIVE_PANGO_RC_FILE);
-  set_rc_environment ("GTK2_RC_FILES", executable_path, RELATIVE_GTK_RC_FILE);
-  set_rc_environment ("GTK_IM_MODULE_FILE", executable_path, RELATIVE_GTK_IMMODULE_FILE);
-  set_rc_environment ("GDK_PIXBUF_MODULE_FILE", executable_path, RELATIVE_GDK_PIXBUF_MODULE_FILE);
 
   free (executable_path);
 }
