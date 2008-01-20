@@ -2,8 +2,8 @@
 # Copyright (C) 2007, 2008   Imendio AB
 #
 
-INCLUDE = -I$(HOME)/src/gtk-framework/Gtk.framework/Headers/ -L$(HOME)/src/gtk-framework/Gtk.framework/Libraries/
-NAME = -install_name $(HOME)/src/gtk-framework/Gtk.framework/Gtk
+INCLUDE = -I$(shell pwd)/Gtk.framework/Headers/ -L$(shell pwd)/Gtk.framework/Libraries/
+NAME = -install_name $(shell pwd)/Gtk.framework/Gtk
 
 LIBS =	\
 	   -lz			\
