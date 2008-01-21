@@ -21,6 +21,15 @@
 #define RELATIVE_GDK_PIXBUF_MODULE_FILE		"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders"
 
 
+/* Make the bundle prefix available to the outside */
+static char *bundle_prefix = NULL;
+
+const char *_gtk_framework_get_bundle_prefix (void)
+{
+  return bundle_prefix;
+}
+
+
 static void set_rc_environment (const char *variable,
                                 const char *bundle_prefix,
                                 const char *relative_file)
@@ -62,7 +71,6 @@ __attribute__((constructor))
 static void initializer (int argc, char **argv, char **envp)
 {
   int i;
-  char *bundle_prefix;
 
   /* Figure out correct bundle prefix */
   if (!is_running_from_app_bundle ())
@@ -102,5 +110,7 @@ static void initializer (int argc, char **argv, char **envp)
   set_rc_environment ("GTK_EXE_PREFIX", bundle_prefix, "/Resources");
   set_rc_environment ("GTK_PATH", bundle_prefix, "/Resources");
 
-  g_free (bundle_prefix);
+  /* We don't free bundle_prefix; it needs to be available until
+   * program termination.
+   */
 }

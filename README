@@ -64,6 +64,12 @@ Contents
 		current working directory and makes it suitable for
 		bundling it inside application bundles.
 
+* patches
+
+	Patches against GTK+ and Pango that are required to get
+	things working.  We will try to get rid of this specific
+	patching if possible.
+
 * old
 
 	Old framework creation scripts that did a little more

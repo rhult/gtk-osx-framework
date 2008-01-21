@@ -4,10 +4,6 @@
     - Include theme and icon data.
     - We need to include the dependencies of the GTK+ modules in the framework's
       Libraries/ subdirectory.
-    - On Leopard, the environment variables that we set in the framework
-      initializer function seem to be gone/cleared once we reach main.
-      (This only happens when you run 10.4 binaries on Leopard.  Freshly
-       compiled binaries on Leopard do not have this problem).
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 * Build a proper installation package (.pkg) for distribution of the

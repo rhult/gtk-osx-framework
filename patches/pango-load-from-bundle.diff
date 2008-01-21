@@ -1,0 +1,50 @@
+Index: pango/pango-utils.c
+===================================================================
+--- pango/pango-utils.c	(revision 2502)
++++ pango/pango-utils.c	(working copy)
+@@ -49,6 +49,10 @@
+ 
+ #endif
+ 
++#ifdef HAVE_CAIRO_ATSUI
++#include <dlfcn.h>
++#endif
++
+ struct PangoAlias
+ {
+   char *alias;
+@@ -614,13 +632,34 @@ read_config (void)
+       char *filename;
+       const char *home;
+       const char *envvar;
++#ifdef HAVE_CAIRO_ATSUI
++      const char * (* get_bundle_prefix) (void);
++#endif
+ 
+       config_hash = g_hash_table_new_full (g_str_hash, g_str_equal,
+ 					   (GDestroyNotify)g_free,
+ 					   (GDestroyNotify)g_free);
++#ifdef HAVE_CAIRO_ATSUI
++      get_bundle_prefix = dlsym (RTLD_DEFAULT,
++                                 "_gtk_framework_get_bundle_prefix");
++      if (get_bundle_prefix)
++        {
++          char *directory;
++
++          directory = g_build_path ("/", get_bundle_prefix (),
++                                    "Resources", "etc", "pango", NULL);
++          filename = g_build_filename (directory, "pangorc", NULL);
++          g_free (directory);
++        }
++      else
++        filename = g_build_filename (pango_get_sysconf_subdirectory (),
++				     "pangorc",
++				     NULL);
++#else
+       filename = g_build_filename (pango_get_sysconf_subdirectory (),
+ 				   "pangorc",
+ 				   NULL);
++#endif
+       read_config_file (filename, FALSE);
+       g_free (filename);
+ 
