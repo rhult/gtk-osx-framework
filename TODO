@@ -2,10 +2,10 @@
 * Finish framework
     - Include translations.
     - Include theme and icon data.
-    - We need to include the dependencies of the GTK+ modules in the framework's
-      Libraries/ subdirectory.
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 * Build a proper installation package (.pkg) for distribution of the
-  SDK.
+  SDK.  Since we patched GTK+, do we need to ship with the patches?
 * prepare-for-system.sh and convert-to-app-bundle.sh can probably mostly be merged.
+* All binaries are non-stripped, need to strip binaries.  As we don't
+  ship with the source the debugging info is useless.
