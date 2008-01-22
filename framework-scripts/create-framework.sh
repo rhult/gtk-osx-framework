@@ -27,7 +27,7 @@ fix_library_prefixes()
 	pushd . > /dev/null
 	cd $directory
 
-	libs=`ls *{so,dylib}`;
+	libs=`ls *{so,dylib} 2>/dev/null`;
 	for i in $libs; do
 		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`;
 
@@ -88,9 +88,9 @@ fi
 mkdir Gtk.framework
 
 #
-# 2. Create Libraries/ subdirectory, copy all needed libraries in there.
+# 2. Create Libraries/ subdirectory, copy the toplevel library
 #
-echo "Resolving dependencies ...";
+echo "Creating Libraries/ ...";
 
 if [ -x Gtk.framework/Libraries/ ]; then
 	echo "Libraries subdirectory already exists; bailing out.";
@@ -104,49 +104,9 @@ cp $top_level ./Gtk.framework/Libraries/
 newid=`echo $top_level | sed -e "s@$libprefix@$new_prefix@"`;
 install_name_tool -id $newid $newid
 
-# resolve dependencies
-
-cd ./Gtk.framework/Libraries/
-
-files_left=true;
-nfiles=0
-
-while $files_left; do
-	libs=`ls *dylib`;
-	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`;
-
-	for j in $deplibs; do
-		j=`echo $j | sed -e "s@$libprefix@@"`;
-		j=`echo $j | sed -e "s@^/@@"`;
-
-		cp -f $libprefix/$j .;
-
-		libname=`echo $j | sed -e "s@[\.-0123456789].*@@"`;
-		newid=`otool -L ./$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`;
-		newid=`echo $newid | sed -e "s@$libprefix@$new_prefix@"`;
-
-		install_name_tool -id $newid ./$j
-	done;
-
-	nnfiles=`ls *dylib | wc -l`;
-	if [ $nnfiles = $nfiles ]; then
-		files_left=false
-	else
-		nfiles=$nnfiles
-	fi
-done
-
-cd ../..
-
 #
-# 3. Run install_name_tool on all those libraries.
+# 3. Create Headers/ subdirectory, copy all needed header files.
 #
-
-echo "Updating install-names..."
-
-fix_library_prefixes "./Gtk.framework/Libraries" $libprefix $new_prefix
-
-# 4. Create Headers/ subdirectory, copy all needed header files.
 
 # FIXME: is there any way we can do this without hardcoding?
 echo "Copying header files ..."
@@ -176,16 +136,11 @@ cp -r $incprefix/gtk-2.0/gtk/ ./gtk/
 
 cd ../..
 
-# 5. Compile Gtk.c into the framework shared library.
+#
+# 4. Setting up Pango modules.
+#
 
-echo "Building main Gtk library..."
-
-make
-mv ./Gtk ./Gtk.framework/Gtk
-
-# 6. Setting up Pango modules.
-
-echo "Setting up pango modules ..."
+echo "Setting up Pango modules ..."
 
 mkdir -p Gtk.framework/Resources/etc/pango/
 
@@ -199,9 +154,9 @@ sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/pango/pango.module
 mkdir -p Gtk.framework/Resources/lib/pango/1.6.0/modules/
 cp $libprefix/pango/1.6.0/modules/*so ./Gtk.framework/Resources/lib/pango/1.6.0/modules/
 
-fix_library_prefixes "./Gtk.framework/Resources/lib/pango/1.6.0/modules" $libprefix $new_prefix
-
-# 7. Setting up GTK+ modules
+#
+# 5. Setting up GTK+ modules
+#
 echo "Setting up GTK+ modules ..."
 
 mkdir -p Gtk.framework/Resources/etc/gtk-2.0
@@ -217,21 +172,85 @@ cp $libprefix/gtk-2.0/2.10.0/immodules/*so ./Gtk.framework/Resources/lib/gtk-2.0
 cp $libprefix/gtk-2.0/2.10.0/loaders/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders
 cp $libprefix/gtk-2.0/2.10.0/printbackends/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
 
+#
+# 6. Resolve dependencies
+#
+echo "Resolving dependencies ..."
+
+files_left=true;
+nfiles=0
+
+while $files_left; do
+	libs=`ls ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
+	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
+	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
+	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
+	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
+	 ./Gtk.framework/Libraries 2>/dev/null`;
+	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`;
+
+	# Copy library and correct ID
+	for j in $deplibs; do
+		j=`echo $j | sed -e "s@$libprefix@@"`;
+		j=`echo $j | sed -e "s@^/@@"`;
+
+		cp -f $libprefix/$j ./Gtk.framework/Libraries;
+
+		libname=`echo $j | sed -e "s@[\.-0123456789].*@@"`;
+		newid=`otool -L ./Gtk.framework/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`;
+		newid=`echo $newid | sed -e "s@$libprefix@$new_prefix@"`;
+
+		install_name_tool -id $newid ./Gtk.framework/Libraries/$j
+	done;
+
+	nnfiles=`ls ./Gtk.framework/Libraries/*dylib | wc -l`;
+	if [ $nnfiles = $nfiles ]; then
+		files_left=false
+	else
+		nfiles=$nnfiles
+	fi
+done
+
+
+#
+# 7. Run install_name_tool on all those libraries.
+#
+
+echo "Updating install-names..."
+
+fix_library_prefixes "./Gtk.framework/Libraries" $libprefix $new_prefix
+
+# Fix the prefixes
+fix_library_prefixes "./Gtk.framework/Resources/lib/pango/1.6.0/modules" $libprefix $new_prefix
+
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines" $libprefix $new_prefix
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules" $libprefix $new_prefix
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $libprefix $new_prefix
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
 
-# 8. Put Info.plist in place; set up small gtkrc
+#
+# 8. Compile Gtk.c into the framework shared library.
+#
+
+echo "Building main Gtk library..."
+
+make
+mv ./Gtk ./Gtk.framework/Gtk
+
+#
+# 9. Put Info.plist in place; set up small gtkrc
+#
 cp ./Info.plist ./Gtk.framework/Resources/Info.plist
 
 cat <<EOF > "./Gtk.framework/Resources/etc/gtk-2.0/gtkrc"
 gtk-icon-theme-name = "Tango"
-gtk-font-name = "Lucida Grande 11"
+gtk-font-name = "Lucida Grande 12"
 gtk-enable-mnemonics = 0
 EOF
 
-# 9. Done?
+#
+# 10 Done?
+#
 echo "Finished.";
 
 exit 0;
