@@ -7,10 +7,37 @@ Copyright (C) 2007, 2008  Imendio AB
 The files that are found in this repository can be used to create a proper
 GTK+ SDK for Mac OS X.  This SDK is built after common Mac standards and
 integrates with the system and the XCode IDE as much as possible.  Building
-and installing our own SDK using these files is not recommended for
+and installing your own SDK using these files is not recommended for
 end-users, download one of the installable PKG files instead.
 
 Contents of the repository and usage notes follow below.
+
+
+Known issues
+------------
+
+* This is all still very beta ;)
+
+* The binaries are not universal, but Intel only!  Building proper
+  universal binaries of the GTK+ binaries is hard and not fully
+  automated yet.  We hope to provide proper universal binaries at
+  some later point.
+
+* Translations and theme data are not yet included.
+
+* The binaries do still contain debugging information.  This debugging
+  information is only of use to get proper stack traces at this moment.
+  At some later point we might decide to ship with stripped binaries.
+
+* A script/application to transform the application created with XCode
+  to a stand-alone binary (with the framework included inside) has not
+  yet been included.  We are still investigating what the best way is
+  to include this.  At some later point this will appear as a small
+  application or as a separate target in XCode.
+
+* We are not shipping vanilla GTK+ binaries.  This is due to a missing
+  Pango feature (which will be merged upstream) and to workaround
+  10.4 compatibility issues on Mac OS X 10.5.
 
 
 Contents
