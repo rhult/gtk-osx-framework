@@ -1,0 +1,1 @@
+To get started, fire up XCode and look for the "GTK+ Quartz Application" entry in the "New Project" dialog!
