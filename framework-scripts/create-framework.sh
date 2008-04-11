@@ -124,6 +124,7 @@ cp -r $incprefix/glib-2.0/glib-object.h ./glib-object.h
 cp $prefix/lib/glib-2.0/include/glibconfig.h ./glibconfig.h
 cp -r $incprefix/glib-2.0/gmodule.h ./gmodule.h
 cp -r $incprefix/glib-2.0/gobject/ ./gobject/
+cp -r $incprefix/glib-2.0/gio/ ./gio/
 
 cp -r $incprefix/pango-1.0/pango/ ./pango/
 
