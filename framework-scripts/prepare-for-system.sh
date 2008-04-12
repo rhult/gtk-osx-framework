@@ -9,7 +9,7 @@
 
 print_help()
 {
-	echo "Usage: `basename $0` <full-path-to-framework>"
+	echo "Usage: `basename $0` <path-to-framework>"
 	exit 1
 }
 
@@ -60,9 +60,13 @@ if [ "x$*" = x ]; then
 	exit 1
 fi
 
-# FIXME: want to check if the path is absolute
-
 framework="$*"
+
+# Check the path, and turn it into an absolute path if not absolute
+# already.
+if [ x`echo "$framework" | sed -e 's@\(^\/\).*@@'` != x ]; then
+    framework=`pwd`/$framework
+fi
 
 if [ ! -d $framework ]; then
 	echo "The directory $* does not exist"
@@ -73,6 +77,10 @@ if [ ! -x $framework ]; then
 	echo "The framework in $* is not accessible"
 	exit 1
 fi
+
+# Drop any trailing slash.
+framework=`dirname "$framework"`/`basename "$framework"`
+
 
 #
 # Check framework directory for sanity
@@ -137,6 +145,15 @@ fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/printbackends" $prefi
 
 update_config "$prefix/Resources/etc/gtk-2.0/" "gdk-pixbuf.loaders" $prefix $new_prefix
 update_config "$prefix/Resources/etc/gtk-2.0/" "gtk.immodules" $prefix $new_prefix
+
+# 6. Update pkg-config files
+pushd . > /dev/null
+cd $prefix/Resources/lib/pkgconfig
+files=`ls *pc`;
+for i in $files; do
+    update_config "$prefix/Resources/lib/pkgconfig/" $i $prefix $new_prefix
+done
+popd > /dev/null
 
 echo "Finished."
 

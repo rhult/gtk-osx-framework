@@ -274,6 +274,28 @@ fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $lib
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
 
 #
+# -  Create and install pkg-config files.
+#
+echo "Creating and copying pkg-config files ..."
+
+prefix=/opt/gtk
+escaped_framework=`echo $framework | sed -e 's@\/@\\\/@g' -e 's@\.@\\\.@g'`
+
+files="atk.pc gdk-2.0.pc gdk-pixbuf-2.0.pc gdk-quartz-2.0.pc gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-export-2.0.pc gmodule-no-export-2.0.pc gobject-2.0.pc gthread-2.0.pc gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc pango.pc pangocairo.pc ige-mac-integration.pc"
+
+mkdir -p $framework/Resources/lib/pkgconfig
+
+# Point all the pc files to our framework library.
+for pc in $files; do
+    cat $prefix/lib/pkgconfig/$pc | sed \
+        -e "s/\(^prefix=\).*/\1$escaped_framework\/Resources/" \
+        -e "s/\(^Requires:\).*/\1/" \
+        -e "s/\(^Libs:\).*/\1 -framework Gtk/" \
+        -e "s/\(^Cflags:\).*/\1 -I$escaped_framework\/Headers/" > $framework/Resources/lib/pkgconfig/$pc
+done
+
+
+#
 # - Compile Gtk.c into the framework shared library.
 #
 echo "Building main Gtk library..."
