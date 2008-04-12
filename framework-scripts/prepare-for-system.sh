@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# prepare-for-system.sh -- Prepare a Gtk.framework for installation in
+# prepare-for-system.sh -- Prepare a framework for installation in
 #                          the System's framework directory.
 #
 # Copyright (C) 2007,2008  Imendio AB
@@ -19,10 +19,14 @@ fix_library_prefixes()
 	old_prefix=$2
 	new_prefix=$3
 
+        if [ ! -d $1 ]; then
+            return
+        fi
+
 	pushd . > /dev/null
 	cd $directory
 
-	libs=`ls *so`;
+	libs=`ls *so 2>/dev/null`;
 	for i in $libs; do
 		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix/Libraries/"`;
 
@@ -41,6 +45,10 @@ update_config()
 	config_file=$2
 	old_prefix=$3
 	new_prefix=$4
+
+        if [ ! -d $1 ]; then
+            return
+        fi
 
 	pushd . > /dev/null
 	cd $directory
@@ -86,10 +94,13 @@ framework=`dirname "$framework"`/`basename "$framework"`
 # Check framework directory for sanity
 #
 
-if [ ! -d "$framework"/Headers -o ! -d "$framework"/Libraries -o ! -d "$framework"/Resources -o ! -x "$framework"/Gtk ]; then
-	echo "$framework does not seem to be a Gtk.framework"
+if [ ! -d "$framework"/Headers -o ! -d "$framework"/Resources ]; then
+	echo "$framework does not seem to be a valid framework"
 	exit 1
 fi
+
+basename=`basename "$framework"`
+framework_name=`echo $basename | sed -e 's@\(^.*\)\..*@\1@'`
 
 #
 # Do the actual conversion
@@ -99,39 +110,40 @@ echo "Processing $framework ..."
 
 # Get rid of the trailing slash.
 prefix=`dirname "$framework"`/`basename "$framework"`
-new_prefix="/Library/Frameworks/Gtk.framework"
+new_prefix="/Library/Frameworks"/`basename "$framework"`
 
-# 2. Update main Gtk library.
-install_name_tool -id $new_prefix/Gtk $prefix/Gtk
+# 2. Update main library.
+install_name_tool -id $new_prefix/$framework_name $prefix/$framework_name
 
-deplibs=`otool -L $prefix/Gtk 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$prefix/Libraries" | grep -v "$prefix/Gtk" | sort | uniq`;
+deplibs=`otool -L $prefix/$framework_name 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$prefix/Libraries" | grep -v "$prefix/$framework_name" | sort | uniq`;
 for i in $deplibs; do
-	new=`echo $i | sed -e "s,$prefix/Libraries/,$new_prefix/Libraries/,"`;
-	install_name_tool -change $i $new $prefix/Gtk
+    new=`echo $i | sed -e "s,$prefix/Libraries/,$new_prefix/Libraries/,"`;
+    install_name_tool -change $i $new $prefix/$framework_name
 done;
 
-# 3. Update ./Libraries
-pushd . > /dev/null
-cd $prefix/Libraries
+# 3. Update ./Libraries.
+if [ -d $prefix/Libraries ]; then
+    pushd . > /dev/null
+    cd $prefix/Libraries
 
-libs=`ls *dylib`;
-for i in $libs; do
+    libs=`ls *dylib`;
+    for i in $libs; do
 	if [ -h $i ]; then
-		continue;
+	    continue;
 	fi;
 
 	install_name_tool -id $new_prefix/Libraries/$i ./$i
 
-        fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | 
-grep "$prefix/Libraries/"`;
+        fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$prefix/Libraries/"`;
 
         for j in $fixlibs; do
-                new=`echo $j | sed -e s,$prefix/Libraries/,$new_prefix/Libraries/,`;
-                install_name_tool -change $j $new $i;
+            new=`echo $j | sed -e s,$prefix/Libraries/,$new_prefix/Libraries/,`;
+            install_name_tool -change $j $new $i;
         done;
-done
+    done
 
-popd > /dev/null
+    popd > /dev/null
+fi
 
 # 4. Update pango modules
 fix_library_prefixes "$prefix/Resources/lib/pango/1.6.0/modules/" $prefix $new_prefix
