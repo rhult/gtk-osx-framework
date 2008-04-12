@@ -40,8 +40,9 @@ fix_library_prefixes()
 	popd > /dev/null
 }
 
+
 #
-# Verify prefix
+# Verify the prefix.
 #
 if [ "x$*" = x ]; then
 	print_help
@@ -60,7 +61,7 @@ if [ ! -x $prefix ]; then
 	exit 1
 fi
 
-# drop trailing slash
+# Drop any trailing slash.
 prefix=`dirname "$prefix"`/`basename "$prefix"`
 prefix=`echo $prefix | sed -e "s@//@/@"`
 
@@ -75,10 +76,11 @@ fi
 framework="`pwd`/Gtk.framework";
 new_prefix="$framework/Libraries";
 
+
 #
 # - Create Gtk.framework directory.
 #
-echo "Creating framework in ./Gtk.framework ..."
+echo "Creating framework in Gtk.framework ..."
 
 if [ -x Gtk.framework/ ]; then
 	echo "Framework directory already exists; bailing out.";
@@ -86,6 +88,7 @@ if [ -x Gtk.framework/ ]; then
 fi
 
 mkdir Gtk.framework
+
 
 #
 # - Create Libraries/ subdirectory, copy the toplevel library
@@ -100,9 +103,10 @@ fi
 mkdir Gtk.framework/Libraries/
 
 # start with the top_level
-cp $top_level ./Gtk.framework/Libraries/
+cp $top_level Gtk.framework/Libraries/
 newid=`echo $top_level | sed -e "s@$libprefix@$new_prefix@"`;
 install_name_tool -id $newid $newid
+
 
 #
 # - Create Headers/ subdirectory, copy all needed header files.
@@ -111,8 +115,8 @@ install_name_tool -id $newid $newid
 # FIXME: is there any way we can do this without hardcoding?
 echo "Copying header files ..."
 
-mkdir ./Gtk.framework/Headers/
-cd ./Gtk.framework/Headers/
+mkdir Gtk.framework/Headers/
+cd Gtk.framework/Headers/
 
 incprefix="$prefix/include"
 
@@ -139,6 +143,7 @@ cp -r $incprefix/igemacintegration/ .
 
 cd ../..
 
+
 #
 # - Setting up Pango modules.
 #
@@ -147,15 +152,18 @@ echo "Setting up Pango modules ..."
 
 mkdir -p Gtk.framework/Resources/etc/pango/
 
-cat <<EOF > "./Gtk.framework/Resources/etc/pango/pangorc"
+cat <<EOF > Gtk.framework/Resources/etc/pango/pangorc
 [Pango]
 ModuleFiles=./pango.modules
 EOF
 
-sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/pango/pango.modules > ./Gtk.framework/Resources/etc/pango/pango.modules
+sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/pango/pango.modules > Gtk.framework/Resources/etc/pango/pango.modules
 
 mkdir -p Gtk.framework/Resources/lib/pango/1.6.0/modules/
-cp $libprefix/pango/1.6.0/modules/*so ./Gtk.framework/Resources/lib/pango/1.6.0/modules/
+
+# Skip copying modules for now, we include the ATSUI module inside pango.
+# cp $libprefix/pango/1.6.0/modules/*so Gtk.framework/Resources/lib/pango/1.6.0/modules/
+
 
 #
 # - Setting up GTK+ modules
@@ -164,29 +172,28 @@ echo "Setting up GTK+ modules ..."
 
 mkdir -p Gtk.framework/Resources/etc/gtk-2.0
 
-sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gdk-pixbuf.loaders > ./Gtk.framework/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
-sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gtk.immodules > ./Gtk.framework/Resources/etc/gtk-2.0/gtk.immodules
+sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gdk-pixbuf.loaders > Gtk.framework/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
+sed -e "s@$libprefix@$framework/Resources/lib@" < $prefix/etc/gtk-2.0/gtk.immodules > Gtk.framework/Resources/etc/gtk-2.0/gtk.immodules
 
 mkdir -p Gtk.framework/Resources/lib/gtk-2.0/2.10.0/{engines,immodules,loaders,printbackends}
 
-# FIXME: copying all engines for now
-cp -r $libprefix/gtk-2.0/2.10.0/engines/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines
-cp $libprefix/gtk-2.0/2.10.0/immodules/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules
-cp $libprefix/gtk-2.0/2.10.0/loaders/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders
-cp $libprefix/gtk-2.0/2.10.0/printbackends/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
+# Copying only Clearlooks for now.
+cp -r $libprefix/gtk-2.0/2.10.0/engines/libclearlooks.so Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines
+cp $libprefix/gtk-2.0/2.10.0/immodules/*so Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules
+cp $libprefix/gtk-2.0/2.10.0/loaders/*so Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders
+cp $libprefix/gtk-2.0/2.10.0/printbackends/*so Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
+
+# Copy in gthread manually since nothing links to it so it's not
+# pulled in automatically.
+cp $libprefix/libgthread-2.0.0.dylib Gtk.framework/Libraries/
+
 
 #
 # - Copy in additional support libraries
 #
 echo "Copying support libraries ..."
 
-cp -r $libprefix/libigemacintegration.0.dylib ./Gtk.framework/Libraries/
-
-#
-# - Copy pkg-config files
-#
-
-# FIXME
+cp -r $libprefix/libigemacintegration.0.dylib Gtk.framework/Libraries/
 
 
 #
@@ -198,12 +205,12 @@ files_left=true;
 nfiles=0
 
 while $files_left; do
-	libs=`ls ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
-	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
-	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
-	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
-	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
-	 ./Gtk.framework/Libraries/*dylib 2>/dev/null`;
+	libs=`ls Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
+	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
+	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
+	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
+	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
+	 Gtk.framework/Libraries/*dylib 2>/dev/null`;
 	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`;
 
 	# Copy library and correct ID
@@ -211,22 +218,23 @@ while $files_left; do
 		j=`echo $j | sed -e "s@$libprefix@@"`;
 		j=`echo $j | sed -e "s@^/@@"`;
 
-		cp -f $libprefix/$j ./Gtk.framework/Libraries;
+		cp -f $libprefix/$j Gtk.framework/Libraries;
 
 		libname=`echo $j | sed -e "s@[\.-0123456789].*@@"`;
-		newid=`otool -L ./Gtk.framework/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`;
+		newid=`otool -L Gtk.framework/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`;
 		newid=`echo $newid | sed -e "s@$libprefix@$new_prefix@"`;
 
-		install_name_tool -id $newid ./Gtk.framework/Libraries/$j
+		install_name_tool -id $newid Gtk.framework/Libraries/$j
 	done;
 
-	nnfiles=`ls ./Gtk.framework/Libraries/*dylib | wc -l`;
+	nnfiles=`ls Gtk.framework/Libraries/*dylib | wc -l`;
 	if [ $nnfiles = $nfiles ]; then
 		files_left=false
 	else
 		nfiles=$nnfiles
 	fi
 done
+
 
 #
 # - Update gdk-pixbuf library name.
@@ -239,18 +247,18 @@ echo "Updating gdk-pixbuf library name ..."
 #
 
 newid=`pwd`/Gtk.framework/Libraries/libgdk-pixbuf-2.0.0.dylib
-mv ./Gtk.framework/Libraries/libgdk_pixbuf-2.0.0.dylib $newid
+mv Gtk.framework/Libraries/libgdk_pixbuf-2.0.0.dylib $newid
 install_name_tool -id $newid $newid
 
 files_left=true;
 nfiles=0
 
-libs=`ls ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
-    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
-    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
-    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
-    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
-    ./Gtk.framework/Libraries/*dylib 2>/dev/null`
+libs=`ls Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
+    Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
+    Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
+    Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
+    Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
+    Gtk.framework/Libraries/*dylib 2>/dev/null`
 for lib in $libs; do
     match=`otool -L $lib 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep libgdk_pixbuf-2.0.0`;
     if [ "x$match" != x ]; then
@@ -258,20 +266,19 @@ for lib in $libs; do
     fi
 done
 
+
 #
 # - Run install_name_tool on all those libraries.
 #
 echo "Updating install-names..."
 
-fix_library_prefixes "./Gtk.framework/Libraries" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Libraries" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Resources/lib/pango/1.6.0/modules" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $libprefix $new_prefix
+fix_library_prefixes "Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
 
-# Fix the prefixes
-fix_library_prefixes "./Gtk.framework/Resources/lib/pango/1.6.0/modules" $libprefix $new_prefix
-
-fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines" $libprefix $new_prefix
-fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules" $libprefix $new_prefix
-fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $libprefix $new_prefix
-fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
 
 #
 # -  Create and install pkg-config files.
@@ -295,26 +302,46 @@ done
 
 
 #
-# - Compile Gtk.c into the framework shared library.
+# -  Copy theme and icon theme files.
+#
+echo "Copying widget and icon theme data ..."
+
+mkdir -p Gtk.framework/Resources/share/icons
+mkdir -p Gtk.framework/Resources/share/themes
+
+cp -r $prefix/share/icons/hicolor Gtk.framework/Resources/share/icons/
+cp -r $prefix/share/icons/Tango Gtk.framework/Resources/share/icons/
+$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/hicolor 2>/dev/null
+$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/Tango 2>/dev/null
+
+cp -r $prefix/share/themes/Clearlooks Gtk.framework/Resources/share/themes
+
+
+#
+# - Compile Gtk.c into the framework's main shared library.
 #
 echo "Building main Gtk library..."
 
 make
-mv ./Gtk ./Gtk.framework/Gtk
+mv Gtk Gtk.framework/Gtk
+
 
 #
 # - Put Info.plist in place; set up small gtkrc
 #
-cp ./Info.plist ./Gtk.framework/Resources/Info.plist
+cp Info.plist Gtk.framework/Resources/Info.plist
 
-cat <<EOF > "./Gtk.framework/Resources/etc/gtk-2.0/gtkrc"
+cat <<EOF > Gtk.framework/Resources/etc/gtk-2.0/gtkrc
 gtk-icon-theme-name = "Tango"
 gtk-font-name = "Lucida Grande 12"
+gtk-theme-name = "Clearlooks"
 gtk-enable-mnemonics = 0
+gtk-button-images = 0
 EOF
 
+
 #
-# - Done?
+# - Done!
 #
 echo "Finished.";
 

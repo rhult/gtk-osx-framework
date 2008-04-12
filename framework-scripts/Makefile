@@ -14,6 +14,7 @@ LIBS =	\
 	   -lglib-2.0.0		\
 	   -lgobject-2.0.0	\
 	   -lgmodule-2.0.0	\
+	   -lgthread-2.0.0	\
 	   -lpango-1.0.0	\
 	   -lpangocairo-1.0.0	\
 	   -latk-1.0.0		\
@@ -29,6 +30,7 @@ SUBLIBS	= \
 	  -sub_library libglib-2	\
 	  -sub_library libgobject-2	\
 	  -sub_library libgmodule-2	\
+	  -sub_library libgthread-2	\
 	  -sub_library libpango-1	\
 	  -sub_library libpangocairo-1	\
 	  -sub_library libatk-1		\
