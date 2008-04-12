@@ -311,7 +311,9 @@ mkdir -p Gtk.framework/Resources/share/themes
 
 cp -r $prefix/share/icons/hicolor Gtk.framework/Resources/share/icons/
 cp -r $prefix/share/icons/Tango Gtk.framework/Resources/share/icons/
+cp -r $prefix/share/icons/gnome Gtk.framework/Resources/share/icons/
 $prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/hicolor 2>/dev/null
+$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/gnome 2>/dev/null
 $prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/Tango 2>/dev/null
 
 cp -r $prefix/share/themes/Clearlooks Gtk.framework/Resources/share/themes
