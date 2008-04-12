@@ -135,6 +135,8 @@ cp $prefix/lib/gtk-2.0/include/gdkconfig.h ./gdkconfig.h
 cp -r $incprefix/gtk-2.0/gdk-pixbuf/ ./gdk-pixbuf/
 cp -r $incprefix/gtk-2.0/gtk/ ./gtk/
 
+cp -r $incprefix/igemacintegration/ .
+
 cd ../..
 
 #
