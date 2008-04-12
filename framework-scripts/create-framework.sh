@@ -278,7 +278,6 @@ fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
 #
 echo "Creating and copying pkg-config files ..."
 
-prefix=/opt/gtk
 escaped_framework=`echo $framework | sed -e 's@\/@\\\/@g' -e 's@\.@\\\.@g'`
 
 files="atk.pc gdk-2.0.pc gdk-pixbuf-2.0.pc gdk-quartz-2.0.pc gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-export-2.0.pc gmodule-no-export-2.0.pc gobject-2.0.pc gthread-2.0.pc gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc pango.pc pangocairo.pc ige-mac-integration.pc"
