@@ -126,7 +126,7 @@ static void initializer (int argc, char **argv, char **envp)
 
   set_rc_environment ("XDG_CONFIG_DIRS", bundle_prefix, "/Resources/etc/xdg");
   set_rc_environment ("XDG_DATA_DIRS", bundle_prefix, "/Resources/share");
-  set_rc_environment ("GTK_DATA_PREFIX", bundle_prefix, "/Resources/share");
+  set_rc_environment ("GTK_DATA_PREFIX", bundle_prefix, "/Resources");
   set_rc_environment ("GTK_EXE_PREFIX", bundle_prefix, "/Resources");
   set_rc_environment ("GTK_PATH", bundle_prefix, "/Resources");
 
