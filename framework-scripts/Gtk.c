@@ -9,8 +9,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <mach-o/dyld.h>
+#include <Carbon/Carbon.h>
 
 #include <glib.h>
+#include <gtk/gtk.h>
 
 /* Relative location of the framework in an application bundle */
 #define FRAMEWORK_OFFSET "../Frameworks/Gtk.framework"
@@ -20,6 +22,11 @@
 #define RELATIVE_GTK_IMMODULE_FILE		"/Resources/etc/gtk-2.0/gtk.immodules"
 #define RELATIVE_GDK_PIXBUF_MODULE_FILE		"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders"
 
+/* Define these private functions from ige-mac-integration here, so we don't
+ * have to install a private header.
+ */
+gboolean _ige_mac_menu_is_quit_menu_item_handled (void);
+gboolean _ige_mac_dock_is_quit_menu_item_handled (void);
 
 /* Make the bundle prefix available to the outside */
 static char *bundle_prefix = NULL;
@@ -65,6 +72,19 @@ static int is_running_from_app_bundle (void)
 
   /* shouldn't be reached ... */
   return 0;
+}
+
+static OSErr
+handle_quit_cb (const AppleEvent *inAppleEvent,
+                AppleEvent       *outAppleEvent,
+                long              inHandlerRefcon)
+{
+  /* We only quit if there is no menu or dock setup. */
+  if (!_ige_mac_menu_is_quit_menu_item_handled () &&
+      !_ige_mac_dock_is_quit_menu_item_handled ())
+    gtk_main_quit ();
+
+  return noErr;
 }
 
 __attribute__((constructor))
@@ -113,4 +133,9 @@ static void initializer (int argc, char **argv, char **envp)
   /* We don't free bundle_prefix; it needs to be available until
    * program termination.
    */
+
+  /* Handle quit menu item so that apps can be quit of of the box. */
+  AEInstallEventHandler (kCoreEventClass, kAEQuitApplication,
+                         handle_quit_cb,
+                         0, true);
 }

@@ -17,9 +17,10 @@ LIBS =	\
 	   -lpango-1.0.0	\
 	   -lpangocairo-1.0.0	\
 	   -latk-1.0.0		\
-	   -lgdk_pixbuf-2.0.0	\
+	   -lgdk-pixbuf-2.0.0	\
 	   -lgdk-quartz-2.0.0	\
-	   -lgtk-quartz-2.0.0
+	   -lgtk-quartz-2.0.0	\
+	   -ligemacintegration.0
 
 SUBLIBS	= \
 	  -sub_library libintl		\
@@ -31,11 +32,12 @@ SUBLIBS	= \
 	  -sub_library libpango-1	\
 	  -sub_library libpangocairo-1	\
 	  -sub_library libatk-1		\
-	  -sub_library libgdk		\
+	  -sub_library libgdk-pixbuf-2	\
 	  -sub_library libgdk-quartz-2	\
-	  -sub_library libgtk-quartz-2
+	  -sub_library libgtk-quartz-2	\
+	  -sub_library libigemacintegration
 
 all:		Gtk
 
 Gtk:		Gtk.c
-		gcc -Wall -dynamiclib -o Gtk -g Gtk.c $(NAME) $(INCLUDE) $(SUBLIBS) $(LIBS)
+		gcc -Wall -dynamiclib -o Gtk -gstabs+3 Gtk.c $(NAME) $(INCLUDE) $(SUBLIBS) $(LIBS) -framework Carbon

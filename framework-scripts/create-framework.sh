@@ -76,7 +76,7 @@ framework="`pwd`/Gtk.framework";
 new_prefix="$framework/Libraries";
 
 #
-# 1. Create Gtk.framework directory.
+# - Create Gtk.framework directory.
 #
 echo "Creating framework in ./Gtk.framework ..."
 
@@ -88,7 +88,7 @@ fi
 mkdir Gtk.framework
 
 #
-# 2. Create Libraries/ subdirectory, copy the toplevel library
+# - Create Libraries/ subdirectory, copy the toplevel library
 #
 echo "Creating Libraries/ ...";
 
@@ -105,7 +105,7 @@ newid=`echo $top_level | sed -e "s@$libprefix@$new_prefix@"`;
 install_name_tool -id $newid $newid
 
 #
-# 3. Create Headers/ subdirectory, copy all needed header files.
+# - Create Headers/ subdirectory, copy all needed header files.
 #
 
 # FIXME: is there any way we can do this without hardcoding?
@@ -138,7 +138,7 @@ cp -r $incprefix/gtk-2.0/gtk/ ./gtk/
 cd ../..
 
 #
-# 4. Setting up Pango modules.
+# - Setting up Pango modules.
 #
 
 echo "Setting up Pango modules ..."
@@ -156,7 +156,7 @@ mkdir -p Gtk.framework/Resources/lib/pango/1.6.0/modules/
 cp $libprefix/pango/1.6.0/modules/*so ./Gtk.framework/Resources/lib/pango/1.6.0/modules/
 
 #
-# 5. Setting up GTK+ modules
+# - Setting up GTK+ modules
 #
 echo "Setting up GTK+ modules ..."
 
@@ -174,7 +174,21 @@ cp $libprefix/gtk-2.0/2.10.0/loaders/*so ./Gtk.framework/Resources/lib/gtk-2.0/2
 cp $libprefix/gtk-2.0/2.10.0/printbackends/*so ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends
 
 #
-# 6. Resolve dependencies
+# - Copy in additional support libraries
+#
+echo "Copying support libraries ..."
+
+cp -r $libprefix/libigemacintegration.0.dylib ./Gtk.framework/Libraries/
+
+#
+# - Copy pkg-config files
+#
+
+# FIXME
+
+
+#
+# - Resolve dependencies
 #
 echo "Resolving dependencies ..."
 
@@ -187,7 +201,7 @@ while $files_left; do
 	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
 	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
 	 ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
-	 ./Gtk.framework/Libraries 2>/dev/null`;
+	 ./Gtk.framework/Libraries/*dylib 2>/dev/null`;
 	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`;
 
 	# Copy library and correct ID
@@ -212,11 +226,39 @@ while $files_left; do
 	fi
 done
 
+#
+# - Update gdk-pixbuf library name.
+#
+echo "Updating gdk-pixbuf library name ..."
+
+# Change the name of gdk-pixbuf library to use a dash instead of
+# underscore, to work around an issue with how OS X interprets library
+# names when using sublibraries.
+#
+
+newid=`pwd`/Gtk.framework/Libraries/libgdk-pixbuf-2.0.0.dylib
+mv ./Gtk.framework/Libraries/libgdk_pixbuf-2.0.0.dylib $newid
+install_name_tool -id $newid $newid
+
+files_left=true;
+nfiles=0
+
+libs=`ls ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
+    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends/*so \
+    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
+    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
+    ./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
+    ./Gtk.framework/Libraries/*dylib 2>/dev/null`
+for lib in $libs; do
+    match=`otool -L $lib 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep libgdk_pixbuf-2.0.0`;
+    if [ "x$match" != x ]; then
+        install_name_tool -change $match $newid $lib
+    fi
+done
 
 #
-# 7. Run install_name_tool on all those libraries.
+# - Run install_name_tool on all those libraries.
 #
-
 echo "Updating install-names..."
 
 fix_library_prefixes "./Gtk.framework/Libraries" $libprefix $new_prefix
@@ -230,16 +272,15 @@ fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders" $lib
 fix_library_prefixes "./Gtk.framework/Resources/lib/gtk-2.0/2.10.0/printbackends" $libprefix $new_prefix
 
 #
-# 8. Compile Gtk.c into the framework shared library.
+# - Compile Gtk.c into the framework shared library.
 #
-
 echo "Building main Gtk library..."
 
 make
 mv ./Gtk ./Gtk.framework/Gtk
 
 #
-# 9. Put Info.plist in place; set up small gtkrc
+# - Put Info.plist in place; set up small gtkrc
 #
 cp ./Info.plist ./Gtk.framework/Resources/Info.plist
 
@@ -250,7 +291,7 @@ gtk-enable-mnemonics = 0
 EOF
 
 #
-# 10 Done?
+# - Done?
 #
 echo "Finished.";
 
