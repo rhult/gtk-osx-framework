@@ -324,7 +324,7 @@ cp -r $prefix/share/themes/Clearlooks Gtk.framework/Resources/share/themes
 #
 echo "Building main Gtk library..."
 
-make
+make || (echo "Could not build Gtk library"; exit 1)
 mv Gtk Gtk.framework/Gtk
 
 
