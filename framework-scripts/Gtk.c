@@ -94,7 +94,7 @@ handle_quit_cb (const AppleEvent *inAppleEvent,
 __attribute__((constructor)) static void
 initializer (int argc, char **argv, char **envp)
 {
-  static initialized = 0;
+  static int initialized = 0;
   int i;
 
   if (initialized)
