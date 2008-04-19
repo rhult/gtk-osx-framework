@@ -8,7 +8,7 @@
 #
 
 # Constants
-starting_point="libgtk-quartz-2.0.0.dylib";
+starting_point="libgtk-quartz-2.0.0.dylib"
 
 # Helper functions
 
@@ -20,21 +20,21 @@ print_help()
 
 fix_library_prefixes()
 {
-	directory=$1;
-	old_prefix=$2;
-	new_prefix=$3;
+	directory=$1
+	old_prefix=$2
+	new_prefix=$3
 
 	pushd . > /dev/null
 	cd $directory
 
-	libs=`ls *{so,dylib} 2>/dev/null`;
+	libs=`ls *{so,dylib} 2>/dev/null`
 	for i in $libs; do
-		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`;
+		fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $prefix`
 
 		for j in $fixlibs; do
-			new=`echo $j | sed -e s@$old_prefix@$new_prefix@`;
-			install_name_tool -change $j $new $i;
-		done;
+			new=`echo $j | sed -e s@$old_prefix@$new_prefix@`
+			install_name_tool -change $j $new $i
+		done
 	done
 
 	popd > /dev/null
@@ -69,12 +69,12 @@ libprefix="$prefix/lib"
 top_level="$prefix/lib/$starting_point"
 
 if [ ! -x "$top_level" ]; then
-	echo "$prefix/lib/$starting_point does not exist.";
-	exit 1;
+	echo "$prefix/lib/$starting_point does not exist."
+	exit 1
 fi
 
-framework="`pwd`/Gtk.framework";
-new_prefix="$framework/Libraries";
+framework="`pwd`/Gtk.framework"
+new_prefix="$framework/Libraries"
 
 
 #
@@ -83,8 +83,8 @@ new_prefix="$framework/Libraries";
 echo "Creating framework in Gtk.framework ..."
 
 if [ -x Gtk.framework/ ]; then
-	echo "Framework directory already exists; bailing out.";
-	exit 1;
+	echo "Framework directory already exists; bailing out."
+	exit 1
 fi
 
 mkdir Gtk.framework
@@ -93,18 +93,18 @@ mkdir Gtk.framework
 #
 # - Create Libraries/ subdirectory, copy the toplevel library
 #
-echo "Creating Libraries/ ...";
+echo "Creating Libraries/ ..."
 
 if [ -x Gtk.framework/Libraries/ ]; then
-	echo "Libraries subdirectory already exists; bailing out.";
-	exit 1;
+	echo "Libraries subdirectory already exists; bailing out."
+	exit 1
 fi
 
 mkdir Gtk.framework/Libraries/
 
 # start with the top_level
 cp $top_level Gtk.framework/Libraries/
-newid=`echo $top_level | sed -e "s@$libprefix@$new_prefix@"`;
+newid=`echo $top_level | sed -e "s@$libprefix@$new_prefix@"`
 install_name_tool -id $newid $newid
 
 
@@ -201,7 +201,7 @@ cp -r $libprefix/libigemacintegration.0.dylib Gtk.framework/Libraries/
 #
 echo "Resolving dependencies ..."
 
-files_left=true;
+files_left=true
 nfiles=0
 
 while $files_left; do
@@ -210,22 +210,22 @@ while $files_left; do
 	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/immodules/*so \
 	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/engines/*so \
 	 Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
-	 Gtk.framework/Libraries/*dylib 2>/dev/null`;
-	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`;
+	 Gtk.framework/Libraries/*dylib 2>/dev/null`
+	deplibs=`otool -L $libs 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep -v $top_level | sort | uniq`
 
 	# Copy library and correct ID
 	for j in $deplibs; do
-		j=`echo $j | sed -e "s@$libprefix@@"`;
-		j=`echo $j | sed -e "s@^/@@"`;
+		j=`echo $j | sed -e "s@$libprefix@@"`
+		j=`echo $j | sed -e "s@^/@@"`
 
-		cp -f $libprefix/$j Gtk.framework/Libraries;
+		cp -f $libprefix/$j Gtk.framework/Libraries
 
-		libname=`echo $j | sed -e "s@[\.-0123456789].*@@"`;
-		newid=`otool -L Gtk.framework/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`;
-		newid=`echo $newid | sed -e "s@$libprefix@$new_prefix@"`;
+		libname=`echo $j | sed -e "s@[\.-0123456789].*@@"`
+		newid=`otool -L Gtk.framework/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`
+		newid=`echo $newid | sed -e "s@$libprefix@$new_prefix@"`
 
 		install_name_tool -id $newid Gtk.framework/Libraries/$j
-	done;
+	done
 
 	nnfiles=`ls Gtk.framework/Libraries/*dylib | wc -l`;
 	if [ $nnfiles = $nfiles ]; then
@@ -250,7 +250,7 @@ newid=`pwd`/Gtk.framework/Libraries/libgdk-pixbuf-2.0.0.dylib
 mv Gtk.framework/Libraries/libgdk_pixbuf-2.0.0.dylib $newid
 install_name_tool -id $newid $newid
 
-files_left=true;
+files_left=true
 nfiles=0
 
 libs=`ls Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
@@ -260,7 +260,7 @@ libs=`ls Gtk.framework/Resources/lib/gtk-2.0/2.10.0/loaders/*so \
     Gtk.framework/Resources/lib/gtk-2.0/2.10.0/modules/*so \
     Gtk.framework/Libraries/*dylib 2>/dev/null`
 for lib in $libs; do
-    match=`otool -L $lib 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep libgdk_pixbuf-2.0.0`;
+    match=`otool -L $lib 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep $libprefix | grep libgdk_pixbuf-2.0.0`
     if [ "x$match" != x ]; then
         install_name_tool -change $match $newid $lib
     fi
@@ -304,27 +304,30 @@ done
 #
 # -  Copy theme and icon theme files.
 #
-echo "Copying widget and icon theme data ..."
+if [ x$SKIP_THEMES = x ]; then
+    echo "Copying widget and icon theme data ..."
 
-mkdir -p Gtk.framework/Resources/share/icons
-mkdir -p Gtk.framework/Resources/share/themes
+    mkdir -p Gtk.framework/Resources/share/icons
+    mkdir -p Gtk.framework/Resources/share/themes
 
-cp -r $prefix/share/icons/hicolor Gtk.framework/Resources/share/icons/
-cp -r $prefix/share/icons/Tango Gtk.framework/Resources/share/icons/
-cp -r $prefix/share/icons/gnome Gtk.framework/Resources/share/icons/
-$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/hicolor 2>/dev/null
-$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/gnome 2>/dev/null
-$prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/Tango 2>/dev/null
+    cp -r $prefix/share/icons/hicolor Gtk.framework/Resources/share/icons/
+    cp -r $prefix/share/icons/Tango Gtk.framework/Resources/share/icons/
+    cp -r $prefix/share/icons/gnome Gtk.framework/Resources/share/icons/
+    $prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/hicolor 2>/dev/null
+    $prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/gnome 2>/dev/null
+    $prefix/bin/gtk-update-icon-cache -f Gtk.framework/Resources/share/icons/Tango 2>/dev/null
 
-cp -r $prefix/share/themes/Clearlooks Gtk.framework/Resources/share/themes
-
+    cp -r $prefix/share/themes/Clearlooks Gtk.framework/Resources/share/themes
+else
+    echo "Skipping theme data ..."
+fi
 
 #
 # - Compile Gtk.c into the framework's main shared library.
 #
 echo "Building main Gtk library..."
 
-make || (echo "Could not build Gtk library"; exit 1)
+make Gtk || (echo "Could not build Gtk library"; exit 1)
 mv Gtk Gtk.framework/Gtk
 
 
@@ -339,12 +342,13 @@ gtk-font-name = "Lucida Grande 12"
 gtk-theme-name = "Clearlooks"
 gtk-enable-mnemonics = 0
 gtk-button-images = 0
+gtk-color-scheme = "fg_color:#000\nbg_color:#ededed\nbase_color:#fff\ntext_color:#1A1A1A\nselected_bg_color:#86ABD9\nselected_fg_color:#fff\ntooltip_bg_color:#F5F5B5\ntooltip_fg_color:#000"
 EOF
 
 
 #
 # - Done!
 #
-echo "Finished.";
+echo "Finished."
 
-exit 0;
+exit 0
