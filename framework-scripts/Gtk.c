@@ -1,7 +1,7 @@
-/**
- * Gtk.c  -- Framework initialization code.
+/*
+ * Gtk.c - Framework initialization code.
  *
- * Copyright (C) 2007, 2008  Imendio AB
+ * Copyright (C) 2007, 2008 Imendio AB
  */
 
 #include <stdio.h>
