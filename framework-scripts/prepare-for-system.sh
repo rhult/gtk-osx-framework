@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# Prepare a framework for installation in the System framework
-# directory.
+# Prepares a framework for installation in /Library/Frameworks/.
 #
 # Copyright (C) 2007, 2008 Imendio AB
 #
@@ -12,56 +11,19 @@ print_help()
     exit 1
 }
 
-fix_library_prefixes()
+update_config_file()
 {
-    local directory=$1
-    local old_prefix=$2
-    local new_prefix=$3
+    local file=$1
 
-    if [ ! -d $1 ]; then
+    if [ ! -f "$file" ]; then
         return
     fi
 
-    pushd . >/dev/null
-    cd $directory
-
-    libs=`ls *so 2>/dev/null`
-    for i in $libs; do
-	fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix/Libraries/"`
-
-	for j in $fixlibs; do
-	    new=`echo $j | sed -e s,$old_prefix/Libraries/,$new_prefix/Libraries/,`
-	    install_name_tool -change $j $new $i
-	done
-    done
-
-    popd >/dev/null
+    sed -e "s,$old_root,$new_root," "$file" > "$file.tmp" || exit 1
+    mv "$file.tmp" "$file"
 }
 
-update_config()
-{
-    directory=$1
-    config_file=$2
-    old_prefix=$3
-    new_prefix=$4
-
-    if [ ! -d $1 ]; then
-        return
-    fi
-
-    pushd . >/dev/null
-    cd $directory
-
-    mv $config_file $config_file".old"
-    sed -e "s,$old_prefix,$new_prefix," ./$config_file".old" > $config_file
-    rm $config_file".old"
-
-    popd >/dev/null
-}
-
-#
-# Verify framework path
-#
+# Verify framework path.
 if [ "x$*" = x ]; then
     print_help
     exit 1
@@ -86,84 +48,42 @@ if [ ! -x $framework ]; then
 fi
 
 # Drop any trailing slash.
-framework=`dirname "$framework"`/`basename "$framework"`
+basename=`basename "$framework"`
+framework=`dirname "$framework"`/$basename
 
+framework_name=`echo $basename | sed -e 's@\(^.*\)\..*@\1@'`
 
-#
-# Check framework directory for sanity
-#
-
-if [ ! -d "$framework"/Headers -o ! -d "$framework"/Resources ]; then
+# Check framework directory for sanity.
+if [ ! -d "$framework"/Headers -o ! -d "$framework"/Resources -o ! -f "$framework/$framework_name" ]; then
     echo "$framework does not seem to be a valid framework"
     exit 1
 fi
 
-basename=`basename "$framework"`
-framework_name=`echo $basename | sed -e 's@\(^.*\)\..*@\1@'`
+old_root=`dirname "$framework"`
+new_root="/Library/Frameworks"
 
-#
-# Do the actual conversion
-#
+echo "Update library references..."
+libs=`find "$framework" \( -name "*.dylib" -o -name "*.so" -o -name "$framework_name" \) -a -type f`
+for lib in $libs; do
+    new=`echo $lib | sed -e s,$old_root,$new_root,`
+    install_name_tool -id "$new" "$lib" || exit 1
 
-echo "Processing $framework ..."
-
-# Get rid of the trailing slash.
-prefix=`dirname "$framework"`/`basename "$framework"`
-new_prefix="/Library/Frameworks"/`basename "$framework"`
-
-# 2. Update main library.
-install_name_tool -id $new_prefix/$framework_name $prefix/$framework_name
-
-deplibs=`otool -L $prefix/$framework_name 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$prefix/Libraries" | grep -v "$prefix/$framework_name" | sort | uniq`
-for i in $deplibs; do
-    new=`echo $i | sed -e "s,$prefix/Libraries/,$new_prefix/Libraries/,"`
-    install_name_tool -change $i $new $prefix/$framework_name
-done
-
-# 3. Update ./Libraries.
-if [ -d $prefix/Libraries ]; then
-    pushd . >/dev/null
-    cd $prefix/Libraries
-
-    libs=`ls *dylib`
-    for i in $libs; do
-	if [ -h $i ]; then
-	    continue
-	fi
-
-	install_name_tool -id $new_prefix/Libraries/$i ./$i
-
-        fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$prefix/Libraries/"`
-
-        for j in $fixlibs; do
-            new=`echo $j | sed -e s,$prefix/Libraries/,$new_prefix/Libraries/,`
-            install_name_tool -change $j $new $i
-        done
+    deps=`otool -L $lib 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_root" | sort | uniq`
+    for dep in $deps; do
+        new=`echo $dep | sed -e s,$old_root,$new_root,`
+        install_name_tool -change "$dep" "$new" "$lib" || exit 1
     done
-
-    popd >/dev/null
-fi
-
-# 4. Update pango modules
-fix_library_prefixes "$prefix/Resources/lib/pango/1.6.0/modules/" $prefix $new_prefix
-update_config "$prefix/Resources/etc/pango" "pango.modules" $prefix $new_prefix
-
-# 5. Update GTK+ modules
-fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/engines" $prefix $new_prefix
-fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/immodules" $prefix $new_prefix
-fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/loaders" $prefix $new_prefix
-fix_library_prefixes "$prefix/Resources/lib/gtk-2.0/2.10.0/printbackends" $prefix $new_prefix
-
-update_config "$prefix/Resources/etc/gtk-2.0/" "gdk-pixbuf.loaders" $prefix $new_prefix
-update_config "$prefix/Resources/etc/gtk-2.0/" "gtk.immodules" $prefix $new_prefix
-
-# 6. Update pkg-config files
-pushd . >/dev/null
-cd $prefix/Resources/lib/pkgconfig
-files=`ls *pc`
-for i in $files; do
-    update_config "$prefix/Resources/lib/pkgconfig/" $i $prefix $new_prefix
 done
-popd >/dev/null
+
+echo "Update config files..."
+update_config_file "$framework"/Resources/etc/pango/pango.modules
+update_config_file "$framework"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
+update_config_file "$framework"/Resources/etc/gtk-2.0/gtk.immodules
+
+echo "Update pkg-config files..."
+files=`ls "$framework"/Resources/lib/pkgconfig/*.pc`
+for file in $files; do
+    update_config_file "$framework"/Resources/lib/pkgconfig/`basename "$file"`
+done
 
 echo "Done."

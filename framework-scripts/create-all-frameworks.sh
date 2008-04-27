@@ -54,13 +54,13 @@ create_framework()
 
 export MACOSX_DEPLOYMENT_TARGET=10.4
 
-#build glib
+build glib
 create_framework GLib
 
 jhbuild shell
 
-#build pixman
-#build cairo
+build pixman
+build cairo
 create_framework Cairo
 
 build atk
@@ -70,8 +70,8 @@ build gtk-engines
 build ige-mac-integration
 create_framework Gtk
 
-#build libglade
-#create_framework Libglade
+build libglade
+create_framework Libglade
 
-#build loudmouth
-#create_framework Loudmouth
+build loudmouth
+create_framework Loudmouth

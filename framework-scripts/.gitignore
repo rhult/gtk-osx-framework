@@ -1,2 +1,8 @@
 Gtk
 Gtk.framework
+GLib
+GLib.framework
+Cairo
+Cairo.framework
+Loudmouth.framework
+Libglade.framework
