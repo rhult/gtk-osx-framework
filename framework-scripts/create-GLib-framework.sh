@@ -46,6 +46,10 @@ ln -s "$framework"/GLib "$framework"/Resources/atlib/libintl.8.dylib || exit 1
 
 # Copy executables.
 
+# This is work in progress, needs some more work. We also need to copy
+# in m4 files etc and setup such paths in order to be able to build
+# autotools projects completely against those frameworks.
+
 fix_executable_prefixes()
 {
     echo "Updating library names in executables..."
