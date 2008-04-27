@@ -33,7 +33,6 @@ _gtk_framework_get_bundle_prefix (void)
   return bundle_prefix;
 }
 
-
 static void
 set_rc_environment (const char *variable,
                     const char *bundle_prefix,
