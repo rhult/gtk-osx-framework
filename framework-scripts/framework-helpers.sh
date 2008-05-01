@@ -14,9 +14,9 @@ fix_library_prefixes()
 {
     echo "Updating library names..."
 
-    local directory=$1
-    local from="$old_prefix"/lib
-    local to="$new_prefix"
+    directory=$1
+    from="$old_prefix"/lib
+    to="$new_prefix"
 
     pushd . >/dev/null
     cd $directory

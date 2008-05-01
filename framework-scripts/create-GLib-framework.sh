@@ -7,6 +7,65 @@
 
 source ./framework-helpers.sh
 
+copy_gettext_libraries()
+{
+    echo "Copying gettext libraries..."
+
+    src=libgettextsrc-0.16.dylib
+    lib=libgettextlib-0.16.dylib
+
+    from="$old_prefix"/lib
+    to="$framework"/Resources/dev/lib
+
+    cp "$from"/$src "$to"
+    cp "$from"/$lib "$to"
+
+    install_name_tool -change "$from"/$src "$to"/$src "$to"/$lib
+    install_name_tool -change "$from"/$lib "$to"/$lib "$to"/$src
+
+    install_name_tool -id "$to"/$lib "$to"/$lib
+    install_name_tool -id "$to"/$src "$to"/$src
+}
+
+copy_gettext_executables()
+{
+    echo "Copying gettext tools..."
+
+    dest="$framework"/Resources/dev/bin
+    mkdir -p "$dest"
+
+    execs="msgattrib msgcmp msgconv msgexec msgfmt msginit msgunfmt msgcat msgcomm msgen msgfilter msggrep msgmerge msguniq xgettext ngettext"
+    for exe in $execs; do
+        full_path="$old_prefix"/bin/$exe
+        cp "$full_path" "$dest"
+
+        if [ "x`file "$full_path" | grep Mach-O\ executable`" != x ]; then
+            fixlibs=`otool -L "$full_path" 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib`
+	    for j in $fixlibs; do
+	        new=`echo $j | sed -e s@$old_prefix/lib/libgettextsrc-0.16.dylib@$framework/Resources/dev/lib/libgettextsrc-0.16.dylib@ -e s@$old_prefix/lib/libgettextlib-0.16.dylib@$framework/Resources/dev/lib/libgettextlib-0.16.dylib@ -e s@$old_prefix/lib@$new_prefix@`
+	        install_name_tool -change "$j" "$new" "$dest"/$exe || exit 1
+	    done
+        fi
+    done
+}
+
+copy_intltool()
+{
+    echo "Copying intltool tools..."
+
+    dest="$framework"/Resources/dev/bin
+    mkdir -p "$dest"
+
+    execs="intltool-extract intltool-merge intltool-prepare intltool-update intltoolize"
+    for exe in $execs; do
+        full_path="$old_prefix"/bin/$exe
+        cp "$full_path" "$dest"
+    done
+
+    mkdir -p "$framework"/Resources/dev/share/intltool
+    cp "$old_prefix"/share/intltool/Makefile.in.in "$framework"/Resources/dev/share/intltool
+}
+
 # Do initial setup.
 init GLib "$*" libglib-2.0.0.dylib
 copy_main_library
@@ -42,14 +101,21 @@ copy_pc_files "gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-exp
 build_framework_library
 
 # Special-case libintl so that dependencies don't pick it up.
-# FIXME: Doesn't seem to work though..
-ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.8.dylib || exit 1
+ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || exit 1
 
 # Copy executables.
 copy_dev_executables glib-genmarshal glib-gettextize glib-mkenums
 
-# Copy aclocal macros.
-copy_aclocal_macros glib-2.0.m4 glib-gettext.m4
+# Gettext binaries are handled specially, since it's only used for
+# development but also needs libraries.
+copy_gettext_libraries
+fix_library_prefixes "$framework"/Resources/dev/lib
+copy_gettext_executables
 
+# Intltool also get special treatment.
+copy_intltool
+
+# Copy aclocal macros.
+copy_aclocal_macros glib-2.0.m4 glib-gettext.m4 intltool.m4
 
 echo "Done."

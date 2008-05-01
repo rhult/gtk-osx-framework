@@ -55,6 +55,7 @@ create_framework()
 
 export MACOSX_DEPLOYMENT_TARGET=10.4
 
+build intltool
 build glib
 create_framework GLib
 
