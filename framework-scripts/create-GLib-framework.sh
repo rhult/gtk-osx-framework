@@ -70,8 +70,8 @@ copy_intltool()
 init GLib "$*" libglib-2.0.0.dylib
 copy_main_library
 
-# Copy in libraries manually since nothing links to it so it's not
-# pulled in automatically.
+# Copy in libraries manually since nothing links to them so they are
+# not pulled in automatically.
 cp "$old_prefix"/lib/libgmodule-2.0.0.dylib "$framework"/Libraries/
 cp "$old_prefix"/lib/libgio-2.0.0.dylib "$framework"/Libraries/
 cp "$old_prefix"/lib/libgobject-2.0.0.dylib "$framework"/Libraries/
@@ -106,7 +106,7 @@ ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || exit 1
 # Copy executables.
 copy_dev_executables glib-genmarshal glib-gettextize glib-mkenums
 
-# Gettext binaries are handled specially, since it's only used for
+# Gettext binaries are handled specially, since they are only used for
 # development but also needs libraries.
 copy_gettext_libraries
 fix_library_prefixes "$framework"/Resources/dev/lib
