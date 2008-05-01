@@ -9,11 +9,12 @@
 # normally installed versions. Also do a make clean since otherwise we
 # will still link against the same old installation.
 #
-# NOTE: We assume everything up to before glib is built already.
+# NOTE: We assume everything up to before glib is built already, with
+# the cfw-10.4 configuration.
 #
 
-# Use the framework configuration for jhbuild (fw).
-export JHB=fw
+# Use the right configuration for jhbuild.
+export JHB=cfw-10.4
 
 PREFIX=`jhbuild getenv JHBUILD_PREFIX`
 case "$PREFIX" in
@@ -22,7 +23,7 @@ case "$PREFIX" in
     *)
         echo "No prefix setup, make sure you have a recent jhbuildrc file from"
         echo " http://developer.imendio.com/projects/gtk-macosx/"
-        echo "and a framework creation setup (\".jhbuildrc-fw\" file)."
+        echo "and a framework creation setup (\".jhbuildrc-$JHB\" file)."
         exit 1
         ;;
 esac
