@@ -40,13 +40,6 @@ GLIB_SUBLIBS = \
 	-sub_library libgmodule-2	\
 	-sub_library libgthread-2
 
-GLIB_SUBLIBS2 = \
-	-reexport-lintl.8		\
-	-reexport-lglib-2.0.0		\
-	-reexport-lgobject-2.0.0	\
-	-reexport-lgmodule-2.0.0	\
-	-reexport-lgthread-2.0.0
-
 CAIRO_LIBS = \
 	-lz				\
 	-lpng12.0			\
