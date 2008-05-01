@@ -62,7 +62,7 @@ fi
 old_root=`dirname "$framework"`
 new_root="/Library/Frameworks"
 
-echo "Update library references..."
+echo "Update library references in libraries..."
 libs=`find "$framework" \( -name "*.dylib" -o -name "*.so" -o -name "$framework_name" \) -a -type f`
 for lib in $libs; do
     new=`echo $lib | sed -e s,$old_root,$new_root,`
@@ -75,15 +75,27 @@ for lib in $libs; do
     done
 done
 
+echo "Update library references in executables..."
+execs=`find "$framework"/Resources/dev/bin 2>/dev/null`
+for exe in $execs; do
+    if [ "x`file "$exe" | grep Mach-O\ executable`" != x ]; then
+        deps=`otool -L $exe 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_root" | sort | uniq`
+        for dep in $deps; do
+            new=`echo $dep | sed -e s,$old_root,$new_root,`
+            install_name_tool -change "$dep" "$new" "$exe" || exit 1
+        done
+    fi
+done
+
 echo "Update config files..."
 update_config_file "$framework"/Resources/etc/pango/pango.modules
 update_config_file "$framework"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
 update_config_file "$framework"/Resources/etc/gtk-2.0/gtk.immodules
 
 echo "Update pkg-config files..."
-files=`ls "$framework"/Resources/lib/pkgconfig/*.pc`
+files=`ls "$framework"/Resources/dev/lib/pkgconfig/*.pc`
 for file in $files; do
-    update_config_file "$framework"/Resources/lib/pkgconfig/`basename "$file"`
+    update_config_file "$framework"/Resources/dev/lib/pkgconfig/`basename "$file"`
 done
 
 echo "Done."
