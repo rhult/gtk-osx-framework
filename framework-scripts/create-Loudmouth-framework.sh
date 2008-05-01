@@ -15,7 +15,7 @@ copy_single_main_library
 resolve_dependencies
 
 # "Relink" library dependencies.
-fix_library_prefixes "$framework"/Libraries "$old_prefix"/lib "$new_prefix"
+fix_library_prefixes "$framework"/Libraries
 
 # Copy header files.
 copy_headers \

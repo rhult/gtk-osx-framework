@@ -76,18 +76,24 @@ for lib in $libs1 $libs2; do
 done
 
 # "Relink" library dependencies.
-fix_library_prefixes "$framework"/Libraries "$old_prefix"/lib "$new_prefix"
-fix_library_prefixes "$framework"/Resources/lib/pango/1.6.0/modules "$old_prefix"/lib "$new_prefix"
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/engines "$old_prefix"/lib "$new_prefix"
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/immodules "$old_prefix"/lib "$new_prefix"
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/loaders "$old_prefix"/lib "$new_prefix"
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/printbackends "$old_prefix"/lib "$new_prefix"
+fix_library_prefixes "$framework"/Libraries
+fix_library_prefixes "$framework"/Resources/lib/pango/1.6.0/modules
+fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/engines
+fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/immodules
+fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/loaders
+fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/printbackends
 
 # Copy and update our "fake" pkgconfig files.
 copy_pc_files "atk.pc pango.pc pangocairo.pc gdk-2.0.pc gdk-quartz-2.0.pc gdk-pixbuf-2.0.pc gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc ige-mac-integration.pc"
 
 # Create the library that will be the main framework library.
 build_framework_library
+
+# Copy executables.
+copy_dev_executables gtk-builder-convert gtk-demo gtk-query-immodules-2.0 gtk-update-icon-cache pango-querymodules
+
+# Copy aclocal macros.
+copy_aclocal_macros gtk-2.0.m4
 
 # Possibly copy theming data.
 if [ x$SKIP_THEMES = x ]; then
@@ -110,14 +116,9 @@ else
 fi
 
 # Handle style defaults.
-echo "Setting up GTK+ theme..."
-cat <<EOF > "$framework"/Resources/etc/gtk-2.0/gtkrc
-gtk-icon-theme-name = "Gnome"
-gtk-font-name = "Lucida Grande 12"
-gtk-theme-name = "Clearlooks"
-gtk-enable-mnemonics = 0
-gtk-button-images = 0
-gtk-color-scheme = "fg_color:#000\nbg_color:#ededed\nbase_color:#fff\ntext_color:#1A1A1A\nselected_bg_color:#86ABD9\nselected_fg_color:#fff\ntooltip_bg_color:#F5F5B5\ntooltip_fg_color:#000"
-EOF
+echo "Setting up GTK+ theme and settings..."
+cp gtkrc "$framework"/Resources/etc/gtk-2.0/gtkrc
+mkdir -p "$framework"/Resources/share/themes/Mac/gtk-2.0-key
+cp gtkrc.key.mac "$framework"/Resources/share/themes/Mac/gtk-2.0-key/gtkrc
 
 echo "Done."
