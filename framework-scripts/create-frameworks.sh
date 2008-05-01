@@ -5,12 +5,14 @@
 # Copyright (C) 2007, 2008 Imendio AB
 #
 
-# We apply some magic to force the use of framework versions over the
-# normally installed versions. Also do a make clean since otherwise we
-# will still link against the same old installation.
+# We apply some jhbuild magic to force the use of framework versions
+# over the normally installed versions.
 #
-# NOTE: We assume everything up to before glib is built already, with
-# the cfw-10.4 configuration.
+# Note that the default is to run "make clean" since otherwise we will
+# still link against the same old installation.
+#
+# Also note that it is assumed that everything up to before glib is
+# built already, with the cfw-10.4 configuration.
 #
 
 # Use the right configuration for jhbuild.
