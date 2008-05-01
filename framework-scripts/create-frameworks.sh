@@ -16,6 +16,8 @@
 # Use the right configuration for jhbuild.
 export JHB=cfw-10.4
 
+all_modules="GLib Cairo Gtk Libglade Loudmouth"
+
 PREFIX=`jhbuild getenv JHBUILD_PREFIX`
 case "$PREFIX" in
     /*)
@@ -37,6 +39,7 @@ print_usage()
     echo "  -l        - Do not run 'make clean' before building"
     echo "  -h        - Display this help text"
     echo "            - FRAMEWORK... is an optional list of frameworks to create"
+    echo "              Valid framework names are: $all_modules"
 }
 
 create_framework()
@@ -45,6 +48,9 @@ create_framework()
     shift 1
 
     if (echo "$modules" | grep -w $framework) >/dev/null; then
+        found_framework=yes
+        modules=`echo $modules | sed -e 's/$framework//'`
+
         if [ $rebuild == yes ]; then
             rm "$PREFIX"/lib/*.la 2>/dev/null
             jhbuild buildone $update $clean $* || exit 1
@@ -86,7 +92,22 @@ while getopts "fnh" o; do
     esac
 done
 shift $(($OPTIND - 1))
+
 modules=$*
+
+if [ "x$modules" != x ]; then
+    tmp=$modules
+    for m in $all_modules; do
+        tmp=`echo $tmp | sed -e "s/$m//"`
+    done
+
+    if [ "x$tmp" != x ]; then
+        echo "Invalid framework names: $tmp"
+        exit 1
+    fi
+else
+    modules=$all_modules
+fi
 
 create_framework GLib intltool glib
 
