@@ -46,69 +46,60 @@ Contents
 
 * GTK+ Quartz Application
 
-	This is an XCode Project Template. This directory should be
-	copied in full to the template directory. For XCode 2.x, this
-	is:
+  This is an XCode Project Template. This directory should be copied
+  in full to the template directory. For XCode 2.x, this is:
 
 /Library/Application Support/Apple/Developer Tools/Project Templates/Application/
 
-        For XCode 3.x, it is instead:
+  For XCode 3.x, it is instead:
 
 /Developer/Platforms/MacOSX.platform/Developer/Library/Xcode/Project Templates/Application/
 
-	XCode will automatically pick up the new template. When
-	creating a new project, look for the "GTK+ Quartz Application"
-	entry. When creating a GTK+ application this way, the build
-	settings and configuration will be taken care of
-	automatically.
+  XCode will automatically pick up the new template. When creating a
+  new project, look for the "GTK+ Quartz Application" entry. When
+  creating a GTK+ application this way, the build settings and
+  configuration will be taken care of automatically.
 
-	Note: This requires the Gtk.framework to be installed under
-	/Library/Frameworks.
+  Note: This requires the Gtk.framework to be installed under
+  /Library/Frameworks.
 
 * framework-scripts
 
-	This directory contains the various files and scripts to create
-	a working Gtk.framework:
+  This directory contains the various files and scripts to create a
+  working Gtk.framework:
 
-	# Gtk.c, Makefile
+    # Gtk.c, Makefile
 
-		Code and makefile for the framework initialization
-		machinery.
+      Code and makefile for the framework initialization machinery.
 
-	# create-Gtk-framework.sh
+    # create-Gtk-framework.sh
 
-		Given a prefix where GTK+ has been compiled into (say
-		/opt), this script will create an "intermediate"
-		Gtk.framework in the current working directory.
+      Given a prefix where GTK+ has been compiled into (say /opt),
+      this script will create an "intermediate" Gtk.framework in the
+      current working directory.
 
-	# prepare-for-system.sh
+    # prepare-for-system.sh
 
-		Modifies a given Gtk.framework so that it can be
-		installed in /Library/Frameworks
+      Modifies a given Gtk.framework so that it can be installed in
+      /Library/Frameworks
 
-	# make-standalone.sh
+    # make-standalone.sh
 
-		Little script to convert an application bundle
-		depending on the framework in /Library/Frameworks to
-		be stand-alone.  (See also the notes below).
+      Little script to convert an application bundle depending on the
+      framework in /Library/Frameworks to be stand-alone.  (See also
+      the notes below).
 
-	# convert-to-app-bundle.sh
+    # convert-to-app-bundle.sh
 
-		Copies Gtk.framework from /Library/Frameworks to the
-		current working directory and makes it suitable for
-		bundling it inside application bundles.
+      Copies Gtk.framework from /Library/Frameworks to the current
+      working directory and makes it suitable for bundling it inside
+      application bundles.
 
 * patches
 
-	Patches against GTK+ and Pango that are required to get
-	things working.  We will try to get rid of this specific
-	patching if possible.
-
-* old
-
-	Old framework creation scripts that did a little more
-	sophisticated dependency resolution and symlink creation.  Only
-	here for reference.
+  Patches against GTK+ and Pango that are required to get things
+  working. We will try to get rid of this specific patching if
+  possible.
 
 
 Steps to create a working SDK
@@ -120,18 +111,18 @@ Steps to create a working SDK
    http://developer.imendio.com/projects/gtk-macosx/build-instructions. Note
    that you must have the extra framework setup file as well:
 
-   http://developer.imendio.com/svn/gtk-osx-build/jhbuildrc-gtk-osx-fw
+   http://developer.imendio.com/svn/gtk-osx-build/jhbuildrc-gtk-osx-cfw-10.4
 
-   Symlink or copy this file into ~/.jhbuildrc-fw.
+   Symlink or copy this file into ~/.jhbuildrc-cfw-10.4.
 
 2. Build jhbuild with the fw setup:
 
-   JHB=fw jhbuild bootstrap
-   JHB=fw jhbuild build
+   JHB=cfw-10.4 jhbuild bootstrap
+   JHB=cfw-10.4 jhbuild build
 
 3. Create the frameworks:
 
-   ./create-all-frameworks.sh
+   ./create-frameworks.sh
 
 3. Convert and install the frameworks:
 
