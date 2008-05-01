@@ -57,8 +57,6 @@ export MACOSX_DEPLOYMENT_TARGET=10.4
 build glib
 create_framework GLib
 
-jhbuild shell
-
 build pixman
 build cairo
 create_framework Cairo
