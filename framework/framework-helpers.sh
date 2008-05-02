@@ -173,8 +173,13 @@ build_framework_library()
 {
     echo "Building main $framework_name library..."
 
+    pushd . >/dev/null
+    cd src
+
     MACOSX_DEPLOYMENT_TARGET=10.4 make $framework_name >/dev/null || exit 1
     mv $framework_name "$framework"/$framework_name || exit 1
+
+    popd >/dev/null
 
     symlink_framework_library
 }
