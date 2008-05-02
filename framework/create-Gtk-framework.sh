@@ -117,8 +117,8 @@ fi
 
 # Handle style defaults.
 echo "Setting up GTK+ theme and settings..."
-cp gtkrc "$framework"/Resources/etc/gtk-2.0/gtkrc
+cp data/gtkrc "$framework"/Resources/etc/gtk-2.0/gtkrc
 mkdir -p "$framework"/Resources/share/themes/Mac/gtk-2.0-key
-cp gtkrc.key.mac "$framework"/Resources/share/themes/Mac/gtk-2.0-key/gtkrc
+cp data/gtkrc.key.mac "$framework"/Resources/share/themes/Mac/gtk-2.0-key/gtkrc
 
 echo "Done."

@@ -79,7 +79,7 @@ init()
     mkdir "$framework"/Resources
     mkdir "$framework"/Headers
 
-    cp Info-$framework_name.plist "$framework"/Resources/Info.plist || exit 1
+    cp data/Info-$framework_name.plist "$framework"/Resources/Info.plist || exit 1
 }
 
 copy_main_library()
