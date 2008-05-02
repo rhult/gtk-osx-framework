@@ -1,0 +1,7 @@
+GLib
+Gtk
+Cairo
+Libglade
+Loudmouth
+*.mode1v3
+*.pbxuser
