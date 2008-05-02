@@ -72,7 +72,7 @@ create_framework()
 rebuild=yes
 update=
 clean=-c
-while getopts "fnh" o; do
+while getopts "fnlh" o; do
     case "$o" in
         f)
             rebuild=no
