@@ -1,1 +1,3 @@
-To get started, fire up XCode and look for the "GTK+ Quartz Application" entry in the "New Project" dialog!
+GTK+ was successfully installed!
+
+To get started, fire up XCode and look for the "GTK+ Application" entry in the "New Project" dialog.
