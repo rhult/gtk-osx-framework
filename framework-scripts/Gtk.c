@@ -11,7 +11,7 @@
 #include <mach-o/dyld.h>
 #include <Carbon/Carbon.h>
 
-/* Relative location of the framework in an application bundle */
+/* Relative location of the framework in an application bundle. */
 #define FRAMEWORK_OFFSET                        "../Frameworks/Gtk.framework"
 
 #define RELATIVE_PANGO_RC_FILE			"/Resources/etc/pango/pangorc"
@@ -24,11 +24,11 @@ int  _ige_mac_menu_is_quit_menu_item_handled (void);
 int  _ige_mac_dock_is_quit_menu_item_handled (void);
 void gtk_main_quit                           (void);
 
-/* Make the bundle prefix available to the outside */
+/* Make the bundle prefix available to the outside. */
 static char *bundle_prefix = NULL;
 
 const char *
-_gtk_framework_get_bundle_prefix (void)
+_gtk_quartz_framework_get_bundle_prefix (void)
 {
   return bundle_prefix;
 }
@@ -36,18 +36,22 @@ _gtk_framework_get_bundle_prefix (void)
 static void
 set_rc_environment (const char *variable,
                     const char *bundle_prefix,
-                    const char *relative_file)
+                    const char *relative_path)
 {
-  char *rc_file;
+  char *value;
 
-  rc_file = malloc (strlen (bundle_prefix) + strlen (relative_file) + 1);
-  strcpy (rc_file, bundle_prefix);
-  strcpy (rc_file + strlen (bundle_prefix), relative_file);
+  value = malloc (strlen (bundle_prefix) + strlen (relative_path) + 1);
+  strcpy (value, bundle_prefix);
+  strcpy (value + strlen (bundle_prefix), relative_path);
 
-  if (setenv (variable, rc_file, 1) < 0)
+#ifdef ENABLE_DEBUG
+  printf ("%s = %s\n", variable, value);
+#endif
+
+  if (setenv (variable, value, 1) < 0)
     perror ("Couldn't set environment variable");
 
-  free (rc_file);
+  free (value);
 }
 
 static int
@@ -55,11 +59,10 @@ is_running_from_app_bundle (void)
 {
   int i;
 
-  /* Here we use some dyld magic to figure out whether we are running
-   * against the system's Gtk.framework or a Gtk.framework found bundled
-   * in the application bundle.
+  /* Use dyld magic to figure out whether we are running against the
+   * system's Gtk.framework or a Gtk.framework bundled in an application
+   * bundle.
    */
-
   for (i = 0; i < _dyld_image_count (); i++)
     {
       const char *name = _dyld_get_image_name (i);
@@ -73,7 +76,7 @@ is_running_from_app_bundle (void)
         }
     }
 
-  /* Shouldn't be reached ... */
+  /* Shouldn't be reached... */
   return 0;
 }
 
@@ -85,12 +88,18 @@ handle_quit_cb (const AppleEvent *inAppleEvent,
   /* We only quit if there is no menu or dock setup. */
   if (!_ige_mac_menu_is_quit_menu_item_handled () &&
       !_ige_mac_dock_is_quit_menu_item_handled ())
-    gtk_main_quit ();
+    {
+      gtk_main_quit ();
+    }
 
   return noErr;
 }
 
-__attribute__((constructor)) static void
+/* Note: using an initializer does not currently work when building against
+ * 10.4 SDK and running on 10.5, so we use a function called from inside
+ * GTK+ instead.
+ */
+/*__attribute__((constructor)) */ static void
 initializer (int argc, char **argv, char **envp)
 {
   static int initialized = 0;
@@ -100,7 +109,7 @@ initializer (int argc, char **argv, char **envp)
     return;
   initialized = 1;
 
-  /* Figure out correct bundle prefix */
+  /* Figure out correct bundle prefix. */
   if (!is_running_from_app_bundle ())
     {
       bundle_prefix = strdup ("/Library/Frameworks/Gtk.framework");
@@ -127,8 +136,7 @@ initializer (int argc, char **argv, char **envp)
     }
 
   /* NOTE: leave the setting of the environment variables in this order,
-   * otherwise things will fail in the Release builds for no obvious
-   * reason.
+   * otherwise things will fail in the Release builds for no obvious reason.
    */
   set_rc_environment ("PANGO_RC_FILE", bundle_prefix, RELATIVE_PANGO_RC_FILE);
   set_rc_environment ("GTK2_RC_FILES", bundle_prefix, RELATIVE_GTK_RC_FILE);
@@ -141,12 +149,18 @@ initializer (int argc, char **argv, char **envp)
   set_rc_environment ("GTK_EXE_PREFIX", bundle_prefix, "/Resources");
   set_rc_environment ("GTK_PATH", bundle_prefix, "/Resources");
 
-  /* We don't free bundle_prefix; it needs to be available until program
-   * termination.
-   */
-
   /* Handle quit menu item so that apps can be quit of of the box. */
   AEInstallEventHandler (kCoreEventClass, kAEQuitApplication,
                          handle_quit_cb,
                          0, true);
+}
+
+void
+_gtk_quartz_framework_init (void)
+{
+#ifdef ENABLE_DEBUG
+  printf ("Initializing GTK+ framework\n");
+#endif
+
+  initializer (0, NULL, NULL);
 }
