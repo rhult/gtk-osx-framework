@@ -4,15 +4,18 @@
 
 CFLAGS = -Wall -gstabs+3 -flat_namespace -mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk
 
-GLIB_INCLUDES = -I$(shell pwd)/GLib.framework/Headers/ -L$(shell pwd)/GLib.framework/Libraries/
-GLIB_NAME = -install_name $(shell pwd)/GLib.framework/GLib
+PWD = $(shell pwd)
+ROOT = $(shell dirname $(PWD))
 
-CAIRO_INCLUDES = -I$(shell pwd)/Cairo.framework/Headers/ -L$(shell pwd)/Cairo.framework/Libraries/
-CAIRO_NAME = -install_name $(shell pwd)/Cairo.framework/Cairo
+GLIB_INCLUDES = -I$(ROOT)/GLib.framework/Headers/ -L$(ROOT)/GLib.framework/Libraries/
+GLIB_NAME = -install_name $(ROOT)/GLib.framework/GLib
 
-GTK_INCLUDES = -I$(shell pwd)/Gtk.framework/Headers/ -L$(shell pwd)/Gtk.framework/Libraries/
-GTK_LDFLAGS = -F$(shell pwd)
-GTK_NAME = -install_name $(shell pwd)/Gtk.framework/Gtk
+CAIRO_INCLUDES = -I$(ROOT)/Cairo.framework/Headers/ -L$(ROOT)/Cairo.framework/Libraries/
+CAIRO_NAME = -install_name $(ROOT)/Cairo.framework/Cairo
+
+GTK_INCLUDES = -I$(ROOT)/Gtk.framework/Headers/ -L$(ROOT)/Gtk.framework/Libraries/
+GTK_LDFLAGS = -F$(ROOT)
+GTK_NAME = -install_name $(ROOT)/Gtk.framework/Gtk
 
 all: GLib Cairo Gtk
 
@@ -74,4 +77,4 @@ GTK_SUBLIBS = \
 	-sub_library libigemacintegration
 
 clean:
-	rm -rf Gtk GLib Cairo Loudmouth
+	rm -rf Gtk GLib Cairo Loudmouth Libglade
