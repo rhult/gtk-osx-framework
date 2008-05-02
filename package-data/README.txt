@@ -1,5 +1,6 @@
-This package contains three frameworks needed for developing GTK+
-applications natively on Mac OS X, GLib, Cairo and GTK+.
+GTK+ 2.12
+
+This package contains three frameworks needed for developing GTK+ applications natively on Mac OS X: GLib, Cairo and GTK+.
 
 The frameworks contain the following components:
 
@@ -29,11 +30,8 @@ GTK+:
   jpeg 6b
 
 
-The frameworks are developer versions with debugging symbols and the
-necessary setup for building both Xcode projects and "autotools"
-projects against them. See:
+The frameworks are developer versions with debugging symbols and the necessary setup for building both Xcode projects and "autotools" projects against them. See:
 
   http://developer.imendio.com/projects/gtk-osx for more information.
 
-Note that this package is still in a beta phase. Tools to produce
-standalone app bundles using those frameworks will be provided later.
+Note that this package is still in a beta phase. Tools to produce standalone app bundles using those frameworks will be provided later.
