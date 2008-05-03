@@ -1,7 +1,9 @@
 The software included in the package is licensed under several different agreements.
 
-MIT License: http://www.opensource.org/licenses/mit-license.php
-
 LGPL: http://www.opensource.org/licenses/lgpl-2.1.php
 
 GPL: http://www.opensource.org/licenses/gpl-2.0.php
+
+
+
+This software is based in part on the work of the Independent JPEG Group.
