@@ -6,18 +6,14 @@
 #
 
 for framework in `ls -d *.framework`; do
-    basename=`basename "$framework"`
+    echo "Preparing $framework..."
+    ./prepare-for-system.sh $framework
+done
 
-    framework_name=`echo $basename | sed -e 's@\(^.*\)\..*@\1@'`
-    pmdoc=../installer/$framework_name/installer-$framework_name.pmdoc
+for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
+    dirname=`dirname $pmdoc`
+    package_name=`head -1 $dirname/package-name`
 
-    if [ -d $pmdoc ]; then
-        echo "Preparing $basename..."
-        ./prepare-for-system.sh $framework
-
-        package_name=`head -1 ../installer/$framework_name/package-name`
-
-        echo "Creating installer for $framework_name..."
-        /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc -o "$package_name.mpkg"
-    fi
+    echo "Creating installer for $package_name..."
+    /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc -o "$package_name.mpkg"
 done
