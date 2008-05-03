@@ -8,13 +8,16 @@
 for framework in `ls -d *.framework`; do
     basename=`basename "$framework"`
 
-    pmdoc=../package/$framework/installer-$framework.pmdoc
+    framework_name=`echo $basename | sed -e 's@\(^.*\)\..*@\1@'`
+    pmdoc=../installer/$framework_name/installer-$framework_name.pmdoc
 
-    if [ -f $pmdoc ]; then
+    if [ -d $pmdoc ]; then
         echo "Preparing $basename..."
         ./prepare-for-system.sh $framework
 
+        package_name=`head -1 ../installer/$framework_name/package-name`
+
         echo "Creating installer..."
-        /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc
+        /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc -o "$package_name.mpkg"
     fi
 done
