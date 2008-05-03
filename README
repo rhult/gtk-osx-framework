@@ -3,141 +3,80 @@ GTK+ OS X SDK
 
 Copyright (C) 2007, 2008 Imendio AB
 
-
 The files that are found in this repository can be used to create a
-proper GTK+ SDK for Mac OS X. This SDK is built after common Mac
-standards and integrates with the system and the XCode IDE as much as
-possible.  Building and installing your own SDK using these files is
-not recommended for end-users, download one of the installable PKG
-files instead.
+proper GTK+ SDK for Mac OS X, using the 10.4 (Tiger) SDK. This means
+that the resulting frameworks will work on Tiger and later. The
+frameworks are built after common Mac standards and integrates with
+the system and the Xcode IDE as well as possible, while still making
+it possible to build against them using autotools.
 
-Contents of the repository and usage notes follow below.
-
-
-Known issues
-------------
-
-* This is all still very beta ;)
-
-* The binaries are not universal, but Intel only. Building proper
-  universal binaries of the GTK+ binaries is hard and not fully
-  automated yet. We hope to provide proper universal binaries at some
-  later point.
-
-* Translations are not yet included.
-
-* The binaries do still contain debugging information. This debugging
-  information is only of use to get proper stack traces at this
-  moment. At some later point we might decide to ship with stripped
-  binaries.
-
-* A script/application to transform the application created with XCode
-  to a stand-alone binary (with the framework included inside) has not
-  yet been included. We are still investigating what the best way is
-  to include this. At some later point this will appear as a small
-  application or as a separate target in XCode.
-
-* We are not shipping vanilla GTK+ binaries. Some patches are applied,
-  FIXME: mentioned what patches.
-
-
-Contents
---------
-
-* GTK+ Quartz Application
-
-  This is an XCode Project Template. This directory should be copied
-  in full to the template directory. For XCode 2.x, this is:
-
-/Library/Application Support/Apple/Developer Tools/Project Templates/Application/
-
-  For XCode 3.x, it is instead:
-
-/Developer/Platforms/MacOSX.platform/Developer/Library/Xcode/Project Templates/Application/
-
-  XCode will automatically pick up the new template. When creating a
-  new project, look for the "GTK+ Quartz Application" entry. When
-  creating a GTK+ application this way, the build settings and
-  configuration will be taken care of automatically.
-
-  Note: This requires the Gtk.framework to be installed under
-  /Library/Frameworks.
-
-* framework-scripts
-
-  This directory contains the various files and scripts to create a
-  working Gtk.framework:
-
-    # Gtk.c, Makefile
-
-      Code and makefile for the framework initialization machinery.
-
-    # create-Gtk-framework.sh
-
-      Given a prefix where GTK+ has been compiled into (say /opt),
-      this script will create an "intermediate" Gtk.framework in the
-      current working directory.
-
-    # prepare-for-system.sh
-
-      Modifies a given Gtk.framework so that it can be installed in
-      /Library/Frameworks
-
-    # make-standalone.sh
-
-      Little script to convert an application bundle depending on the
-      framework in /Library/Frameworks to be stand-alone.  (See also
-      the notes below).
-
-    # convert-to-app-bundle.sh
-
-      Copies Gtk.framework from /Library/Frameworks to the current
-      working directory and makes it suitable for bundling it inside
-      application bundles.
-
-* patches
-
-  Patches against GTK+ and Pango that are required to get things
-  working. We will try to get rid of this specific patching if
-  possible.
+Building and installing your own SDK using these files is not
+recommended for end-users, instead its recommended to download a
+prebuilt installer.
 
 
 Steps to create a working SDK
 -----------------------------
 
-1. Build GTK+ for OSX from SVN using jhbuild. You need a recent
-   version of jhbuild (as of 2008-04-26) and the latest jhbuild setup
-   from
-   http://developer.imendio.com/projects/gtk-macosx/build-instructions. Note
-   that you must have the extra framework setup file as well:
+1. Build GTK+ for Mac OS X from SVN using jhbuild. You need a recent
+   version of jhbuild (2008-04-26 or newer) and the latest jhbuild
+   setup from:
+
+   http://developer.imendio.com/projects/gtk-macosx/build-instructions
+
+   Note that you must have the extra framework setup file:
 
    http://developer.imendio.com/svn/gtk-osx-build/jhbuildrc-gtk-osx-cfw-10.4
 
    Symlink or copy this file into ~/.jhbuildrc-cfw-10.4.
 
-2. Build jhbuild with the fw setup:
+2. Build jhbuild with the cfw-10.4 setup:
 
    JHB=cfw-10.4 jhbuild bootstrap
    JHB=cfw-10.4 jhbuild build
 
-3. Create the frameworks:
+   This step builds everything needed in a "normal" setup, and after
+   this is completed, you can check that GTK+ works properly by
+   running "JHB=cfw-10.4 jhbuild run gtk-demo".
 
+   It is very important that you only use this jhbuild setup for the
+   framework creation. Do not attempt to use it to build anything else
+   or do any manual building. Use a different setup for that.
+
+3. The next step is to rebuild the libraries that will be frameworks,
+   and rebuild everything that depends on those so they link to the
+   frameworks:
+
+   cd framework
    ./create-frameworks.sh
 
-3. Convert and install the frameworks:
+   Once this is completed, a number of frameworks will be found in the
+   current directory.
 
-   ./install-frameworks.sh
+4. At this point, you can either install the frameworks on your system
+   (for example to test them), or create package installers for
+   distribution.
 
-4. Copy the Xcode project template to the correct directory.
+   4a. Installing them into /Library/Frameworks:
 
-5. Launch XCode and start hacking.
+       ./install-frameworks.sh
+
+   4b. Creating installers:
+
+       ./create-installers.sh
+
+       This will create mpkg files in the current directory.
+
+If the installer is installed, there will also be an Xcode template
+installed, that will turn up in the User Templates of Xcode, when you
+create a new project.
 
 
 Creating stand-alone applications
 ---------------------------------
 
 Applications that have been built using the "Release" build
-configuration in XCode can be converted to be stand-alone as follows:
+configuration in Xcode can be converted to be stand-alone as follows:
 
 1. Copy the application bundle from the "build/Release" directory in
    your project directory.
@@ -147,3 +86,27 @@ configuration in XCode can be converted to be stand-alone as follows:
    and make the necessary modifications.
 
 3. Ship it!
+
+
+Known issues
+------------
+
+* This is all still in the beta stage.
+
+* The binaries are not universal, but Intel only. Building proper
+  universal binaries of the GTK+ binaries is hard and not fully
+  automated yet. We hope to provide proper universal binaries at some
+  later point, but as time goes on this is less and less important.
+
+* Translations are not yet included.
+
+* The binaries do still contain debugging information. This debugging
+  information is only of use to get proper stack traces at this
+  moment. At some later point we might decide to ship with stripped
+  binaries.
+
+* A script/application to transform the application created with Xcode
+  to a stand-alone binary (with the framework included inside) has not
+  yet been included. We are still investigating what the best way is
+  to include this. At some later point this will appear as a small
+  application or as a separate target in Xcode.
