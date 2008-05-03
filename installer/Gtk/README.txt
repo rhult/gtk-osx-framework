@@ -30,7 +30,7 @@ GTK+:
   jpeg 6b
 
 
-The frameworks are developer versions with debugging symbols and the necessary setup for building both Xcode projects and "autotools" projects against them. See:
+The frameworks are developer versions with debugging symbols and the necessary setup for building both Xcode projects and "autotools" projects against them. Note that Xcode 2.5 or later is needed. See:
 
   http://developer.imendio.com/projects/gtk-osx for more information.
 

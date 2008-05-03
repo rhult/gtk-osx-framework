@@ -7,8 +7,8 @@ The files that are found in this repository can be used to create a
 proper GTK+ SDK for Mac OS X, using the 10.4 (Tiger) SDK. This means
 that the resulting frameworks will work on Tiger and later. The
 frameworks are built after common Mac standards and integrates with
-the system and the Xcode IDE as well as possible, while still making
-it possible to build against them using autotools.
+the system and the Xcode IDE (2.5 or newer) as well as possible, while
+still making it possible to build against them using autotools.
 
 Building and installing your own SDK using these files is not
 recommended for end-users, instead its recommended to download a
