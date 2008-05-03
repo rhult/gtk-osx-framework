@@ -4,10 +4,14 @@
 # Copyright (C) 2007, 2008 Imendio AB
 #
 
+if [ "x$framework_helpers_inited" = x ]; then
+    framework_helpers_inited=yes
+    trap do_abort SIGHUP SIGINT SIGTERM SIGQUIT SIGILL SIGTRAP SIGABRT SIGBUS 
+fi
+
 print_help()
 {
-    echo "Usage: `basename $0` <prefix>"
-    exit 1
+    do_exit 1 "Usage: `basename $0` <prefix>"
 }
 
 fix_library_prefixes()
@@ -27,28 +31,46 @@ fix_library_prefixes()
 
 	for j in $fixlibs; do
 	    new=`echo $j | sed -e s@$from@$to@`
-	    install_name_tool -change "$j" "$new" "$i" || exit 1
+	    install_name_tool -change "$j" "$new" "$i" || do_exit 1
 	done
     done
 
     popd >/dev/null
 }
 
+do_exit()
+{
+    echo -ne "\033]0;\007"
+
+    if [ "x$2" != x ]; then
+        echo $2
+    else
+        echo "Exiting."
+    fi
+
+    exit $1
+}
+
+do_abort()
+{
+    echo -ne "\033]0;\007"
+    echo "Aborting."
+    exit 1
+}
+
 init()
 {
     if [ x"$2" = x ]; then
 	print_help
-	exit 1
+	do_exit 1
     fi
 
     if [ ! -d "$2" ]; then
-	echo "The directory $2 does not exist"
-	exit 1
+	do_exit 1 "The directory $2 does not exist"
     fi
 
     if [ ! -x "$2" ]; then
-	echo "The framework in $2 is not accessible"
-	exit 1
+	do_exit 1 "The framework in $2 is not accessible"
     fi
 
     # Drop any trailing slash.
@@ -58,8 +80,7 @@ init()
     main_library="$old_prefix/lib/$3"
 
     if [ ! -x "$main_library" ]; then
-	echo "Required library $main_library does not exist."
-	exit 1
+	do_exit 1 "Required library $main_library does not exist."
     fi
 
     framework_name="$1"
@@ -68,11 +89,11 @@ init()
     new_prefix="$framework/Libraries"
 
     if [ -x $framework ]; then
-	echo "Framework directory already exists; bailing out."
-	exit 1
+	do_exit 1 "Framework directory already exists."
     fi
 
     echo "Creating $framework_name.framework skeleton..."
+    echo -ne "\033]0;Creating $framework_name.framework\007"
 
     mkdir -p "$framework"
     mkdir "$framework"/Libraries
@@ -88,7 +109,7 @@ copy_main_library()
 
     cp $main_library "$framework"/Libraries/
     newid=`echo "$main_library" | sed -e "s@$old_prefix/lib@$new_prefix@"`
-    install_name_tool -id "$newid" "$newid" || exit 1
+    install_name_tool -id "$newid" "$newid" || do_exit 1
 }
 
 symlink_framework_library()
@@ -99,7 +120,7 @@ symlink_framework_library()
     # form "libfoo.dylib". The pkg-config file points to this
     # directory and library.
     mkdir -p "$framework"/Resources/dev/lib
-    ln -s "$framework"/$framework_name "$framework"/Resources/dev/lib/lib$framework_name.dylib || exit 1
+    ln -s "$framework"/$framework_name "$framework"/Resources/dev/lib/lib$framework_name.dylib || do_exit 1
 }
 
 copy_single_main_library()
@@ -108,7 +129,7 @@ copy_single_main_library()
 
     cp $main_library "$framework"/$framework_name
     newid="$framework"/$framework_name
-    install_name_tool -id "$newid" "$newid" || exit 1
+    install_name_tool -id "$newid" "$newid" || do_exit 1
 
     symlink_framework_library
 }
@@ -136,7 +157,7 @@ resolve_dependencies()
 	    newid=`otool -L "$framework"/Libraries/$j 2>/dev/null | fgrep compatibility | grep $libname | cut -d\( -f1`
 	    newid=`echo $newid | sed -e "s@$old_prefix/lib@$new_prefix@"`
 
-	    install_name_tool -id "$newid" "$framework"/Libraries/"$j" || exit 1
+	    install_name_tool -id "$newid" "$framework"/Libraries/"$j" || do_exit 1
 	done
 
 	nnfiles=`ls "$framework"/Libraries/*dylib 2>/dev/null| wc -l`;
@@ -176,8 +197,8 @@ build_framework_library()
     pushd . >/dev/null
     cd src
 
-    MACOSX_DEPLOYMENT_TARGET=10.4 make $framework_name >/dev/null || exit 1
-    mv $framework_name "$framework"/$framework_name || exit 1
+    MACOSX_DEPLOYMENT_TARGET=10.4 make $framework_name >/dev/null || do_exit 1
+    mv $framework_name "$framework"/$framework_name || do_exit 1
 
     popd >/dev/null
 
@@ -193,8 +214,7 @@ copy_headers()
         shift 1
 
         if [ "x$1" == x ]; then
-            echo "Wrong number of arguments, need pairs of from/to paths"
-            exit 1
+            do_exit 1 "Wrong number of arguments, need pairs of from/to paths"
         fi
 
         tail=$1
@@ -223,7 +243,7 @@ copy_dev_executables()
 	    for j in $fixlibs; do
                 # Also change any references to the renamed gdk-pixbuf library.
 	        new=`echo $j | sed -e s@$old_prefix/lib@$new_prefix@ -e s@libgdk_pixbuf-@libgdk-pixbuf-@`
-	        install_name_tool -change "$j" "$new" "$framework"/Resources/dev/bin/"$i" || exit 1
+	        install_name_tool -change "$j" "$new" "$framework"/Resources/dev/bin/"$i" || do_exit 1
 	    done
         fi
     done

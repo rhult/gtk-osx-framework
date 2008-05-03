@@ -43,7 +43,7 @@ copy_gettext_executables()
             fixlibs=`otool -L "$full_path" 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib`
 	    for j in $fixlibs; do
 	        new=`echo $j | sed -e s@$old_prefix/lib/libgettextsrc-0.16.dylib@$framework/Resources/dev/lib/libgettextsrc-0.16.dylib@ -e s@$old_prefix/lib/libgettextlib-0.16.dylib@$framework/Resources/dev/lib/libgettextlib-0.16.dylib@ -e s@$old_prefix/lib@$new_prefix@`
-	        install_name_tool -change "$j" "$new" "$dest"/$exe || exit 1
+	        install_name_tool -change "$j" "$new" "$dest"/$exe || do_exit 1
 	    done
         fi
     done
@@ -101,7 +101,7 @@ copy_pc_files "gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-exp
 build_framework_library
 
 # Special-case libintl so that dependencies don't pick it up.
-ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || exit 1
+ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || do_exit 1
 
 # Copy executables.
 copy_dev_executables glib-genmarshal glib-gettextize glib-mkenums

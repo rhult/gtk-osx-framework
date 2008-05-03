@@ -9,7 +9,7 @@
 # over the normally installed versions.
 #
 # Note that the default is to run "make clean" since otherwise we will
-# still link against the same old installation.
+# still might link against the old non-framework installations.
 #
 # Also note that it is assumed that everything up to before glib is
 # built already, with the cfw-10.4 configuration.

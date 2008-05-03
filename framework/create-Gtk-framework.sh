@@ -104,8 +104,8 @@ if [ x$SKIP_THEMES = x ]; then
 
     cp -r "$old_prefix"/share/icons/hicolor "$framework"/Resources/share/icons/
     cp -r "$old_prefix"/share/icons/gnome "$framework"/Resources/share/icons/
-    "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/hicolor 2>/dev/null
-    "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/gnome 2>/dev/null
+    "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/hicolor 2>/dev/null || do_exit 1 "Could not update icon cache. Exiting."
+    "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/gnome 2>/dev/null || do_exit 1 "Could not update icon cache. Exiting."
 
     #cp -r "$old_prefix"/share/icons/Tango "$framework"/Resources/share/icons/
     #"$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/Tango 2>/dev/null
