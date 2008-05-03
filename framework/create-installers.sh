@@ -17,7 +17,7 @@ for framework in `ls -d *.framework`; do
 
         package_name=`head -1 ../installer/$framework_name/package-name`
 
-        echo "Creating installer..."
+        echo "Creating installer for $framework_name..."
         /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc -o "$package_name.mpkg"
     fi
 done
