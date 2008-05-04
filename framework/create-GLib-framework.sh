@@ -60,10 +60,11 @@ copy_intltool()
     for exe in $execs; do
         full_path="$old_prefix"/bin/$exe
         cp "$full_path" "$dest"
+        update_dev_file "$dest"/$exe
     done
 
-    mkdir -p "$framework"/Resources/dev/share/intltool
-    cp "$old_prefix"/share/intltool/Makefile.in.in "$framework"/Resources/dev/share/intltool
+    mkdir -p "$framework"/Resources/dev/share
+    cp -r "$old_prefix"/share/intltool "$framework"/Resources/dev/share/
 }
 
 # Do initial setup.
@@ -103,8 +104,9 @@ build_framework_library
 # Special-case libintl so that dependencies don't pick it up.
 ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || do_exit 1
 
-# Copy executables.
+# Copy glib executables.
 copy_dev_executables glib-genmarshal glib-gettextize glib-mkenums
+update_dev_file "$framework"/Resources/dev/bin/glib-gettextize
 
 # Gettext binaries are handled specially, since they are only used for
 # development but also needs libraries.
@@ -112,7 +114,11 @@ copy_gettext_libraries
 fix_library_prefixes "$framework"/Resources/dev/lib
 copy_gettext_executables
 
-# Intltool also get special treatment.
+# Copy gettext data.
+mkdir -p "$framework"/Resources/dev/share
+cp -r "$old_prefix"/share/glib-2.0 "$framework"/Resources/dev/share/
+
+# Copy intltool scripts and data.
 copy_intltool
 
 # Copy aclocal macros.

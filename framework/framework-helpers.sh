@@ -261,3 +261,15 @@ copy_aclocal_macros()
     done
 }
 
+update_dev_file()
+{
+    file=$1
+
+    if [ ! -f "$file" ]; then
+        return
+    fi
+
+    sed -e "s,$old_prefix,$framework/Resources/dev," "$file" > "$file.tmp" || do_exit 1
+    mv "$file.tmp" "$file"
+}
+

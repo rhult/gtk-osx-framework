@@ -75,6 +75,14 @@ for lib in $libs; do
     done
 done
 
+echo "Update dev symlinks..."
+tmp=/Library/Frameworks/$framework_name.framework/$framework_name
+ln -shf $tmp "$framework"/Resources/dev/lib/lib$framework_name.dylib || exit 1
+# Handle glib's intl library here as well...
+if [ -f "$framework"/Resources/dev/lib/libintl.dylib ]; then
+    ln -shf $tmp "$framework"/Resources/dev/lib/libintl.dylib 2>/dev/null
+fi
+
 echo "Update library references in executables..."
 execs=`find "$framework"/Resources/dev/bin 2>/dev/null`
 for exe in $execs; do
@@ -87,10 +95,16 @@ for exe in $execs; do
     fi
 done
 
+
+
+# Handle some known locations, if we need to add lots more we can make
+# it more generic.
 echo "Update config files..."
 update_config_file "$framework"/Resources/etc/pango/pango.modules
 update_config_file "$framework"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
 update_config_file "$framework"/Resources/etc/gtk-2.0/gtk.immodules
+update_config_file "$framework"/Resources/dev/bin/glib-gettextize
+update_config_file "$framework"/Resources/dev/bin/intltoolize
 
 echo "Update pkg-config files..."
 files=`ls "$framework"/Resources/dev/lib/pkgconfig/*.pc`
