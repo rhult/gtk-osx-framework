@@ -271,5 +271,8 @@ update_dev_file()
 
     sed -e "s,$old_prefix,$framework/Resources/dev," "$file" > "$file.tmp" || do_exit 1
     mv "$file.tmp" "$file"
-}
 
+    if echo "$file" | grep "/dev/bin/" >/dev/null; then
+        chmod +x $file
+    fi
+}

@@ -13,7 +13,7 @@ print_help()
 
 update_config_file()
 {
-    local file=$1
+    file=$1
 
     if [ ! -f "$file" ]; then
         return
@@ -21,6 +21,10 @@ update_config_file()
 
     sed -e "s,$old_root,$new_root," "$file" > "$file.tmp" || exit 1
     mv "$file.tmp" "$file"
+
+    if echo "$file" | grep "/dev/bin/" >/dev/null; then
+        chmod +x $file
+    fi
 }
 
 # Verify framework path.

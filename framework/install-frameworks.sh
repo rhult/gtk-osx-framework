@@ -13,5 +13,5 @@ for framework in `ls -d *.framework`; do
     ./prepare-for-system.sh $framework
 
     rm -r /Library/Frameworks/$basename 2>/dev/null
-    cp -r $framework /Library/Frameworks
+    cp -R $framework /Library/Frameworks
 done
