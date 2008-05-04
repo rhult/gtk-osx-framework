@@ -5,7 +5,7 @@
 # across versions.
 
 developer="$HOME/Library/Application Support/Developer"
-templates="$developer/Shared/Xcode/Project Templates"
+templates="$developer/Shared/Xcode/Project Templates/Application"
 
 mkdir -p "$templates"
 chown -R $USER "$developer"
