@@ -34,4 +34,4 @@ The frameworks are developer versions with debugging symbols and the necessary s
 
   http://developer.imendio.com/projects/gtk-osx for more information.
 
-Note that this package is still in a beta phase. Tools to produce standalone app bundles using those frameworks will be provided later.
+Note that this package is still in a beta phase, in particular, the exact selection of libraries and tools included in the frameworks might change in the next version. Therefore it is best not to distribute the frameworks as standalone frameworks, but only included inside application bundles for now. Tools to produce standalone app bundles using those frameworks will be provided later.
