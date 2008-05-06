@@ -11,8 +11,9 @@
 # Note that the default is to run "make clean" since otherwise we will
 # still might link against the old non-framework installations.
 #
-# Also note that it is assumed that everything up to before glib is
-# built already, with the cfw-10.4 configuration.
+# Also note that it is assumed that the cfw-10.4 jhbuild configuration
+# has been used to build everything needed before this script is
+# started (JHB=cfw-10.4 jhbuild bootstrap; jhbuild build).
 #
 
 # Use the right configuration for jhbuild.
@@ -111,7 +112,7 @@ else
     modules=$all_modules
 fi
 
-create_framework GLib intltool glib
+create_framework GLib glib
 
 create_framework Cairo pixman cairo
 

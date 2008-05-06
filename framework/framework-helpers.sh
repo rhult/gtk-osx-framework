@@ -224,7 +224,7 @@ copy_headers()
 
         shift 1
 
-        cp -r "$old_prefix/$dir/$tail" "$framework/Headers/$tail"
+        cp -R "$old_prefix/$dir/$tail" "$framework/Headers/$tail"
     done
 }
 

@@ -45,14 +45,14 @@ sed -e "s@$old_prefix/lib@$framework/Resources/lib@" < "$old_prefix"/etc/gtk-2.0
 sed -e "s@$old_prefix/lib@$framework/Resources/lib@" < "$old_prefix"/etc/gtk-2.0/gtk.immodules > "$framework"/Resources/etc/gtk-2.0/gtk.immodules
 
 # Copy modules.
-cp -r "$old_prefix"/lib/gtk-2.0/2.10.0/engines/libclearlooks.so "$framework"/Resources/lib/gtk-2.0/2.10.0/engines
+cp "$old_prefix"/lib/gtk-2.0/2.10.0/engines/libclearlooks.so "$framework"/Resources/lib/gtk-2.0/2.10.0/engines
 cp "$old_prefix"/lib/gtk-2.0/2.10.0/immodules/*so "$framework"/Resources/lib/gtk-2.0/2.10.0/immodules
 cp "$old_prefix"/lib/gtk-2.0/2.10.0/loaders/*so "$framework"/Resources/lib/gtk-2.0/2.10.0/loaders
 cp "$old_prefix"/lib/gtk-2.0/2.10.0/printbackends/*so "$framework"/Resources/lib/gtk-2.0/2.10.0/printbackends
 
 # Copy mac integration library.
 echo "Copying support libraries ..."
-cp -r "$old_prefix"/lib/libigemacintegration.0.dylib "$framework"/Libraries/
+cp "$old_prefix"/lib/libigemacintegration.0.dylib "$framework"/Libraries/
 
 # Copy in any libraries we depend on.
 resolve_dependencies
@@ -102,15 +102,15 @@ if [ x$SKIP_THEMES = x ]; then
     mkdir -p "$framework"/Resources/share/icons
     mkdir -p "$framework"/Resources/share/themes
 
-    cp -r "$old_prefix"/share/icons/hicolor "$framework"/Resources/share/icons/
-    cp -r "$old_prefix"/share/icons/gnome "$framework"/Resources/share/icons/
+    cp -R "$old_prefix"/share/icons/hicolor "$framework"/Resources/share/icons/
+    cp -R "$old_prefix"/share/icons/gnome "$framework"/Resources/share/icons/
     "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/hicolor 2>/dev/null || do_exit 1 "Could not update icon cache. Exiting."
     "$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/gnome 2>/dev/null || do_exit 1 "Could not update icon cache. Exiting."
 
-    #cp -r "$old_prefix"/share/icons/Tango "$framework"/Resources/share/icons/
+    #cp -R "$old_prefix"/share/icons/Tango "$framework"/Resources/share/icons/
     #"$old_prefix"/bin/gtk-update-icon-cache -f "$framework"/Resources/share/icons/Tango 2>/dev/null
 
-    cp -r "$old_prefix"/share/themes/Clearlooks "$framework"/Resources/share/themes
+    cp -R "$old_prefix"/share/themes/Clearlooks "$framework"/Resources/share/themes
 else
     echo "Skipping theme data ..."
 fi

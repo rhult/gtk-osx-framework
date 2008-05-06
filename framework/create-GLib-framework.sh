@@ -64,7 +64,7 @@ copy_intltool()
     done
 
     mkdir -p "$framework"/Resources/dev/share
-    cp -r "$old_prefix"/share/intltool "$framework"/Resources/dev/share/
+    cp -R "$old_prefix"/share/intltool "$framework"/Resources/dev/share/
 }
 
 # Do initial setup.
@@ -116,7 +116,7 @@ copy_gettext_executables
 
 # Copy gettext data.
 mkdir -p "$framework"/Resources/dev/share
-cp -r "$old_prefix"/share/glib-2.0 "$framework"/Resources/dev/share/
+cp -R "$old_prefix"/share/glib-2.0 "$framework"/Resources/dev/share/
 
 # Copy intltool scripts and data.
 copy_intltool
