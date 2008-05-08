@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Gtk</string>
 	<key>CFBundleGetInfoString</key>
-	<string>GTK+ Quartz Framework 2.12</string>
+	<string>GTK+ Quartz Framework 2.13</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.gtk.framework</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,10 +17,10 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.12</string>
+	<string>2.13</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2.12</string>
+	<string>2.13</string>
 </dict>
 </plist>
