@@ -116,7 +116,8 @@ create_framework GLib glib
 
 create_framework Cairo pixman cairo
 
-create_framework Gtk atk pango gtk+ gtk-engines ige-mac-integration
+# gnome-icon-theme requires gettext, that's why we build it here.
+create_framework Gtk gnome-icon-theme atk pango gtk+ gtk-engines ige-mac-integration
 
 create_framework Libglade libglade
 

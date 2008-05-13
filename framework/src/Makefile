@@ -32,6 +32,7 @@ GLIB_LIBS = \
 	-lintl.8			\
 	-liconv				\
 	-lglib-2.0.0			\
+	-lgio-2.0.0			\
 	-lgobject-2.0.0			\
 	-lgmodule-2.0.0			\
 	-lgthread-2.0.0
@@ -39,6 +40,7 @@ GLIB_LIBS = \
 GLIB_SUBLIBS = \
 	-sub_library libintl		\
 	-sub_library libglib-2		\
+	-sub_library libgio-2		\
 	-sub_library libgobject-2	\
 	-sub_library libgmodule-2	\
 	-sub_library libgthread-2
