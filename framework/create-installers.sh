@@ -45,6 +45,7 @@ for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
         # Copy the template and resize the copy so the contents will fit.
         cp $dirname/template.dmg.sparseimage "$image_filename".sparseimage
 
+        # Get the needed size with some margin.
         size=`du -sk "$package_filename" | cut -f1`
         size=`expr $size + 1024`
 
@@ -56,6 +57,7 @@ for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
 
         mount=`mktemp -d -t crdmg`
 
+        # Try to exit cleanly...
         trap do_abort SIGHUP SIGINT SIGTERM SIGQUIT SIGILL SIGTRAP SIGABRT SIGBUS
 
         # Mount the image.
@@ -78,12 +80,12 @@ for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
         rm "$image_filename".sparseimage
     else
         echo "Not using template."
-        hdiutil create -format UDRO -quiet -srcfolder "$package_filename" "$image_filename" || exit $?
+        hdiutil create -format UDRO -quiet -srcfolder "$package_filename" -volname "$package_name" "$image_filename" || exit $?
     fi
 done
 
 
 # Create template:
-# hdiutil create -size 512k -layout NONE -fs 'HFS+' -type "SPARSE" -volname "Test" template.dmg
+# hdiutil create -size 512k -layout NONE -fs 'HFS+' -type "SPARSE" -volname "Name here..." template.dmg
 # Open it, drag in background.png, set size, background, icon size, text size.
 # Unmount.
