@@ -47,7 +47,7 @@ for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
 
         # Get the needed size with some margin.
         size=`du -sk "$package_filename" | cut -f1`
-        size=`expr $size + 1024`
+        size=`expr $size + 2048`
 
         # Unmount any previous failed attempts.
         unmount crdmg
@@ -74,7 +74,7 @@ for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
         unmount crdmg
 
         # Convert to normal readonly image.
-        echo "Convert to final image."
+        echo "Convert to final image..."
         rm -f "$image_filename"
         hdiutil convert "$image_filename".sparseimage -format UDRO -quiet -o "$image_filename"
         rm "$image_filename".sparseimage
