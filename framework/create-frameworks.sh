@@ -19,7 +19,7 @@
 # Use the right configuration for jhbuild.
 export JHB=cfw-10.4
 
-all_modules="GLib Cairo Gtk Libglade Loudmouth"
+all_modules="GLib Cairo Gtk Libglade Loudmouth WebKitGtk"
 
 PREFIX=`jhbuild getenv JHBUILD_PREFIX`
 case "$PREFIX" in
@@ -122,3 +122,5 @@ create_framework Gtk gnome-icon-theme atk pango gtk+ gtk-engines ige-mac-integra
 create_framework Libglade libglade
 
 create_framework Loudmouth loudmouth
+
+create_framework WebKitGtk WebKit
