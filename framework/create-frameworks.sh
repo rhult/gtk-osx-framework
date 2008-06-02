@@ -99,15 +99,19 @@ shift $(($OPTIND - 1))
 modules=$*
 
 if [ "x$modules" != x ]; then
-    tmp=$modules
-    for m in $all_modules; do
-        tmp=`echo $tmp | sed -e "s/$m//"`
+    for m in $modules; do
+        found=
+        for a in $all_modules; do
+            if [ $m == $a ]; then
+                found=$m
+                break;
+            fi
+        done
+        if [ "x$found" == x ]; then
+            echo "Invalid framework: $m"
+            exit 1
+        fi
     done
-
-    if [ "x$tmp" != x ]; then
-        echo "Invalid framework names: $tmp"
-        exit 1
-    fi
 else
     modules=$all_modules
 fi
