@@ -76,12 +76,7 @@ for lib in $libs1 $libs2; do
 done
 
 # "Relink" library dependencies.
-fix_library_prefixes "$framework"/Libraries
-fix_library_prefixes "$framework"/Resources/lib/pango/1.6.0/modules
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/engines
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/immodules
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/loaders
-fix_library_prefixes "$framework"/Resources/lib/gtk-2.0/2.10.0/printbackends
+fix_library_references
 
 # Copy and update our "fake" pkgconfig files.
 copy_pc_files "atk.pc pango.pc pangocairo.pc gdk-2.0.pc gdk-quartz-2.0.pc gdk-pixbuf-2.0.pc gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc ige-mac-integration.pc"

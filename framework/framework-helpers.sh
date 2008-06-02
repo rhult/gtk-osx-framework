@@ -14,18 +14,22 @@ print_help()
     do_exit 1 "Usage: `basename $0` <prefix>"
 }
 
-fix_library_prefixes()
+fix_library_references_for_directory()
 {
-    echo "Updating library names..."
-
     directory=$1
     from="$old_prefix"/lib
     to="$new_prefix"
 
+    if [ ! -d "$directory" ]; then
+        return
+    fi
+
+    echo "Updating library names in `basename $directory`..."
+
     pushd . >/dev/null
     cd $directory
 
-    libs=`ls *{so,dylib} 2>/dev/null`
+    libs=`find . -type f -name "*.so" -o -name "*.dylib" 2>/dev/null`
     for i in $libs; do
 	fixlibs=`otool -L $i 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$from"`
 
@@ -36,6 +40,24 @@ fix_library_prefixes()
     done
 
     popd >/dev/null
+}
+
+fix_library_references()
+{
+    echo "Updating main library references..."
+
+    from="$old_prefix"/lib
+    to="$new_prefix"
+
+    library="$framework/$framework_name"
+    fixlibs=`otool -L "$library" 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$from"`
+    for j in $fixlibs; do
+	new=`echo $j | sed -e s@$from@$to@`
+	install_name_tool -change "$j" "$new" "$library" || do_exit 1
+    done
+
+    fix_library_references_for_directory "$framework"/Libraries
+    fix_library_references_for_directory "$framework"/Resources/lib
 }
 
 do_exit()

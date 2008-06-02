@@ -82,7 +82,7 @@ cp "$old_prefix"/lib/libgthread-2.0.0.dylib "$framework"/Libraries/
 resolve_dependencies
 
 # "Relink" library dependencies.
-fix_library_prefixes "$framework"/Libraries
+fix_library_references
 
 # Copy header files.
 copy_headers \
@@ -111,7 +111,7 @@ update_dev_file "$framework"/Resources/dev/bin/glib-gettextize
 # Gettext binaries are handled specially, since they are only used for
 # development but also needs libraries.
 copy_gettext_libraries
-fix_library_prefixes "$framework"/Resources/dev/lib
+fix_library_references_for_directory "$framework"/Resources/dev/lib
 copy_gettext_executables
 
 # Copy gettext data.
