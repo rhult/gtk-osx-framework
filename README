@@ -18,9 +18,8 @@ prebuilt installer.
 Steps to create a working SDK
 -----------------------------
 
-1. Build GTK+ for Mac OS X from SVN using jhbuild. You need a recent
-   version of jhbuild (2008-04-26 or newer) and the latest jhbuild
-   setup from:
+1. Bootstrap and build the dependencies. You need a recent version of
+   jhbuild and latest jhbuild setup from:
 
    http://developer.imendio.com/projects/gtk-macosx/build-instructions
 
@@ -35,17 +34,11 @@ Steps to create a working SDK
    JHB=cfw-10.4 jhbuild bootstrap
    JHB=cfw-10.4 jhbuild build
 
-   This step builds everything needed in a "normal" setup, and after
-   this is completed, you can check that GTK+ works properly by
-   running "JHB=cfw-10.4 jhbuild run gtk-demo".
-
-   It is very important that you only use this jhbuild setup for the
+   It is important that you only use this jhbuild setup for the
    framework creation. Do not attempt to use it to build anything else
    or do any manual building. Use a different setup for that.
 
-3. The next step is to rebuild the libraries that will be frameworks,
-   and rebuild everything that depends on those so they link to the
-   frameworks:
+3. The next step is to build the frameworks:
 
    cd framework
    ./create-frameworks.sh
@@ -75,6 +68,8 @@ create a new project.
 Creating stand-alone applications
 ---------------------------------
 
+NOTE: This section needs a bit of updating, and doesn't work.
+
 Applications that have been built using the "Release" build
 configuration in Xcode can be converted to be stand-alone as follows:
 
@@ -95,8 +90,7 @@ Known issues
 
 * The binaries are not universal, but Intel only. Building proper
   universal binaries of the GTK+ binaries is hard and not fully
-  automated yet. We hope to provide proper universal binaries at some
-  later point, but as time goes on this is less and less important.
+  automated yet.
 
 * Translations are not yet included.
 
