@@ -6,26 +6,26 @@ The frameworks contain the following components:
 
 GLib:
 
-  glib 2.16
+  glib 2.18.0
   gettext 0.16
-  intltool 0.39.99
+  intltool 0.40.3
 
 Cairo:
 
-  cairo 1.6.5-20080421-a2c4fd
-  pixman 0.10
-  libpng 1.2.26
+  cairo 1.7.4
+  pixman 0.11.8
+  libpng 1.2.29
 
 GTK+:
 
   gtk+ 2.13
-  pango 1.21.0
-  atk 1.22.0
-  ige-mac-integration 0.7  
-  gnome-icon-theme 2.23.0
+  pango 1.21.5
+  atk 1.23.5
+  ige-mac-integration 0.8.2
+  gnome-icon-theme 2.23.90
   hicolor-icon-theme 0.10
-  gtk-engines 2.15.0 (only Clearlooks)
-  libpng 1.2.26
+  gtk-engines 2.15.4 (only Clearlooks)
+  libpng 1.2.29
   tiff 3.8.2
   jpeg 6b
 

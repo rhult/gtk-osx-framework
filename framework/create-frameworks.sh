@@ -127,4 +127,4 @@ create_framework Libglade libglade
 
 create_framework Loudmouth loudmouth
 
-create_framework WebKitGtk WebKit
+#create_framework WebKitGtk WebKit
