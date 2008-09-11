@@ -125,6 +125,6 @@ create_framework Gtk gnome-icon-theme atk pango gtk+ gtk-engines ige-mac-integra
 
 create_framework Libglade libglade
 
-create_framework Loudmouth loudmouth
+#create_framework Loudmouth loudmouth
 
 #create_framework WebKitGtk WebKit

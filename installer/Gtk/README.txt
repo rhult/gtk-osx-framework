@@ -1,4 +1,4 @@
-GTK+ 2.13
+GTK+ 2.14
 
 This package contains three frameworks needed for developing GTK+ applications natively on Mac OS X: GLib, Cairo and GTK+.
 
@@ -18,7 +18,7 @@ Cairo:
 
 GTK+:
 
-  gtk+ 2.13
+  gtk+ 2.14.1
   pango 1.21.5
   atk 1.23.5
   ige-mac-integration 0.8.2

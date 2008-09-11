@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Cairo</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Cairo Framework 1.6.4</string>
+	<string>Cairo Framework 1.7.4</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.cairographics.framework</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,10 +17,10 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.6.4</string>
+	<string>1.7.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.6.4</string>
+	<string>1.7.4</string>
 </dict>
 </plist>
