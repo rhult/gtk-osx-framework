@@ -18,7 +18,7 @@ Cairo:
 
 GTK+:
 
-  gtk+ 2.14.1
+  gtk+ 2.14.2
   pango 1.21.5
   atk 1.23.5
   ige-mac-integration 0.8.2
