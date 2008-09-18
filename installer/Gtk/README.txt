@@ -6,14 +6,14 @@ The frameworks contain the following components:
 
 GLib:
 
-  glib 2.18.0
+  glib 2.18.1
   gettext 0.16
   intltool 0.40.3
 
 Cairo:
 
   cairo 1.7.4
-  pixman 0.11.8
+  pixman 0.12
   libpng 1.2.29
 
 GTK+:
