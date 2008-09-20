@@ -8,11 +8,11 @@ GLib:
 
   glib 2.18.1
   gettext 0.16
-  intltool 0.40.3
+  intltool 0.40.4
 
 Cairo:
 
-  cairo 1.7.4
+  cairo 1.7.6
   pixman 0.12
   libpng 1.2.29
 
@@ -22,7 +22,7 @@ GTK+:
   pango 1.21.5
   atk 1.23.5
   ige-mac-integration 0.8.2
-  gnome-icon-theme 2.23.90
+  gnome-icon-theme 2.23.92
   hicolor-icon-theme 0.10
   gtk-engines 2.15.4 (only Clearlooks)
   libpng 1.2.29
