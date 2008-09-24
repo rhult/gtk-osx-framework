@@ -32,8 +32,10 @@ do_abort()
 for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
     dirname=`dirname $pmdoc`
     package_name=`head -1 $dirname/package-name`
+    package_version=`head -1 $dirname/package-version`
     package_filename="$package_name.mpkg"
-    image_filename="$package_name.dmg"
+    #image_filename="$package_name-$package_version.dmg"
+    image_filename="`head -1 $dirname/image-filename`-$package_version.dmg"
 
     echo "Creating installer for $package_name..."
     /Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --doc $pmdoc -o "$package_filename"
