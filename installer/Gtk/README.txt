@@ -18,13 +18,13 @@ Cairo:
 
 GTK+:
 
-  gtk+ 2.14.2
-  pango 1.21.5
-  atk 1.23.5
+  gtk+ 2.14.3
+  pango 1.22.0
+  atk 1.24.0
   ige-mac-integration 0.8.2
-  gnome-icon-theme 2.23.92
+  gnome-icon-theme 2.24.0
   hicolor-icon-theme 0.10
-  gtk-engines 2.15.4 (only Clearlooks)
+  gtk-engines 2.16.0 (only Clearlooks)
   libpng 1.2.29
   tiff 3.8.2
   jpeg 6b
