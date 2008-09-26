@@ -12,7 +12,7 @@ GLib:
 
 Cairo:
 
-  cairo 1.7.6
+  cairo 1.8.0
   pixman 0.12
   libpng 1.2.29
 
