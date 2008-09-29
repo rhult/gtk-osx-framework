@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+ <TOC>
+  <Node type="folder">
+   <Name>The gdk-pixbuf Library</Name>
+   <Path>index.html</Path>
+   <Subnodes>
+    <Node id="1" type="folder">
+     <Name>API Reference</Name>
+     <Path>rn01.html</Path>
+     <Subnodes>
+      <Node id="2" type="folder">
+       <Name>Initialization and Versions</Name>
+       <Path>gdk-pixbuf-Versioning.html</Path>
+       <Subnodes>
+        <Node id="37">
+         <Name>gdk_pixbuf_version</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>gdk-pixbuf-version</Anchor>
+        </Node>
+        <Node id="38">
+         <Name>gdk_pixbuf_major_version</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>gdk-pixbuf-major-version</Anchor>
+        </Node>
+        <Node id="39">
+         <Name>gdk_pixbuf_minor_version</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>gdk-pixbuf-minor-version</Anchor>
+        </Node>
+        <Node id="40">
+         <Name>gdk_pixbuf_micro_version</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>gdk-pixbuf-micro-version</Anchor>
+        </Node>
+        <Node id="41">
+         <Name>GDK_PIXBUF_VERSION</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>GDK-PIXBUF-VERSION:CAPS</Anchor>
+        </Node>
+        <Node id="42">
+         <Name>GDK_PIXBUF_MAJOR</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>GDK-PIXBUF-MAJOR:CAPS</Anchor>
+        </Node>
+        <Node id="43">
+         <Name>GDK_PIXBUF_MINOR</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>GDK-PIXBUF-MINOR:CAPS</Anchor>
+        </Node>
+        <Node id="44">
+         <Name>GDK_PIXBUF_MICRO</Name>
+         <Path>gdk-pixbuf-Versioning.html</Path>
+         <Anchor>GDK-PIXBUF-MICRO:CAPS</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="3" type="folder">
+       <Name>The GdkPixbuf Structure</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+       <Subnodes>
+        <Node id="45">
+         <Name>GdkPixbufError</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbufError</Anchor>
+        </Node>
+        <Node id="46">
+         <Name>GDK_PIXBUF_ERROR</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GDK-PIXBUF-ERROR:CAPS</Anchor>
+        </Node>
+        <Node id="47">
+         <Name>GdkColorspace</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkColorspace</Anchor>
+        </Node>
+        <Node id="48">
+         <Name>GdkPixbufAlphaMode</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbufAlphaMode</Anchor>
+        </Node>
+        <Node id="49">
+         <Name>GdkPixbuf</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf-struct</Anchor>
+        </Node>
+        <Node id="50">
+         <Name>gdk_pixbuf_get_colorspace</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-colorspace</Anchor>
+        </Node>
+        <Node id="51">
+         <Name>gdk_pixbuf_get_n_channels</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-n-channels</Anchor>
+        </Node>
+        <Node id="52">
+         <Name>gdk_pixbuf_get_has_alpha</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-has-alpha</Anchor>
+        </Node>
+        <Node id="53">
+         <Name>gdk_pixbuf_get_bits_per_sample</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-bits-per-sample</Anchor>
+        </Node>
+        <Node id="54">
+         <Name>gdk_pixbuf_get_pixels</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-pixels</Anchor>
+        </Node>
+        <Node id="55">
+         <Name>gdk_pixbuf_get_width</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-width</Anchor>
+        </Node>
+        <Node id="56">
+         <Name>gdk_pixbuf_get_height</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-height</Anchor>
+        </Node>
+        <Node id="57">
+         <Name>gdk_pixbuf_get_rowstride</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-rowstride</Anchor>
+        </Node>
+        <Node id="58">
+         <Name>gdk_pixbuf_get_option</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>gdk-pixbuf-get-option</Anchor>
+        </Node>
+        <Node id="59">
+         <Name>The &quot;bits-per-sample&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--bits-per-sample</Anchor>
+        </Node>
+        <Node id="60">
+         <Name>The &quot;colorspace&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--colorspace</Anchor>
+        </Node>
+        <Node id="61">
+         <Name>The &quot;has-alpha&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--has-alpha</Anchor>
+        </Node>
+        <Node id="62">
+         <Name>The &quot;height&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--height</Anchor>
+        </Node>
+        <Node id="63">
+         <Name>The &quot;n-channels&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--n-channels</Anchor>
+        </Node>
+        <Node id="64">
+         <Name>The &quot;pixels&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--pixels</Anchor>
+        </Node>
+        <Node id="65">
+         <Name>The &quot;rowstride&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--rowstride</Anchor>
+        </Node>
+        <Node id="66">
+         <Name>The &quot;width&quot; property</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+         <Anchor>GdkPixbuf--width</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="4" type="folder">
+       <Name>Reference Counting and Memory Mangement</Name>
+       <Path>gdk-pixbuf-refcounting.html</Path>
+       <Subnodes>
+        <Node id="67">
+         <Name>gdk_pixbuf_ref</Name>
+         <Path>gdk-pixbuf-refcounting.html</Path>
+         <Anchor>gdk-pixbuf-ref</Anchor>
+        </Node>
+        <Node id="68">
+         <Name>gdk_pixbuf_unref</Name>
+         <Path>gdk-pixbuf-refcounting.html</Path>
+         <Anchor>gdk-pixbuf-unref</Anchor>
+        </Node>
+        <Node id="69">
+         <Name>GdkPixbufDestroyNotify</Name>
+         <Path>gdk-pixbuf-refcounting.html</Path>
+         <Anchor>GdkPixbufDestroyNotify</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="5" type="folder">
+       <Name>File Loading</Name>
+       <Path>gdk-pixbuf-file-loading.html</Path>
+       <Subnodes>
+        <Node id="70">
+         <Name>gdk_pixbuf_new_from_file</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-new-from-file</Anchor>
+        </Node>
+        <Node id="71">
+         <Name>gdk_pixbuf_new_from_file_at_size</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-new-from-file-at-size</Anchor>
+        </Node>
+        <Node id="72">
+         <Name>gdk_pixbuf_new_from_file_at_scale</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-new-from-file-at-scale</Anchor>
+        </Node>
+        <Node id="73">
+         <Name>gdk_pixbuf_get_file_info</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-get-file-info</Anchor>
+        </Node>
+        <Node id="74">
+         <Name>gdk_pixbuf_new_from_stream</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-new-from-stream</Anchor>
+        </Node>
+        <Node id="75">
+         <Name>gdk_pixbuf_new_from_stream_at_scale</Name>
+         <Path>gdk-pixbuf-file-loading.html</Path>
+         <Anchor>gdk-pixbuf-new-from-stream-at-scale</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="6" type="folder">
+       <Name>File saving</Name>
+       <Path>gdk-pixbuf-file-saving.html</Path>
+       <Subnodes>
+        <Node id="76">
+         <Name>gdk_pixbuf_savev</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-savev</Anchor>
+        </Node>
+        <Node id="77">
+         <Name>gdk_pixbuf_save</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save</Anchor>
+        </Node>
+        <Node id="78">
+         <Name>GdkPixbufSaveFunc</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>GdkPixbufSaveFunc</Anchor>
+        </Node>
+        <Node id="79">
+         <Name>gdk_pixbuf_save_to_callback</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save-to-callback</Anchor>
+        </Node>
+        <Node id="80">
+         <Name>gdk_pixbuf_save_to_callbackv</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save-to-callbackv</Anchor>
+        </Node>
+        <Node id="81">
+         <Name>gdk_pixbuf_save_to_buffer</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save-to-buffer</Anchor>
+        </Node>
+        <Node id="82">
+         <Name>gdk_pixbuf_save_to_bufferv</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save-to-bufferv</Anchor>
+        </Node>
+        <Node id="83">
+         <Name>gdk_pixbuf_save_to_stream</Name>
+         <Path>gdk-pixbuf-file-saving.html</Path>
+         <Anchor>gdk-pixbuf-save-to-stream</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="7" type="folder">
+       <Name>Image Data in Memory</Name>
+       <Path>gdk-pixbuf-creating.html</Path>
+       <Subnodes>
+        <Node id="84">
+         <Name>gdk_pixbuf_new</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-new</Anchor>
+        </Node>
+        <Node id="85">
+         <Name>gdk_pixbuf_new_from_data</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-new-from-data</Anchor>
+        </Node>
+        <Node id="86">
+         <Name>gdk_pixbuf_new_from_xpm_data</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-new-from-xpm-data</Anchor>
+        </Node>
+        <Node id="87">
+         <Name>gdk_pixbuf_new_from_inline</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-new-from-inline</Anchor>
+        </Node>
+        <Node id="88">
+         <Name>gdk_pixbuf_new_subpixbuf</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-new-subpixbuf</Anchor>
+        </Node>
+        <Node id="89">
+         <Name>gdk_pixbuf_copy</Name>
+         <Path>gdk-pixbuf-creating.html</Path>
+         <Anchor>gdk-pixbuf-copy</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="8" type="folder">
+       <Name>Inline data</Name>
+       <Path>gdk-pixbuf-inline.html</Path>
+       <Subnodes>
+        <Node id="90">
+         <Name>GdkPixdata</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>GdkPixdata</Anchor>
+        </Node>
+        <Node id="91">
+         <Name>GdkPixdataType</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>GdkPixdataType</Anchor>
+        </Node>
+        <Node id="92">
+         <Name>GdkPixdataDumpType</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>GdkPixdataDumpType</Anchor>
+        </Node>
+        <Node id="93">
+         <Name>GDK_PIXBUF_MAGIC_NUMBER</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>GDK-PIXBUF-MAGIC-NUMBER:CAPS</Anchor>
+        </Node>
+        <Node id="94">
+         <Name>GDK_PIXDATA_HEADER_LENGTH</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>GDK-PIXDATA-HEADER-LENGTH:CAPS</Anchor>
+        </Node>
+        <Node id="95">
+         <Name>gdk_pixdata_from_pixbuf</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>gdk-pixdata-from-pixbuf</Anchor>
+        </Node>
+        <Node id="96">
+         <Name>gdk_pixbuf_from_pixdata</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>gdk-pixbuf-from-pixdata</Anchor>
+        </Node>
+        <Node id="97">
+         <Name>gdk_pixdata_serialize</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>gdk-pixdata-serialize</Anchor>
+        </Node>
+        <Node id="98">
+         <Name>gdk_pixdata_deserialize</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>gdk-pixdata-deserialize</Anchor>
+        </Node>
+        <Node id="99">
+         <Name>gdk_pixdata_to_csource</Name>
+         <Path>gdk-pixbuf-inline.html</Path>
+         <Anchor>gdk-pixdata-to-csource</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="9" type="folder">
+       <Name>Scaling</Name>
+       <Path>gdk-pixbuf-scaling.html</Path>
+       <Subnodes>
+        <Node id="100">
+         <Name>GdkInterpType</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>GdkInterpType</Anchor>
+        </Node>
+        <Node id="101">
+         <Name>gdk_pixbuf_scale_simple</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-scale-simple</Anchor>
+        </Node>
+        <Node id="102">
+         <Name>gdk_pixbuf_scale</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-scale</Anchor>
+        </Node>
+        <Node id="103">
+         <Name>gdk_pixbuf_composite_color_simple</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-composite-color-simple</Anchor>
+        </Node>
+        <Node id="104">
+         <Name>gdk_pixbuf_composite</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-composite</Anchor>
+        </Node>
+        <Node id="105">
+         <Name>gdk_pixbuf_composite_color</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-composite-color</Anchor>
+        </Node>
+        <Node id="106">
+         <Name>GdkPixbufRotation</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>GdkPixbufRotation</Anchor>
+        </Node>
+        <Node id="107">
+         <Name>gdk_pixbuf_rotate_simple</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-rotate-simple</Anchor>
+        </Node>
+        <Node id="108">
+         <Name>gdk_pixbuf_flip</Name>
+         <Path>gdk-pixbuf-scaling.html</Path>
+         <Anchor>gdk-pixbuf-flip</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="10">
+       <Name>Rendering</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-rendering.html</Path>
+      </Node>
+      <Node id="11">
+       <Name>Drawables to Pixbufs</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-from-drawables.html</Path>
+      </Node>
+      <Node id="12" type="folder">
+       <Name>Utilities</Name>
+       <Path>gdk-pixbuf-util.html</Path>
+       <Subnodes>
+        <Node id="109">
+         <Name>gdk_pixbuf_add_alpha</Name>
+         <Path>gdk-pixbuf-util.html</Path>
+         <Anchor>gdk-pixbuf-add-alpha</Anchor>
+        </Node>
+        <Node id="110">
+         <Name>gdk_pixbuf_copy_area</Name>
+         <Path>gdk-pixbuf-util.html</Path>
+         <Anchor>gdk-pixbuf-copy-area</Anchor>
+        </Node>
+        <Node id="111">
+         <Name>gdk_pixbuf_saturate_and_pixelate</Name>
+         <Path>gdk-pixbuf-util.html</Path>
+         <Anchor>gdk-pixbuf-saturate-and-pixelate</Anchor>
+        </Node>
+        <Node id="112">
+         <Name>gdk_pixbuf_apply_embedded_orientation</Name>
+         <Path>gdk-pixbuf-util.html</Path>
+         <Anchor>gdk-pixbuf-apply-embedded-orientation</Anchor>
+        </Node>
+        <Node id="113">
+         <Name>gdk_pixbuf_fill</Name>
+         <Path>gdk-pixbuf-util.html</Path>
+         <Anchor>gdk-pixbuf-fill</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="13" type="folder">
+       <Name>Animations</Name>
+       <Path>gdk-pixbuf-animation.html</Path>
+       <Subnodes>
+        <Node id="114">
+         <Name>GdkPixbufAnimation</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>GdkPixbufAnimation-struct</Anchor>
+        </Node>
+        <Node id="115">
+         <Name>GdkPixbufAnimationIter</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>GdkPixbufAnimationIter-struct</Anchor>
+        </Node>
+        <Node id="116">
+         <Name>gdk_pixbuf_animation_new_from_file</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-new-from-file</Anchor>
+        </Node>
+        <Node id="117">
+         <Name>gdk_pixbuf_animation_ref</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-ref</Anchor>
+        </Node>
+        <Node id="118">
+         <Name>gdk_pixbuf_animation_unref</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-unref</Anchor>
+        </Node>
+        <Node id="119">
+         <Name>gdk_pixbuf_animation_get_width</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-get-width</Anchor>
+        </Node>
+        <Node id="120">
+         <Name>gdk_pixbuf_animation_get_height</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-get-height</Anchor>
+        </Node>
+        <Node id="121">
+         <Name>gdk_pixbuf_animation_get_iter</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-get-iter</Anchor>
+        </Node>
+        <Node id="122">
+         <Name>gdk_pixbuf_animation_is_static_image</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-is-static-image</Anchor>
+        </Node>
+        <Node id="123">
+         <Name>gdk_pixbuf_animation_get_static_image</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-get-static-image</Anchor>
+        </Node>
+        <Node id="124">
+         <Name>gdk_pixbuf_animation_iter_advance</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-iter-advance</Anchor>
+        </Node>
+        <Node id="125">
+         <Name>gdk_pixbuf_animation_iter_get_delay_time</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-iter-get-delay-time</Anchor>
+        </Node>
+        <Node id="126">
+         <Name>gdk_pixbuf_animation_iter_on_currently_loading_frame</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-iter-on-currently-loading-frame</Anchor>
+        </Node>
+        <Node id="127">
+         <Name>gdk_pixbuf_animation_iter_get_pixbuf</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-animation-iter-get-pixbuf</Anchor>
+        </Node>
+        <Node id="128">
+         <Name>GdkPixbufSimpleAnim</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>GdkPixbufSimpleAnim</Anchor>
+        </Node>
+        <Node id="129">
+         <Name>gdk_pixbuf_simple_anim_new</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-simple-anim-new</Anchor>
+        </Node>
+        <Node id="130">
+         <Name>gdk_pixbuf_simple_anim_add_frame</Name>
+         <Path>gdk-pixbuf-animation.html</Path>
+         <Anchor>gdk-pixbuf-simple-anim-add-frame</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="14" type="folder">
+       <Name>GdkPixbufLoader</Name>
+       <Path>GdkPixbufLoader.html</Path>
+       <Subnodes>
+        <Node id="131">
+         <Name>Loading an animation</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>id3115167</Anchor>
+        </Node>
+        <Node id="132">
+         <Name>GdkPixbufLoader</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>GdkPixbufLoader-struct</Anchor>
+        </Node>
+        <Node id="133">
+         <Name>gdk_pixbuf_loader_new</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-new</Anchor>
+        </Node>
+        <Node id="134">
+         <Name>gdk_pixbuf_loader_new_with_type</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-new-with-type</Anchor>
+        </Node>
+        <Node id="135">
+         <Name>gdk_pixbuf_loader_new_with_mime_type</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-new-with-mime-type</Anchor>
+        </Node>
+        <Node id="136">
+         <Name>gdk_pixbuf_loader_get_format</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-get-format</Anchor>
+        </Node>
+        <Node id="137">
+         <Name>gdk_pixbuf_loader_write</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-write</Anchor>
+        </Node>
+        <Node id="138">
+         <Name>gdk_pixbuf_loader_set_size</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-set-size</Anchor>
+        </Node>
+        <Node id="139">
+         <Name>gdk_pixbuf_loader_get_pixbuf</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-get-pixbuf</Anchor>
+        </Node>
+        <Node id="140">
+         <Name>gdk_pixbuf_loader_get_animation</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-get-animation</Anchor>
+        </Node>
+        <Node id="141">
+         <Name>gdk_pixbuf_loader_close</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>gdk-pixbuf-loader-close</Anchor>
+        </Node>
+        <Node id="142">
+         <Name>The &quot;area-prepared&quot; signal</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>GdkPixbufLoader-area-prepared</Anchor>
+        </Node>
+        <Node id="143">
+         <Name>The &quot;area-updated&quot; signal</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>GdkPixbufLoader-area-updated</Anchor>
+        </Node>
+        <Node id="144">
+         <Name>The &quot;closed&quot; signal</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>GdkPixbufLoader-closed</Anchor>
+        </Node>
+        <Node id="145">
+         <Name>The &quot;size-prepared&quot; signal</Name>
+         <Path>GdkPixbufLoader.html</Path>
+         <Anchor>GdkPixbufLoader-size-prepared</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="15" type="folder">
+       <Name>Module Interface</Name>
+       <Path>gdk-pixbuf-Module-Interface.html</Path>
+       <Subnodes>
+        <Node id="146">
+         <Name>gdk_pixbuf_set_option</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-set-option</Anchor>
+        </Node>
+        <Node id="147">
+         <Name>gdk_pixbuf_get_formats</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-get-formats</Anchor>
+        </Node>
+        <Node id="148">
+         <Name>gdk_pixbuf_format_get_name</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-get-name</Anchor>
+        </Node>
+        <Node id="149">
+         <Name>gdk_pixbuf_format_get_description</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-get-description</Anchor>
+        </Node>
+        <Node id="150">
+         <Name>gdk_pixbuf_format_get_mime_types</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-get-mime-types</Anchor>
+        </Node>
+        <Node id="151">
+         <Name>gdk_pixbuf_format_get_extensions</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-get-extensions</Anchor>
+        </Node>
+        <Node id="152">
+         <Name>gdk_pixbuf_format_is_writable</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-is-writable</Anchor>
+        </Node>
+        <Node id="153">
+         <Name>gdk_pixbuf_format_is_scalable</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-is-scalable</Anchor>
+        </Node>
+        <Node id="154">
+         <Name>gdk_pixbuf_format_is_disabled</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-is-disabled</Anchor>
+        </Node>
+        <Node id="155">
+         <Name>gdk_pixbuf_format_set_disabled</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-set-disabled</Anchor>
+        </Node>
+        <Node id="156">
+         <Name>gdk_pixbuf_format_get_license</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>gdk-pixbuf-format-get-license</Anchor>
+        </Node>
+        <Node id="157">
+         <Name>GdkPixbufFormat</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufFormat</Anchor>
+        </Node>
+        <Node id="158">
+         <Name>GdkPixbufFormatFlags</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufFormatFlags</Anchor>
+        </Node>
+        <Node id="159">
+         <Name>GdkPixbufModulePattern</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModulePattern</Anchor>
+        </Node>
+        <Node id="160">
+         <Name>GdkPixbufModuleFillVtableFunc</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModuleFillVtableFunc</Anchor>
+        </Node>
+        <Node id="161">
+         <Name>GdkPixbufModuleFillInfoFunc</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModuleFillInfoFunc</Anchor>
+        </Node>
+        <Node id="162">
+         <Name>GdkPixbufModuleSizeFunc</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModuleSizeFunc</Anchor>
+        </Node>
+        <Node id="163">
+         <Name>GdkPixbufModulePreparedFunc</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModulePreparedFunc</Anchor>
+        </Node>
+        <Node id="164">
+         <Name>GdkPixbufModuleUpdatedFunc</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModuleUpdatedFunc</Anchor>
+        </Node>
+        <Node id="165">
+         <Name>GdkPixbufModule</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufModule</Anchor>
+        </Node>
+        <Node id="166">
+         <Name>GdkPixbufAnimationClass</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufAnimationClass</Anchor>
+        </Node>
+        <Node id="167">
+         <Name>GdkPixbufAnimationIterClass</Name>
+         <Path>gdk-pixbuf-Module-Interface.html</Path>
+         <Anchor>GdkPixbufAnimationIterClass</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="16" type="folder">
+       <Name>gdk-pixbuf Xlib initialization</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-xlib-init.html</Path>
+       <Subnodes>
+        <Node id="168">
+         <Name>gdk_pixbuf_xlib_init</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-init.html</Path>
+         <Anchor>gdk-pixbuf-xlib-init</Anchor>
+        </Node>
+        <Node id="169">
+         <Name>gdk_pixbuf_xlib_init_with_depth</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-init.html</Path>
+         <Anchor>gdk-pixbuf-xlib-init-with-depth</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="17" type="folder">
+       <Name>Xlib Rendering</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+       <Subnodes>
+        <Node id="170">
+         <Name>gdk_pixbuf_xlib_render_threshold_alpha</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+         <Anchor>gdk-pixbuf-xlib-render-threshold-alpha</Anchor>
+        </Node>
+        <Node id="171">
+         <Name>gdk_pixbuf_xlib_render_to_drawable</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+         <Anchor>gdk-pixbuf-xlib-render-to-drawable</Anchor>
+        </Node>
+        <Node id="172">
+         <Name>gdk_pixbuf_xlib_render_to_drawable_alpha</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+         <Anchor>gdk-pixbuf-xlib-render-to-drawable-alpha</Anchor>
+        </Node>
+        <Node id="173">
+         <Name>gdk_pixbuf_xlib_render_pixmap_and_mask</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+         <Anchor>gdk-pixbuf-xlib-render-pixmap-and-mask</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="18" type="folder">
+       <Name>X Drawables to Pixbufs</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-xlib-from-drawables.html</Path>
+       <Subnodes>
+        <Node id="174">
+         <Name>gdk_pixbuf_xlib_get_from_drawable</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-from-drawables.html</Path>
+         <Anchor>gdk-pixbuf-xlib-get-from-drawable</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="19" type="folder">
+       <Name>XlibRGB</Name>
+       <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+       <Subnodes>
+        <Node id="175">
+         <Name>XlibRgbCmap</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>XlibRgbCmap</Anchor>
+        </Node>
+        <Node id="176">
+         <Name>XlibRgbDither</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>XlibRgbDither</Anchor>
+        </Node>
+        <Node id="177">
+         <Name>xlib_rgb_init</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-init</Anchor>
+        </Node>
+        <Node id="178">
+         <Name>xlib_rgb_init_with_depth</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-init-with-depth</Anchor>
+        </Node>
+        <Node id="179">
+         <Name>xlib_rgb_xpixel_from_rgb</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-xpixel-from-rgb</Anchor>
+        </Node>
+        <Node id="180">
+         <Name>xlib_rgb_gc_set_foreground</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-gc-set-foreground</Anchor>
+        </Node>
+        <Node id="181">
+         <Name>xlib_rgb_gc_set_background</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-gc-set-background</Anchor>
+        </Node>
+        <Node id="182">
+         <Name>xlib_draw_rgb_image</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-draw-rgb-image</Anchor>
+        </Node>
+        <Node id="183">
+         <Name>xlib_draw_rgb_image_dithalign</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-draw-rgb-image-dithalign</Anchor>
+        </Node>
+        <Node id="184">
+         <Name>xlib_draw_rgb_32_image</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-draw-rgb-32-image</Anchor>
+        </Node>
+        <Node id="185">
+         <Name>xlib_draw_gray_image</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-draw-gray-image</Anchor>
+        </Node>
+        <Node id="186">
+         <Name>xlib_rgb_cmap_new</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-cmap-new</Anchor>
+        </Node>
+        <Node id="187">
+         <Name>xlib_rgb_cmap_free</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-cmap-free</Anchor>
+        </Node>
+        <Node id="188">
+         <Name>xlib_draw_indexed_image</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-draw-indexed-image</Anchor>
+        </Node>
+        <Node id="189">
+         <Name>xlib_rgb_ditherable</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-ditherable</Anchor>
+        </Node>
+        <Node id="190">
+         <Name>xlib_rgb_set_verbose</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-set-verbose</Anchor>
+        </Node>
+        <Node id="191">
+         <Name>xlib_rgb_set_install</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-set-install</Anchor>
+        </Node>
+        <Node id="192">
+         <Name>xlib_rgb_set_min_colors</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-set-min-colors</Anchor>
+        </Node>
+        <Node id="193">
+         <Name>xlib_rgb_get_cmap</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-cmap</Anchor>
+        </Node>
+        <Node id="194">
+         <Name>xlib_rgb_get_visual</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-visual</Anchor>
+        </Node>
+        <Node id="195">
+         <Name>xlib_rgb_get_visual_info</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-visual-info</Anchor>
+        </Node>
+        <Node id="196">
+         <Name>xlib_rgb_get_depth</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-depth</Anchor>
+        </Node>
+        <Node id="197">
+         <Name>xlib_rgb_get_display</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-display</Anchor>
+        </Node>
+        <Node id="198">
+         <Name>xlib_rgb_get_screen</Name>
+         <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+         <Anchor>xlib-rgb-get-screen</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="20" type="folder">
+     <Name>Tools Reference</Name>
+     <Path>rn02.html</Path>
+     <Subnodes>
+      <Node id="21" type="folder">
+       <Name>gdk-pixbuf-csource</Name>
+       <Path>gdk-pixbuf-csource.html</Path>
+       <Subnodes>
+        <Node id="199">
+         <Name>Options</Name>
+         <Path>gdk-pixbuf-csource.html</Path>
+         <Anchor>id3094265</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="22">
+       <Name>gdk-pixbuf-query-loaders</Name>
+       <Path>gdk-pixbuf-query-loaders.html</Path>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="32" type="folder">
+     <Name>Porting applications from Imlib to gdk-pixbuf</Name>
+     <Path>apa.html</Path>
+     <Subnodes>
+      <Node id="33">
+       <Name>Introduction</Name>
+       <Path>apa.html#id3109251</Path>
+      </Node>
+      <Node id="34">
+       <Name>Differences between Imlib and gdk-pixbuf</Name>
+       <Path>apas02.html</Path>
+      </Node>
+      <Node id="35">
+       <Name>Converting Applications to gdk-pixbuf</Name>
+       <Path>apas03.html</Path>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="36">
+     <Name>License</Name>
+     <Path>license.html</Path>
+    </Node>
+    <Node id="0" type="folder">
+     <Name>Index</Name>
+     <Subnodes>
+      <Node id="23">
+       <Name>Index of all symbols</Name>
+       <Path>api-index-full.html</Path>
+      </Node>
+      <Node id="24">
+       <Name>Index of deprecated symbols</Name>
+       <Path>api-index-deprecated.html</Path>
+      </Node>
+      <Node id="25">
+       <Name>Index of new symbols in 2.2</Name>
+       <Path>api-index-2-2.html</Path>
+      </Node>
+      <Node id="26">
+       <Name>Index of new symbols in 2.4</Name>
+       <Path>api-index-2-4.html</Path>
+      </Node>
+      <Node id="27">
+       <Name>Index of new symbols in 2.6</Name>
+       <Path>api-index-2-6.html</Path>
+      </Node>
+      <Node id="28">
+       <Name>Index of new symbols in 2.8</Name>
+       <Path>api-index-2-8.html</Path>
+      </Node>
+      <Node id="29">
+       <Name>Index of new symbols in 2.10</Name>
+       <Path>api-index-2-10.html</Path>
+      </Node>
+      <Node id="30">
+       <Name>Index of new symbols in 2.12</Name>
+       <Path>api-index-2-12.html</Path>
+      </Node>
+      <Node id="31">
+       <Name>Index of new symbols in 2.14</Name>
+       <Path>api-index-2-14.html</Path>
+      </Node>
+     </Subnodes>
+    </Node>
+   </Subnodes>
+  </Node>
+ </TOC>
+</DocSetNodes>

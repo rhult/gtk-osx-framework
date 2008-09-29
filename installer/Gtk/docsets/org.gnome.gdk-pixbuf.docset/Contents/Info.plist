@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist
+PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+       "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+ <dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleIdentifier</key>
+  <string>org.gnome.gdk-pixbuf.docset</string>
+  <key>CFBundleName</key>
+  <string>The gdk-pixbuf Library</string>
+  <key>CFBundleShortVersionString</key>
+  <string>2.14.3</string>
+  <key>CFBundleVersion</key>
+  <string>2.14.3</string>
+  <key>DocSetMinimumXcodeVersion</key>
+  <string>3.0</string>
+  <key>NSHumanReadableCopyright</key>
+  <string>Copyright © 2005-2008 The GNOME Project</string>
+  <key>DocSetFeedName</key>
+  <string>GNOME Reference Library</string>
+ </dict>
+</plist>

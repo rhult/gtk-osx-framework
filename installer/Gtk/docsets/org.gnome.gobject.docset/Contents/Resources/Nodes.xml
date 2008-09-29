@@ -1,0 +1,3460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+ <TOC>
+  <Node type="folder">
+   <Name>GObject Reference Manual</Name>
+   <Path>index.html</Path>
+   <Subnodes>
+    <Node id="1">
+     <Name>Introduction</Name>
+     <Path>pr01.html</Path>
+    </Node>
+    <Node id="2" type="folder">
+     <Name>Concepts</Name>
+     <Path>pt01.html</Path>
+     <Subnodes>
+      <Node id="3" type="folder">
+       <Name>Background</Name>
+       <Path>chapter-intro.html</Path>
+       <Subnodes>
+        <Node id="4">
+         <Name>Data types and programming</Name>
+         <Path>chapter-intro.html#id2601143</Path>
+        </Node>
+        <Node id="5">
+         <Name>Exporting a C API</Name>
+         <Path>ch01s02.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="6" type="folder">
+       <Name>The GLib Dynamic Type System</Name>
+       <Path>chapter-gtype.html</Path>
+       <Subnodes>
+        <Node id="7">
+         <Name>Copy functions</Name>
+         <Path>chapter-gtype.html#gtype-copy</Path>
+        </Node>
+        <Node id="8">
+         <Name>Conventions</Name>
+         <Path>gtype-conventions.html</Path>
+        </Node>
+        <Node id="9">
+         <Name>Non-instantiable non-classed fundamental types</Name>
+         <Path>gtype-non-instantiable.html</Path>
+        </Node>
+        <Node id="10">
+         <Name>Instantiable classed types: objects</Name>
+         <Path>gtype-instantiable-classed.html</Path>
+        </Node>
+        <Node id="11">
+         <Name>Non-instantiable classed types: interfaces</Name>
+         <Path>gtype-non-instantiable-classed.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="12" type="folder">
+       <Name>The GObject base class</Name>
+       <Path>chapter-gobject.html</Path>
+       <Subnodes>
+        <Node id="13">
+         <Name>Object instantiation</Name>
+         <Path>chapter-gobject.html#gobject-instantiation</Path>
+        </Node>
+        <Node id="14">
+         <Name>Object memory management</Name>
+         <Path>gobject-memory.html</Path>
+        </Node>
+        <Node id="15">
+         <Name>Object properties</Name>
+         <Path>gobject-properties.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="16" type="folder">
+       <Name>The GObject messaging system</Name>
+       <Path>chapter-signal.html</Path>
+       <Subnodes>
+        <Node id="17">
+         <Name>Closures</Name>
+         <Path>chapter-signal.html#closure</Path>
+        </Node>
+        <Node id="18">
+         <Name>Signals</Name>
+         <Path>signal.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="19" type="folder">
+     <Name>API Reference</Name>
+     <Path>rn01.html</Path>
+     <Subnodes>
+      <Node id="20" type="folder">
+       <Name>Type Information</Name>
+       <Path>gobject-Type-Information.html</Path>
+       <Subnodes>
+        <Node id="68">
+         <Name>GType</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GType</Anchor>
+        </Node>
+        <Node id="69">
+         <Name>G_TYPE_FUNDAMENTAL</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FUNDAMENTAL:CAPS</Anchor>
+        </Node>
+        <Node id="70">
+         <Name>G_TYPE_FUNDAMENTAL_MAX</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FUNDAMENTAL-MAX:CAPS</Anchor>
+        </Node>
+        <Node id="71">
+         <Name>G_TYPE_MAKE_FUNDAMENTAL</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-MAKE-FUNDAMENTAL:CAPS</Anchor>
+        </Node>
+        <Node id="72">
+         <Name>G_TYPE_IS_ABSTRACT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-ABSTRACT:CAPS</Anchor>
+        </Node>
+        <Node id="73">
+         <Name>G_TYPE_IS_DERIVED</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-DERIVED:CAPS</Anchor>
+        </Node>
+        <Node id="74">
+         <Name>G_TYPE_IS_FUNDAMENTAL</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-FUNDAMENTAL:CAPS</Anchor>
+        </Node>
+        <Node id="75">
+         <Name>G_TYPE_IS_VALUE_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-VALUE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="76">
+         <Name>G_TYPE_HAS_VALUE_TABLE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-HAS-VALUE-TABLE:CAPS</Anchor>
+        </Node>
+        <Node id="77">
+         <Name>G_TYPE_IS_CLASSED</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-CLASSED:CAPS</Anchor>
+        </Node>
+        <Node id="78">
+         <Name>G_TYPE_IS_INSTANTIATABLE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-INSTANTIATABLE:CAPS</Anchor>
+        </Node>
+        <Node id="79">
+         <Name>G_TYPE_IS_DERIVABLE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-DERIVABLE:CAPS</Anchor>
+        </Node>
+        <Node id="80">
+         <Name>G_TYPE_IS_DEEP_DERIVABLE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-DEEP-DERIVABLE:CAPS</Anchor>
+        </Node>
+        <Node id="81">
+         <Name>G_TYPE_IS_INTERFACE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-IS-INTERFACE:CAPS</Anchor>
+        </Node>
+        <Node id="82">
+         <Name>GTypeInterface</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeInterface</Anchor>
+        </Node>
+        <Node id="83">
+         <Name>GTypeInstance</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeInstance</Anchor>
+        </Node>
+        <Node id="84">
+         <Name>GTypeClass</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeClass</Anchor>
+        </Node>
+        <Node id="85">
+         <Name>GTypeInfo</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeInfo</Anchor>
+        </Node>
+        <Node id="86">
+         <Name>GTypeFundamentalInfo</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeFundamentalInfo</Anchor>
+        </Node>
+        <Node id="87">
+         <Name>GInterfaceInfo</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GInterfaceInfo</Anchor>
+        </Node>
+        <Node id="88">
+         <Name>GTypeValueTable</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeValueTable</Anchor>
+        </Node>
+        <Node id="89">
+         <Name>G_TYPE_FROM_INSTANCE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FROM-INSTANCE:CAPS</Anchor>
+        </Node>
+        <Node id="90">
+         <Name>G_TYPE_FROM_CLASS</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FROM-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="91">
+         <Name>G_TYPE_FROM_INTERFACE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FROM-INTERFACE:CAPS</Anchor>
+        </Node>
+        <Node id="92">
+         <Name>G_TYPE_INSTANCE_GET_CLASS</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INSTANCE-GET-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="93">
+         <Name>G_TYPE_INSTANCE_GET_INTERFACE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INSTANCE-GET-INTERFACE:CAPS</Anchor>
+        </Node>
+        <Node id="94">
+         <Name>G_TYPE_INSTANCE_GET_PRIVATE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INSTANCE-GET-PRIVATE:CAPS</Anchor>
+        </Node>
+        <Node id="95">
+         <Name>G_TYPE_CHECK_INSTANCE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-INSTANCE:CAPS</Anchor>
+        </Node>
+        <Node id="96">
+         <Name>G_TYPE_CHECK_INSTANCE_CAST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-INSTANCE-CAST:CAPS</Anchor>
+        </Node>
+        <Node id="97">
+         <Name>G_TYPE_CHECK_INSTANCE_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-INSTANCE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="98">
+         <Name>G_TYPE_CHECK_CLASS_CAST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-CLASS-CAST:CAPS</Anchor>
+        </Node>
+        <Node id="99">
+         <Name>G_TYPE_CHECK_CLASS_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-CLASS-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="100">
+         <Name>G_TYPE_CHECK_VALUE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-VALUE:CAPS</Anchor>
+        </Node>
+        <Node id="101">
+         <Name>G_TYPE_CHECK_VALUE_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHECK-VALUE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="102">
+         <Name>G_TYPE_FLAG_RESERVED_ID_BIT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FLAG-RESERVED-ID-BIT:CAPS</Anchor>
+        </Node>
+        <Node id="103">
+         <Name>g_type_init</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-init</Anchor>
+        </Node>
+        <Node id="104">
+         <Name>GTypeDebugFlags</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeDebugFlags</Anchor>
+        </Node>
+        <Node id="105">
+         <Name>g_type_init_with_debug_flags</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-init-with-debug-flags</Anchor>
+        </Node>
+        <Node id="106">
+         <Name>g_type_name</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-name</Anchor>
+        </Node>
+        <Node id="107">
+         <Name>g_type_qname</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-qname</Anchor>
+        </Node>
+        <Node id="108">
+         <Name>g_type_from_name</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-from-name</Anchor>
+        </Node>
+        <Node id="109">
+         <Name>g_type_parent</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-parent</Anchor>
+        </Node>
+        <Node id="110">
+         <Name>g_type_depth</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-depth</Anchor>
+        </Node>
+        <Node id="111">
+         <Name>g_type_next_base</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-next-base</Anchor>
+        </Node>
+        <Node id="112">
+         <Name>g_type_is_a</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-is-a</Anchor>
+        </Node>
+        <Node id="113">
+         <Name>g_type_class_ref</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-ref</Anchor>
+        </Node>
+        <Node id="114">
+         <Name>g_type_class_peek</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-peek</Anchor>
+        </Node>
+        <Node id="115">
+         <Name>g_type_class_peek_static</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-peek-static</Anchor>
+        </Node>
+        <Node id="116">
+         <Name>g_type_class_unref</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-unref</Anchor>
+        </Node>
+        <Node id="117">
+         <Name>g_type_class_peek_parent</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-peek-parent</Anchor>
+        </Node>
+        <Node id="118">
+         <Name>g_type_class_add_private</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-add-private</Anchor>
+        </Node>
+        <Node id="119">
+         <Name>g_type_interface_peek</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interface-peek</Anchor>
+        </Node>
+        <Node id="120">
+         <Name>g_type_interface_peek_parent</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interface-peek-parent</Anchor>
+        </Node>
+        <Node id="121">
+         <Name>g_type_default_interface_ref</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-default-interface-ref</Anchor>
+        </Node>
+        <Node id="122">
+         <Name>g_type_default_interface_peek</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-default-interface-peek</Anchor>
+        </Node>
+        <Node id="123">
+         <Name>g_type_default_interface_unref</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-default-interface-unref</Anchor>
+        </Node>
+        <Node id="124">
+         <Name>g_type_children</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-children</Anchor>
+        </Node>
+        <Node id="125">
+         <Name>g_type_interfaces</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interfaces</Anchor>
+        </Node>
+        <Node id="126">
+         <Name>g_type_interface_prerequisites</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interface-prerequisites</Anchor>
+        </Node>
+        <Node id="127">
+         <Name>g_type_set_qdata</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-set-qdata</Anchor>
+        </Node>
+        <Node id="128">
+         <Name>g_type_get_qdata</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-get-qdata</Anchor>
+        </Node>
+        <Node id="129">
+         <Name>g_type_query</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-query</Anchor>
+        </Node>
+        <Node id="130">
+         <Name>GTypeQuery</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeQuery</Anchor>
+        </Node>
+        <Node id="131">
+         <Name>GBaseInitFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GBaseInitFunc</Anchor>
+        </Node>
+        <Node id="132">
+         <Name>GBaseFinalizeFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GBaseFinalizeFunc</Anchor>
+        </Node>
+        <Node id="133">
+         <Name>GClassInitFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GClassInitFunc</Anchor>
+        </Node>
+        <Node id="134">
+         <Name>GClassFinalizeFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GClassFinalizeFunc</Anchor>
+        </Node>
+        <Node id="135">
+         <Name>GInstanceInitFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GInstanceInitFunc</Anchor>
+        </Node>
+        <Node id="136">
+         <Name>GInterfaceInitFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GInterfaceInitFunc</Anchor>
+        </Node>
+        <Node id="137">
+         <Name>GInterfaceFinalizeFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GInterfaceFinalizeFunc</Anchor>
+        </Node>
+        <Node id="138">
+         <Name>GTypeClassCacheFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeClassCacheFunc</Anchor>
+        </Node>
+        <Node id="139">
+         <Name>GTypeFlags</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeFlags</Anchor>
+        </Node>
+        <Node id="140">
+         <Name>GTypeFundamentalFlags</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeFundamentalFlags</Anchor>
+        </Node>
+        <Node id="141">
+         <Name>g_type_register_static</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-register-static</Anchor>
+        </Node>
+        <Node id="142">
+         <Name>g_type_register_static_simple</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-register-static-simple</Anchor>
+        </Node>
+        <Node id="143">
+         <Name>g_type_register_dynamic</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-register-dynamic</Anchor>
+        </Node>
+        <Node id="144">
+         <Name>g_type_register_fundamental</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-register-fundamental</Anchor>
+        </Node>
+        <Node id="145">
+         <Name>g_type_add_interface_static</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-add-interface-static</Anchor>
+        </Node>
+        <Node id="146">
+         <Name>g_type_add_interface_dynamic</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-add-interface-dynamic</Anchor>
+        </Node>
+        <Node id="147">
+         <Name>g_type_interface_add_prerequisite</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interface-add-prerequisite</Anchor>
+        </Node>
+        <Node id="148">
+         <Name>g_type_get_plugin</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-get-plugin</Anchor>
+        </Node>
+        <Node id="149">
+         <Name>g_type_interface_get_plugin</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-interface-get-plugin</Anchor>
+        </Node>
+        <Node id="150">
+         <Name>g_type_fundamental_next</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-fundamental-next</Anchor>
+        </Node>
+        <Node id="151">
+         <Name>g_type_fundamental</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-fundamental</Anchor>
+        </Node>
+        <Node id="152">
+         <Name>g_type_create_instance</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-create-instance</Anchor>
+        </Node>
+        <Node id="153">
+         <Name>g_type_free_instance</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-free-instance</Anchor>
+        </Node>
+        <Node id="154">
+         <Name>g_type_add_class_cache_func</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-add-class-cache-func</Anchor>
+        </Node>
+        <Node id="155">
+         <Name>g_type_remove_class_cache_func</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-remove-class-cache-func</Anchor>
+        </Node>
+        <Node id="156">
+         <Name>g_type_class_unref_uncached</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-class-unref-uncached</Anchor>
+        </Node>
+        <Node id="157">
+         <Name>g_type_add_interface_check</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-add-interface-check</Anchor>
+        </Node>
+        <Node id="158">
+         <Name>g_type_remove_interface_check</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-remove-interface-check</Anchor>
+        </Node>
+        <Node id="159">
+         <Name>GTypeInterfaceCheckFunc</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>GTypeInterfaceCheckFunc</Anchor>
+        </Node>
+        <Node id="160">
+         <Name>g_type_value_table_peek</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>g-type-value-table-peek</Anchor>
+        </Node>
+        <Node id="161">
+         <Name>G_DEFINE_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-DEFINE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="162">
+         <Name>G_DEFINE_TYPE_WITH_CODE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-DEFINE-TYPE-WITH-CODE:CAPS</Anchor>
+        </Node>
+        <Node id="163">
+         <Name>G_DEFINE_ABSTRACT_TYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-DEFINE-ABSTRACT-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="164">
+         <Name>G_DEFINE_ABSTRACT_TYPE_WITH_CODE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-DEFINE-ABSTRACT-TYPE-WITH-CODE:CAPS</Anchor>
+        </Node>
+        <Node id="165">
+         <Name>G_IMPLEMENT_INTERFACE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-IMPLEMENT-INTERFACE:CAPS</Anchor>
+        </Node>
+        <Node id="166">
+         <Name>G_DEFINE_TYPE_EXTENDED</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-DEFINE-TYPE-EXTENDED:CAPS</Anchor>
+        </Node>
+        <Node id="167">
+         <Name>G_TYPE_INVALID</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INVALID:CAPS</Anchor>
+        </Node>
+        <Node id="168">
+         <Name>G_TYPE_NONE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-NONE:CAPS</Anchor>
+        </Node>
+        <Node id="169">
+         <Name>G_TYPE_INTERFACE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INTERFACE:CAPS</Anchor>
+        </Node>
+        <Node id="170">
+         <Name>G_TYPE_CHAR</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-CHAR:CAPS</Anchor>
+        </Node>
+        <Node id="171">
+         <Name>G_TYPE_UCHAR</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-UCHAR:CAPS</Anchor>
+        </Node>
+        <Node id="172">
+         <Name>G_TYPE_BOOLEAN</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-BOOLEAN:CAPS</Anchor>
+        </Node>
+        <Node id="173">
+         <Name>G_TYPE_INT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INT:CAPS</Anchor>
+        </Node>
+        <Node id="174">
+         <Name>G_TYPE_UINT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-UINT:CAPS</Anchor>
+        </Node>
+        <Node id="175">
+         <Name>G_TYPE_LONG</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-LONG:CAPS</Anchor>
+        </Node>
+        <Node id="176">
+         <Name>G_TYPE_ULONG</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-ULONG:CAPS</Anchor>
+        </Node>
+        <Node id="177">
+         <Name>G_TYPE_INT64</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-INT64:CAPS</Anchor>
+        </Node>
+        <Node id="178">
+         <Name>G_TYPE_UINT64</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-UINT64:CAPS</Anchor>
+        </Node>
+        <Node id="179">
+         <Name>G_TYPE_ENUM</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="180">
+         <Name>G_TYPE_FLAGS</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="181">
+         <Name>G_TYPE_FLOAT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-FLOAT:CAPS</Anchor>
+        </Node>
+        <Node id="182">
+         <Name>G_TYPE_DOUBLE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-DOUBLE:CAPS</Anchor>
+        </Node>
+        <Node id="183">
+         <Name>G_TYPE_STRING</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-STRING:CAPS</Anchor>
+        </Node>
+        <Node id="184">
+         <Name>G_TYPE_POINTER</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-POINTER:CAPS</Anchor>
+        </Node>
+        <Node id="185">
+         <Name>G_TYPE_BOXED</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-BOXED:CAPS</Anchor>
+        </Node>
+        <Node id="186">
+         <Name>G_TYPE_PARAM</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="187">
+         <Name>G_TYPE_OBJECT</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="188">
+         <Name>G_TYPE_GTYPE</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-GTYPE:CAPS</Anchor>
+        </Node>
+        <Node id="189">
+         <Name>G_TYPE_RESERVED_GLIB_FIRST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-RESERVED-GLIB-FIRST:CAPS</Anchor>
+        </Node>
+        <Node id="190">
+         <Name>G_TYPE_RESERVED_GLIB_LAST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-RESERVED-GLIB-LAST:CAPS</Anchor>
+        </Node>
+        <Node id="191">
+         <Name>G_TYPE_RESERVED_BSE_FIRST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-RESERVED-BSE-FIRST:CAPS</Anchor>
+        </Node>
+        <Node id="192">
+         <Name>G_TYPE_RESERVED_BSE_LAST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-RESERVED-BSE-LAST:CAPS</Anchor>
+        </Node>
+        <Node id="193">
+         <Name>G_TYPE_RESERVED_USER_FIRST</Name>
+         <Path>gobject-Type-Information.html</Path>
+         <Anchor>G-TYPE-RESERVED-USER-FIRST:CAPS</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="21" type="folder">
+       <Name>GTypePlugin</Name>
+       <Path>GTypePlugin.html</Path>
+       <Subnodes>
+        <Node id="194">
+         <Name>GTypePlugin</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePlugin-struct</Anchor>
+        </Node>
+        <Node id="195">
+         <Name>GTypePluginClass</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePluginClass</Anchor>
+        </Node>
+        <Node id="196">
+         <Name>GTypePluginUse</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePluginUse</Anchor>
+        </Node>
+        <Node id="197">
+         <Name>GTypePluginUnuse</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePluginUnuse</Anchor>
+        </Node>
+        <Node id="198">
+         <Name>GTypePluginCompleteTypeInfo</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePluginCompleteTypeInfo</Anchor>
+        </Node>
+        <Node id="199">
+         <Name>GTypePluginCompleteInterfaceInfo</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>GTypePluginCompleteInterfaceInfo</Anchor>
+        </Node>
+        <Node id="200">
+         <Name>g_type_plugin_use</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>g-type-plugin-use</Anchor>
+        </Node>
+        <Node id="201">
+         <Name>g_type_plugin_unuse</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>g-type-plugin-unuse</Anchor>
+        </Node>
+        <Node id="202">
+         <Name>g_type_plugin_complete_type_info</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>g-type-plugin-complete-type-info</Anchor>
+        </Node>
+        <Node id="203">
+         <Name>g_type_plugin_complete_interface_info</Name>
+         <Path>GTypePlugin.html</Path>
+         <Anchor>g-type-plugin-complete-interface-info</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="22" type="folder">
+       <Name>GTypeModule</Name>
+       <Path>GTypeModule.html</Path>
+       <Subnodes>
+        <Node id="204">
+         <Name>GTypeModule</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>GTypeModule-struct</Anchor>
+        </Node>
+        <Node id="205">
+         <Name>GTypeModuleClass</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>GTypeModuleClass</Anchor>
+        </Node>
+        <Node id="206">
+         <Name>g_type_module_use</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-use</Anchor>
+        </Node>
+        <Node id="207">
+         <Name>g_type_module_unuse</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-unuse</Anchor>
+        </Node>
+        <Node id="208">
+         <Name>g_type_module_set_name</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-set-name</Anchor>
+        </Node>
+        <Node id="209">
+         <Name>g_type_module_register_type</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-register-type</Anchor>
+        </Node>
+        <Node id="210">
+         <Name>g_type_module_add_interface</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-add-interface</Anchor>
+        </Node>
+        <Node id="211">
+         <Name>g_type_module_register_enum</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-register-enum</Anchor>
+        </Node>
+        <Node id="212">
+         <Name>g_type_module_register_flags</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>g-type-module-register-flags</Anchor>
+        </Node>
+        <Node id="213">
+         <Name>G_DEFINE_DYNAMIC_TYPE</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>G-DEFINE-DYNAMIC-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="214">
+         <Name>G_DEFINE_DYNAMIC_TYPE_EXTENDED</Name>
+         <Path>GTypeModule.html</Path>
+         <Anchor>G-DEFINE-DYNAMIC-TYPE-EXTENDED:CAPS</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="23" type="folder">
+       <Name>The Base Object Type</Name>
+       <Path>gobject-The-Base-Object-Type.html</Path>
+       <Subnodes>
+        <Node id="215">
+         <Name>GObject</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObject-struct</Anchor>
+        </Node>
+        <Node id="216">
+         <Name>GObjectClass</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObjectClass</Anchor>
+        </Node>
+        <Node id="217">
+         <Name>GObjectConstructParam</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObjectConstructParam</Anchor>
+        </Node>
+        <Node id="218">
+         <Name>GObjectGetPropertyFunc</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObjectGetPropertyFunc</Anchor>
+        </Node>
+        <Node id="219">
+         <Name>GObjectSetPropertyFunc</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObjectSetPropertyFunc</Anchor>
+        </Node>
+        <Node id="220">
+         <Name>GObjectFinalizeFunc</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObjectFinalizeFunc</Anchor>
+        </Node>
+        <Node id="221">
+         <Name>G_TYPE_IS_OBJECT</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-TYPE-IS-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="222">
+         <Name>G_OBJECT</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="223">
+         <Name>G_IS_OBJECT</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-IS-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="224">
+         <Name>G_OBJECT_CLASS</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="225">
+         <Name>G_IS_OBJECT_CLASS</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-IS-OBJECT-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="226">
+         <Name>G_OBJECT_GET_CLASS</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-GET-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="227">
+         <Name>G_OBJECT_TYPE</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="228">
+         <Name>G_OBJECT_TYPE_NAME</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-TYPE-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="229">
+         <Name>G_OBJECT_CLASS_TYPE</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-CLASS-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="230">
+         <Name>G_OBJECT_CLASS_NAME</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-CLASS-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="231">
+         <Name>g_object_class_install_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-class-install-property</Anchor>
+        </Node>
+        <Node id="232">
+         <Name>g_object_class_find_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-class-find-property</Anchor>
+        </Node>
+        <Node id="233">
+         <Name>g_object_class_list_properties</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-class-list-properties</Anchor>
+        </Node>
+        <Node id="234">
+         <Name>g_object_class_override_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-class-override-property</Anchor>
+        </Node>
+        <Node id="235">
+         <Name>g_object_interface_install_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-interface-install-property</Anchor>
+        </Node>
+        <Node id="236">
+         <Name>g_object_interface_find_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-interface-find-property</Anchor>
+        </Node>
+        <Node id="237">
+         <Name>g_object_interface_list_properties</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-interface-list-properties</Anchor>
+        </Node>
+        <Node id="238">
+         <Name>g_object_new</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-new</Anchor>
+        </Node>
+        <Node id="239">
+         <Name>g_object_newv</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-newv</Anchor>
+        </Node>
+        <Node id="240">
+         <Name>GParameter</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GParameter</Anchor>
+        </Node>
+        <Node id="241">
+         <Name>g_object_ref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-ref</Anchor>
+        </Node>
+        <Node id="242">
+         <Name>g_object_unref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-unref</Anchor>
+        </Node>
+        <Node id="243">
+         <Name>g_object_ref_sink</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-ref-sink</Anchor>
+        </Node>
+        <Node id="244">
+         <Name>GInitiallyUnowned</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GInitiallyUnowned</Anchor>
+        </Node>
+        <Node id="245">
+         <Name>GInitiallyUnownedClass</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GInitiallyUnownedClass</Anchor>
+        </Node>
+        <Node id="246">
+         <Name>G_TYPE_INITIALLY_UNOWNED</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-TYPE-INITIALLY-UNOWNED:CAPS</Anchor>
+        </Node>
+        <Node id="247">
+         <Name>g_object_is_floating</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-is-floating</Anchor>
+        </Node>
+        <Node id="248">
+         <Name>g_object_force_floating</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-force-floating</Anchor>
+        </Node>
+        <Node id="249">
+         <Name>GWeakNotify</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GWeakNotify</Anchor>
+        </Node>
+        <Node id="250">
+         <Name>g_object_weak_ref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-weak-ref</Anchor>
+        </Node>
+        <Node id="251">
+         <Name>g_object_weak_unref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-weak-unref</Anchor>
+        </Node>
+        <Node id="252">
+         <Name>g_object_add_weak_pointer</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-add-weak-pointer</Anchor>
+        </Node>
+        <Node id="253">
+         <Name>g_object_remove_weak_pointer</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-remove-weak-pointer</Anchor>
+        </Node>
+        <Node id="254">
+         <Name>GToggleNotify</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GToggleNotify</Anchor>
+        </Node>
+        <Node id="255">
+         <Name>g_object_add_toggle_ref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-add-toggle-ref</Anchor>
+        </Node>
+        <Node id="256">
+         <Name>g_object_remove_toggle_ref</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-remove-toggle-ref</Anchor>
+        </Node>
+        <Node id="257">
+         <Name>g_object_connect</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-connect</Anchor>
+        </Node>
+        <Node id="258">
+         <Name>g_object_disconnect</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-disconnect</Anchor>
+        </Node>
+        <Node id="259">
+         <Name>g_object_set</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set</Anchor>
+        </Node>
+        <Node id="260">
+         <Name>g_object_get</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-get</Anchor>
+        </Node>
+        <Node id="261">
+         <Name>g_object_notify</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-notify</Anchor>
+        </Node>
+        <Node id="262">
+         <Name>g_object_freeze_notify</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-freeze-notify</Anchor>
+        </Node>
+        <Node id="263">
+         <Name>g_object_thaw_notify</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-thaw-notify</Anchor>
+        </Node>
+        <Node id="264">
+         <Name>g_object_get_data</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-get-data</Anchor>
+        </Node>
+        <Node id="265">
+         <Name>g_object_set_data</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-data</Anchor>
+        </Node>
+        <Node id="266">
+         <Name>g_object_set_data_full</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-data-full</Anchor>
+        </Node>
+        <Node id="267">
+         <Name>g_object_steal_data</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-steal-data</Anchor>
+        </Node>
+        <Node id="268">
+         <Name>g_object_get_qdata</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-get-qdata</Anchor>
+        </Node>
+        <Node id="269">
+         <Name>g_object_set_qdata</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-qdata</Anchor>
+        </Node>
+        <Node id="270">
+         <Name>g_object_set_qdata_full</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-qdata-full</Anchor>
+        </Node>
+        <Node id="271">
+         <Name>g_object_steal_qdata</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-steal-qdata</Anchor>
+        </Node>
+        <Node id="272">
+         <Name>g_object_set_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-property</Anchor>
+        </Node>
+        <Node id="273">
+         <Name>g_object_get_property</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-get-property</Anchor>
+        </Node>
+        <Node id="274">
+         <Name>g_object_new_valist</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-new-valist</Anchor>
+        </Node>
+        <Node id="275">
+         <Name>g_object_set_valist</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-set-valist</Anchor>
+        </Node>
+        <Node id="276">
+         <Name>g_object_get_valist</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-get-valist</Anchor>
+        </Node>
+        <Node id="277">
+         <Name>g_object_watch_closure</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-watch-closure</Anchor>
+        </Node>
+        <Node id="278">
+         <Name>g_object_run_dispose</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>g-object-run-dispose</Anchor>
+        </Node>
+        <Node id="279">
+         <Name>G_OBJECT_WARN_INVALID_PROPERTY_ID</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>G-OBJECT-WARN-INVALID-PROPERTY-ID:CAPS</Anchor>
+        </Node>
+        <Node id="280">
+         <Name>The &quot;notify&quot; signal</Name>
+         <Path>gobject-The-Base-Object-Type.html</Path>
+         <Anchor>GObject-notify</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="24" type="folder">
+       <Name>Enumeration and Flag Types</Name>
+       <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+       <Subnodes>
+        <Node id="281">
+         <Name>GEnumClass</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>GEnumClass</Anchor>
+        </Node>
+        <Node id="282">
+         <Name>GFlagsClass</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>GFlagsClass</Anchor>
+        </Node>
+        <Node id="283">
+         <Name>G_ENUM_CLASS_TYPE</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-ENUM-CLASS-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="284">
+         <Name>G_ENUM_CLASS_TYPE_NAME</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-ENUM-CLASS-TYPE-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="285">
+         <Name>G_TYPE_IS_ENUM</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-TYPE-IS-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="286">
+         <Name>G_ENUM_CLASS</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-ENUM-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="287">
+         <Name>G_IS_ENUM_CLASS</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-IS-ENUM-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="288">
+         <Name>G_TYPE_IS_FLAGS</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-TYPE-IS-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="289">
+         <Name>G_FLAGS_CLASS</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-FLAGS-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="290">
+         <Name>G_IS_FLAGS_CLASS</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-IS-FLAGS-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="291">
+         <Name>G_FLAGS_CLASS_TYPE</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-FLAGS-CLASS-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="292">
+         <Name>G_FLAGS_CLASS_TYPE_NAME</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>G-FLAGS-CLASS-TYPE-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="293">
+         <Name>GEnumValue</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>GEnumValue</Anchor>
+        </Node>
+        <Node id="294">
+         <Name>GFlagsValue</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>GFlagsValue</Anchor>
+        </Node>
+        <Node id="295">
+         <Name>g_enum_get_value</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-enum-get-value</Anchor>
+        </Node>
+        <Node id="296">
+         <Name>g_enum_get_value_by_name</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-enum-get-value-by-name</Anchor>
+        </Node>
+        <Node id="297">
+         <Name>g_enum_get_value_by_nick</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-enum-get-value-by-nick</Anchor>
+        </Node>
+        <Node id="298">
+         <Name>g_flags_get_first_value</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-flags-get-first-value</Anchor>
+        </Node>
+        <Node id="299">
+         <Name>g_flags_get_value_by_name</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-flags-get-value-by-name</Anchor>
+        </Node>
+        <Node id="300">
+         <Name>g_flags_get_value_by_nick</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-flags-get-value-by-nick</Anchor>
+        </Node>
+        <Node id="301">
+         <Name>g_enum_register_static</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-enum-register-static</Anchor>
+        </Node>
+        <Node id="302">
+         <Name>g_flags_register_static</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-flags-register-static</Anchor>
+        </Node>
+        <Node id="303">
+         <Name>g_enum_complete_type_info</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-enum-complete-type-info</Anchor>
+        </Node>
+        <Node id="304">
+         <Name>g_flags_complete_type_info</Name>
+         <Path>gobject-Enumeration-and-Flag-Types.html</Path>
+         <Anchor>g-flags-complete-type-info</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="25" type="folder">
+       <Name>Boxed Types</Name>
+       <Path>gobject-Boxed-Types.html</Path>
+       <Subnodes>
+        <Node id="305">
+         <Name>GBoxedCopyFunc</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>GBoxedCopyFunc</Anchor>
+        </Node>
+        <Node id="306">
+         <Name>GBoxedFreeFunc</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>GBoxedFreeFunc</Anchor>
+        </Node>
+        <Node id="307">
+         <Name>g_boxed_copy</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>g-boxed-copy</Anchor>
+        </Node>
+        <Node id="308">
+         <Name>g_boxed_free</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>g-boxed-free</Anchor>
+        </Node>
+        <Node id="309">
+         <Name>g_boxed_type_register_static</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>g-boxed-type-register-static</Anchor>
+        </Node>
+        <Node id="310">
+         <Name>g_pointer_type_register_static</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>g-pointer-type-register-static</Anchor>
+        </Node>
+        <Node id="311">
+         <Name>G_TYPE_HASH_TABLE</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>G-TYPE-HASH-TABLE:CAPS</Anchor>
+        </Node>
+        <Node id="312">
+         <Name>G_TYPE_DATE</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>G-TYPE-DATE:CAPS</Anchor>
+        </Node>
+        <Node id="313">
+         <Name>G_TYPE_GSTRING</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>G-TYPE-GSTRING:CAPS</Anchor>
+        </Node>
+        <Node id="314">
+         <Name>G_TYPE_STRV</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>G-TYPE-STRV:CAPS</Anchor>
+        </Node>
+        <Node id="315">
+         <Name>G_TYPE_REGEX</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>G-TYPE-REGEX:CAPS</Anchor>
+        </Node>
+        <Node id="316">
+         <Name>GStrv</Name>
+         <Path>gobject-Boxed-Types.html</Path>
+         <Anchor>GStrv</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="26" type="folder">
+       <Name>Generic values</Name>
+       <Path>gobject-Generic-values.html</Path>
+       <Subnodes>
+        <Node id="317">
+         <Name>G_VALUE_HOLDS</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-VALUE-HOLDS:CAPS</Anchor>
+        </Node>
+        <Node id="318">
+         <Name>G_VALUE_TYPE</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-VALUE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="319">
+         <Name>G_VALUE_TYPE_NAME</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-VALUE-TYPE-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="320">
+         <Name>G_TYPE_IS_VALUE</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-TYPE-IS-VALUE:CAPS</Anchor>
+        </Node>
+        <Node id="321">
+         <Name>G_TYPE_IS_VALUE_ABSTRACT</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-TYPE-IS-VALUE-ABSTRACT:CAPS</Anchor>
+        </Node>
+        <Node id="322">
+         <Name>G_IS_VALUE</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-IS-VALUE:CAPS</Anchor>
+        </Node>
+        <Node id="323">
+         <Name>GValue</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>GValue</Anchor>
+        </Node>
+        <Node id="324">
+         <Name>G_TYPE_VALUE</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-TYPE-VALUE:CAPS</Anchor>
+        </Node>
+        <Node id="325">
+         <Name>G_TYPE_VALUE_ARRAY</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>G-TYPE-VALUE-ARRAY:CAPS</Anchor>
+        </Node>
+        <Node id="326">
+         <Name>g_value_init</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-init</Anchor>
+        </Node>
+        <Node id="327">
+         <Name>g_value_copy</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-copy</Anchor>
+        </Node>
+        <Node id="328">
+         <Name>g_value_reset</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-reset</Anchor>
+        </Node>
+        <Node id="329">
+         <Name>g_value_unset</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-unset</Anchor>
+        </Node>
+        <Node id="330">
+         <Name>g_value_set_instance</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-set-instance</Anchor>
+        </Node>
+        <Node id="331">
+         <Name>g_value_fits_pointer</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-fits-pointer</Anchor>
+        </Node>
+        <Node id="332">
+         <Name>g_value_peek_pointer</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-peek-pointer</Anchor>
+        </Node>
+        <Node id="333">
+         <Name>g_value_type_compatible</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-type-compatible</Anchor>
+        </Node>
+        <Node id="334">
+         <Name>g_value_type_transformable</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-type-transformable</Anchor>
+        </Node>
+        <Node id="335">
+         <Name>g_value_transform</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-transform</Anchor>
+        </Node>
+        <Node id="336">
+         <Name>GValueTransform</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>GValueTransform</Anchor>
+        </Node>
+        <Node id="337">
+         <Name>g_value_register_transform_func</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-value-register-transform-func</Anchor>
+        </Node>
+        <Node id="338">
+         <Name>g_strdup_value_contents</Name>
+         <Path>gobject-Generic-values.html</Path>
+         <Anchor>g-strdup-value-contents</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="27" type="folder">
+       <Name>Parameters and Values</Name>
+       <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+       <Subnodes>
+        <Node id="339">
+         <Name>G_IS_PARAM_SPEC_BOOLEAN</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-BOOLEAN:CAPS</Anchor>
+        </Node>
+        <Node id="340">
+         <Name>G_PARAM_SPEC_BOOLEAN</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-BOOLEAN:CAPS</Anchor>
+        </Node>
+        <Node id="341">
+         <Name>G_VALUE_HOLDS_BOOLEAN</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-BOOLEAN:CAPS</Anchor>
+        </Node>
+        <Node id="342">
+         <Name>G_TYPE_PARAM_BOOLEAN</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-BOOLEAN:CAPS</Anchor>
+        </Node>
+        <Node id="343">
+         <Name>GParamSpecBoolean</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecBoolean</Anchor>
+        </Node>
+        <Node id="344">
+         <Name>g_param_spec_boolean</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-boolean</Anchor>
+        </Node>
+        <Node id="345">
+         <Name>g_value_set_boolean</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-boolean</Anchor>
+        </Node>
+        <Node id="346">
+         <Name>g_value_get_boolean</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-boolean</Anchor>
+        </Node>
+        <Node id="347">
+         <Name>G_IS_PARAM_SPEC_CHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-CHAR:CAPS</Anchor>
+        </Node>
+        <Node id="348">
+         <Name>G_PARAM_SPEC_CHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-CHAR:CAPS</Anchor>
+        </Node>
+        <Node id="349">
+         <Name>G_VALUE_HOLDS_CHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-CHAR:CAPS</Anchor>
+        </Node>
+        <Node id="350">
+         <Name>G_TYPE_PARAM_CHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-CHAR:CAPS</Anchor>
+        </Node>
+        <Node id="351">
+         <Name>GParamSpecChar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecChar</Anchor>
+        </Node>
+        <Node id="352">
+         <Name>g_param_spec_char</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-char</Anchor>
+        </Node>
+        <Node id="353">
+         <Name>g_value_set_char</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-char</Anchor>
+        </Node>
+        <Node id="354">
+         <Name>g_value_get_char</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-char</Anchor>
+        </Node>
+        <Node id="355">
+         <Name>G_IS_PARAM_SPEC_UCHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-UCHAR:CAPS</Anchor>
+        </Node>
+        <Node id="356">
+         <Name>G_PARAM_SPEC_UCHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-UCHAR:CAPS</Anchor>
+        </Node>
+        <Node id="357">
+         <Name>G_VALUE_HOLDS_UCHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-UCHAR:CAPS</Anchor>
+        </Node>
+        <Node id="358">
+         <Name>G_TYPE_PARAM_UCHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-UCHAR:CAPS</Anchor>
+        </Node>
+        <Node id="359">
+         <Name>GParamSpecUChar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecUChar</Anchor>
+        </Node>
+        <Node id="360">
+         <Name>g_param_spec_uchar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-uchar</Anchor>
+        </Node>
+        <Node id="361">
+         <Name>g_value_set_uchar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-uchar</Anchor>
+        </Node>
+        <Node id="362">
+         <Name>g_value_get_uchar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-uchar</Anchor>
+        </Node>
+        <Node id="363">
+         <Name>G_IS_PARAM_SPEC_INT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-INT:CAPS</Anchor>
+        </Node>
+        <Node id="364">
+         <Name>G_PARAM_SPEC_INT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-INT:CAPS</Anchor>
+        </Node>
+        <Node id="365">
+         <Name>G_VALUE_HOLDS_INT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-INT:CAPS</Anchor>
+        </Node>
+        <Node id="366">
+         <Name>G_TYPE_PARAM_INT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-INT:CAPS</Anchor>
+        </Node>
+        <Node id="367">
+         <Name>GParamSpecInt</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecInt</Anchor>
+        </Node>
+        <Node id="368">
+         <Name>g_param_spec_int</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-int</Anchor>
+        </Node>
+        <Node id="369">
+         <Name>g_value_set_int</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-int</Anchor>
+        </Node>
+        <Node id="370">
+         <Name>g_value_get_int</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-int</Anchor>
+        </Node>
+        <Node id="371">
+         <Name>G_IS_PARAM_SPEC_UINT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-UINT:CAPS</Anchor>
+        </Node>
+        <Node id="372">
+         <Name>G_PARAM_SPEC_UINT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-UINT:CAPS</Anchor>
+        </Node>
+        <Node id="373">
+         <Name>G_VALUE_HOLDS_UINT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-UINT:CAPS</Anchor>
+        </Node>
+        <Node id="374">
+         <Name>G_TYPE_PARAM_UINT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-UINT:CAPS</Anchor>
+        </Node>
+        <Node id="375">
+         <Name>GParamSpecUInt</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecUInt</Anchor>
+        </Node>
+        <Node id="376">
+         <Name>g_param_spec_uint</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-uint</Anchor>
+        </Node>
+        <Node id="377">
+         <Name>g_value_set_uint</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-uint</Anchor>
+        </Node>
+        <Node id="378">
+         <Name>g_value_get_uint</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-uint</Anchor>
+        </Node>
+        <Node id="379">
+         <Name>G_IS_PARAM_SPEC_LONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-LONG:CAPS</Anchor>
+        </Node>
+        <Node id="380">
+         <Name>G_PARAM_SPEC_LONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-LONG:CAPS</Anchor>
+        </Node>
+        <Node id="381">
+         <Name>G_VALUE_HOLDS_LONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-LONG:CAPS</Anchor>
+        </Node>
+        <Node id="382">
+         <Name>G_TYPE_PARAM_LONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-LONG:CAPS</Anchor>
+        </Node>
+        <Node id="383">
+         <Name>GParamSpecLong</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecLong</Anchor>
+        </Node>
+        <Node id="384">
+         <Name>g_param_spec_long</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-long</Anchor>
+        </Node>
+        <Node id="385">
+         <Name>g_value_set_long</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-long</Anchor>
+        </Node>
+        <Node id="386">
+         <Name>g_value_get_long</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-long</Anchor>
+        </Node>
+        <Node id="387">
+         <Name>G_IS_PARAM_SPEC_ULONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-ULONG:CAPS</Anchor>
+        </Node>
+        <Node id="388">
+         <Name>G_PARAM_SPEC_ULONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-ULONG:CAPS</Anchor>
+        </Node>
+        <Node id="389">
+         <Name>G_VALUE_HOLDS_ULONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-ULONG:CAPS</Anchor>
+        </Node>
+        <Node id="390">
+         <Name>G_TYPE_PARAM_ULONG</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-ULONG:CAPS</Anchor>
+        </Node>
+        <Node id="391">
+         <Name>GParamSpecULong</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecULong</Anchor>
+        </Node>
+        <Node id="392">
+         <Name>g_param_spec_ulong</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-ulong</Anchor>
+        </Node>
+        <Node id="393">
+         <Name>g_value_set_ulong</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-ulong</Anchor>
+        </Node>
+        <Node id="394">
+         <Name>g_value_get_ulong</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-ulong</Anchor>
+        </Node>
+        <Node id="395">
+         <Name>G_IS_PARAM_SPEC_INT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-INT64:CAPS</Anchor>
+        </Node>
+        <Node id="396">
+         <Name>G_PARAM_SPEC_INT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-INT64:CAPS</Anchor>
+        </Node>
+        <Node id="397">
+         <Name>G_VALUE_HOLDS_INT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-INT64:CAPS</Anchor>
+        </Node>
+        <Node id="398">
+         <Name>G_TYPE_PARAM_INT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-INT64:CAPS</Anchor>
+        </Node>
+        <Node id="399">
+         <Name>GParamSpecInt64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecInt64</Anchor>
+        </Node>
+        <Node id="400">
+         <Name>g_param_spec_int64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-int64</Anchor>
+        </Node>
+        <Node id="401">
+         <Name>g_value_set_int64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-int64</Anchor>
+        </Node>
+        <Node id="402">
+         <Name>g_value_get_int64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-int64</Anchor>
+        </Node>
+        <Node id="403">
+         <Name>G_IS_PARAM_SPEC_UINT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-UINT64:CAPS</Anchor>
+        </Node>
+        <Node id="404">
+         <Name>G_PARAM_SPEC_UINT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-UINT64:CAPS</Anchor>
+        </Node>
+        <Node id="405">
+         <Name>G_VALUE_HOLDS_UINT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-UINT64:CAPS</Anchor>
+        </Node>
+        <Node id="406">
+         <Name>G_TYPE_PARAM_UINT64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-UINT64:CAPS</Anchor>
+        </Node>
+        <Node id="407">
+         <Name>GParamSpecUInt64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecUInt64</Anchor>
+        </Node>
+        <Node id="408">
+         <Name>g_param_spec_uint64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-uint64</Anchor>
+        </Node>
+        <Node id="409">
+         <Name>g_value_set_uint64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-uint64</Anchor>
+        </Node>
+        <Node id="410">
+         <Name>g_value_get_uint64</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-uint64</Anchor>
+        </Node>
+        <Node id="411">
+         <Name>G_IS_PARAM_SPEC_FLOAT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-FLOAT:CAPS</Anchor>
+        </Node>
+        <Node id="412">
+         <Name>G_PARAM_SPEC_FLOAT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-FLOAT:CAPS</Anchor>
+        </Node>
+        <Node id="413">
+         <Name>G_VALUE_HOLDS_FLOAT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-FLOAT:CAPS</Anchor>
+        </Node>
+        <Node id="414">
+         <Name>G_TYPE_PARAM_FLOAT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-FLOAT:CAPS</Anchor>
+        </Node>
+        <Node id="415">
+         <Name>GParamSpecFloat</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecFloat</Anchor>
+        </Node>
+        <Node id="416">
+         <Name>g_param_spec_float</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-float</Anchor>
+        </Node>
+        <Node id="417">
+         <Name>g_value_set_float</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-float</Anchor>
+        </Node>
+        <Node id="418">
+         <Name>g_value_get_float</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-float</Anchor>
+        </Node>
+        <Node id="419">
+         <Name>G_IS_PARAM_SPEC_DOUBLE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-DOUBLE:CAPS</Anchor>
+        </Node>
+        <Node id="420">
+         <Name>G_PARAM_SPEC_DOUBLE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-DOUBLE:CAPS</Anchor>
+        </Node>
+        <Node id="421">
+         <Name>G_VALUE_HOLDS_DOUBLE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-DOUBLE:CAPS</Anchor>
+        </Node>
+        <Node id="422">
+         <Name>G_TYPE_PARAM_DOUBLE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-DOUBLE:CAPS</Anchor>
+        </Node>
+        <Node id="423">
+         <Name>GParamSpecDouble</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecDouble</Anchor>
+        </Node>
+        <Node id="424">
+         <Name>g_param_spec_double</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-double</Anchor>
+        </Node>
+        <Node id="425">
+         <Name>g_value_set_double</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-double</Anchor>
+        </Node>
+        <Node id="426">
+         <Name>g_value_get_double</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-double</Anchor>
+        </Node>
+        <Node id="427">
+         <Name>G_IS_PARAM_SPEC_ENUM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="428">
+         <Name>G_PARAM_SPEC_ENUM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="429">
+         <Name>G_VALUE_HOLDS_ENUM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="430">
+         <Name>G_TYPE_PARAM_ENUM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-ENUM:CAPS</Anchor>
+        </Node>
+        <Node id="431">
+         <Name>GParamSpecEnum</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecEnum</Anchor>
+        </Node>
+        <Node id="432">
+         <Name>g_param_spec_enum</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-enum</Anchor>
+        </Node>
+        <Node id="433">
+         <Name>g_value_set_enum</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-enum</Anchor>
+        </Node>
+        <Node id="434">
+         <Name>g_value_get_enum</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-enum</Anchor>
+        </Node>
+        <Node id="435">
+         <Name>G_IS_PARAM_SPEC_FLAGS</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="436">
+         <Name>G_PARAM_SPEC_FLAGS</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="437">
+         <Name>G_VALUE_HOLDS_FLAGS</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="438">
+         <Name>G_TYPE_PARAM_FLAGS</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-FLAGS:CAPS</Anchor>
+        </Node>
+        <Node id="439">
+         <Name>GParamSpecFlags</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecFlags</Anchor>
+        </Node>
+        <Node id="440">
+         <Name>g_param_spec_flags</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-flags</Anchor>
+        </Node>
+        <Node id="441">
+         <Name>g_value_set_flags</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-flags</Anchor>
+        </Node>
+        <Node id="442">
+         <Name>g_value_get_flags</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-flags</Anchor>
+        </Node>
+        <Node id="443">
+         <Name>G_IS_PARAM_SPEC_STRING</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-STRING:CAPS</Anchor>
+        </Node>
+        <Node id="444">
+         <Name>G_PARAM_SPEC_STRING</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-STRING:CAPS</Anchor>
+        </Node>
+        <Node id="445">
+         <Name>G_VALUE_HOLDS_STRING</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-STRING:CAPS</Anchor>
+        </Node>
+        <Node id="446">
+         <Name>G_TYPE_PARAM_STRING</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-STRING:CAPS</Anchor>
+        </Node>
+        <Node id="447">
+         <Name>GParamSpecString</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecString</Anchor>
+        </Node>
+        <Node id="448">
+         <Name>gchararray</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>gchararray</Anchor>
+        </Node>
+        <Node id="449">
+         <Name>g_param_spec_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-string</Anchor>
+        </Node>
+        <Node id="450">
+         <Name>g_value_set_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-string</Anchor>
+        </Node>
+        <Node id="451">
+         <Name>g_value_set_static_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-static-string</Anchor>
+        </Node>
+        <Node id="452">
+         <Name>g_value_take_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-take-string</Anchor>
+        </Node>
+        <Node id="453">
+         <Name>g_value_set_string_take_ownership</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-string-take-ownership</Anchor>
+        </Node>
+        <Node id="454">
+         <Name>g_value_get_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-string</Anchor>
+        </Node>
+        <Node id="455">
+         <Name>g_value_dup_string</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-dup-string</Anchor>
+        </Node>
+        <Node id="456">
+         <Name>G_IS_PARAM_SPEC_PARAM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="457">
+         <Name>G_PARAM_SPEC_PARAM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="458">
+         <Name>G_VALUE_HOLDS_PARAM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="459">
+         <Name>G_TYPE_PARAM_PARAM</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="460">
+         <Name>GParamSpecParam</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecParam</Anchor>
+        </Node>
+        <Node id="461">
+         <Name>g_param_spec_param</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-param</Anchor>
+        </Node>
+        <Node id="462">
+         <Name>g_value_set_param</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-param</Anchor>
+        </Node>
+        <Node id="463">
+         <Name>g_value_take_param</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-take-param</Anchor>
+        </Node>
+        <Node id="464">
+         <Name>g_value_set_param_take_ownership</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-param-take-ownership</Anchor>
+        </Node>
+        <Node id="465">
+         <Name>g_value_get_param</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-param</Anchor>
+        </Node>
+        <Node id="466">
+         <Name>g_value_dup_param</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-dup-param</Anchor>
+        </Node>
+        <Node id="467">
+         <Name>G_IS_PARAM_SPEC_BOXED</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-BOXED:CAPS</Anchor>
+        </Node>
+        <Node id="468">
+         <Name>G_PARAM_SPEC_BOXED</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-BOXED:CAPS</Anchor>
+        </Node>
+        <Node id="469">
+         <Name>G_VALUE_HOLDS_BOXED</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-BOXED:CAPS</Anchor>
+        </Node>
+        <Node id="470">
+         <Name>G_TYPE_PARAM_BOXED</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-BOXED:CAPS</Anchor>
+        </Node>
+        <Node id="471">
+         <Name>GParamSpecBoxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecBoxed</Anchor>
+        </Node>
+        <Node id="472">
+         <Name>g_param_spec_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-boxed</Anchor>
+        </Node>
+        <Node id="473">
+         <Name>g_value_set_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-boxed</Anchor>
+        </Node>
+        <Node id="474">
+         <Name>g_value_set_static_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-static-boxed</Anchor>
+        </Node>
+        <Node id="475">
+         <Name>g_value_take_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-take-boxed</Anchor>
+        </Node>
+        <Node id="476">
+         <Name>g_value_set_boxed_take_ownership</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-boxed-take-ownership</Anchor>
+        </Node>
+        <Node id="477">
+         <Name>g_value_get_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-boxed</Anchor>
+        </Node>
+        <Node id="478">
+         <Name>g_value_dup_boxed</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-dup-boxed</Anchor>
+        </Node>
+        <Node id="479">
+         <Name>G_IS_PARAM_SPEC_POINTER</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-POINTER:CAPS</Anchor>
+        </Node>
+        <Node id="480">
+         <Name>G_PARAM_SPEC_POINTER</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-POINTER:CAPS</Anchor>
+        </Node>
+        <Node id="481">
+         <Name>G_VALUE_HOLDS_POINTER</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-POINTER:CAPS</Anchor>
+        </Node>
+        <Node id="482">
+         <Name>G_TYPE_PARAM_POINTER</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-POINTER:CAPS</Anchor>
+        </Node>
+        <Node id="483">
+         <Name>GParamSpecPointer</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecPointer</Anchor>
+        </Node>
+        <Node id="484">
+         <Name>g_param_spec_pointer</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-pointer</Anchor>
+        </Node>
+        <Node id="485">
+         <Name>g_value_set_pointer</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-pointer</Anchor>
+        </Node>
+        <Node id="486">
+         <Name>g_value_get_pointer</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-pointer</Anchor>
+        </Node>
+        <Node id="487">
+         <Name>G_IS_PARAM_SPEC_OBJECT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="488">
+         <Name>G_PARAM_SPEC_OBJECT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="489">
+         <Name>G_VALUE_HOLDS_OBJECT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="490">
+         <Name>G_TYPE_PARAM_OBJECT</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-OBJECT:CAPS</Anchor>
+        </Node>
+        <Node id="491">
+         <Name>GParamSpecObject</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecObject</Anchor>
+        </Node>
+        <Node id="492">
+         <Name>g_param_spec_object</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-object</Anchor>
+        </Node>
+        <Node id="493">
+         <Name>g_value_set_object</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-object</Anchor>
+        </Node>
+        <Node id="494">
+         <Name>g_value_take_object</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-take-object</Anchor>
+        </Node>
+        <Node id="495">
+         <Name>g_value_set_object_take_ownership</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-object-take-ownership</Anchor>
+        </Node>
+        <Node id="496">
+         <Name>g_value_get_object</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-object</Anchor>
+        </Node>
+        <Node id="497">
+         <Name>g_value_dup_object</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-dup-object</Anchor>
+        </Node>
+        <Node id="498">
+         <Name>G_IS_PARAM_SPEC_UNICHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-UNICHAR:CAPS</Anchor>
+        </Node>
+        <Node id="499">
+         <Name>G_PARAM_SPEC_UNICHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-UNICHAR:CAPS</Anchor>
+        </Node>
+        <Node id="500">
+         <Name>G_TYPE_PARAM_UNICHAR</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-UNICHAR:CAPS</Anchor>
+        </Node>
+        <Node id="501">
+         <Name>GParamSpecUnichar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecUnichar</Anchor>
+        </Node>
+        <Node id="502">
+         <Name>g_param_spec_unichar</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-unichar</Anchor>
+        </Node>
+        <Node id="503">
+         <Name>G_IS_PARAM_SPEC_VALUE_ARRAY</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-VALUE-ARRAY:CAPS</Anchor>
+        </Node>
+        <Node id="504">
+         <Name>G_PARAM_SPEC_VALUE_ARRAY</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-VALUE-ARRAY:CAPS</Anchor>
+        </Node>
+        <Node id="505">
+         <Name>G_TYPE_PARAM_VALUE_ARRAY</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-VALUE-ARRAY:CAPS</Anchor>
+        </Node>
+        <Node id="506">
+         <Name>GParamSpecValueArray</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecValueArray</Anchor>
+        </Node>
+        <Node id="507">
+         <Name>g_param_spec_value_array</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-value-array</Anchor>
+        </Node>
+        <Node id="508">
+         <Name>G_IS_PARAM_SPEC_OVERRIDE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-OVERRIDE:CAPS</Anchor>
+        </Node>
+        <Node id="509">
+         <Name>G_PARAM_SPEC_OVERRIDE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-OVERRIDE:CAPS</Anchor>
+        </Node>
+        <Node id="510">
+         <Name>G_TYPE_PARAM_OVERRIDE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-OVERRIDE:CAPS</Anchor>
+        </Node>
+        <Node id="511">
+         <Name>GParamSpecOverride</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecOverride</Anchor>
+        </Node>
+        <Node id="512">
+         <Name>g_param_spec_override</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-override</Anchor>
+        </Node>
+        <Node id="513">
+         <Name>G_IS_PARAM_SPEC_GTYPE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-GTYPE:CAPS</Anchor>
+        </Node>
+        <Node id="514">
+         <Name>G_PARAM_SPEC_GTYPE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-PARAM-SPEC-GTYPE:CAPS</Anchor>
+        </Node>
+        <Node id="515">
+         <Name>G_VALUE_HOLDS_GTYPE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-VALUE-HOLDS-GTYPE:CAPS</Anchor>
+        </Node>
+        <Node id="516">
+         <Name>G_TYPE_PARAM_GTYPE</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>G-TYPE-PARAM-GTYPE:CAPS</Anchor>
+        </Node>
+        <Node id="517">
+         <Name>GParamSpecGType</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>GParamSpecGType</Anchor>
+        </Node>
+        <Node id="518">
+         <Name>g_param_spec_gtype</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-param-spec-gtype</Anchor>
+        </Node>
+        <Node id="519">
+         <Name>g_value_get_gtype</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-get-gtype</Anchor>
+        </Node>
+        <Node id="520">
+         <Name>g_value_set_gtype</Name>
+         <Path>gobject-Standard-Parameter-and-Value-Types.html</Path>
+         <Anchor>g-value-set-gtype</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="28" type="folder">
+       <Name>Varargs Value Collection</Name>
+       <Path>gobject-Varargs-Value-Collection.html</Path>
+       <Subnodes>
+        <Node id="521">
+         <Name>GTypeCValue</Name>
+         <Path>gobject-Varargs-Value-Collection.html</Path>
+         <Anchor>GTypeCValue</Anchor>
+        </Node>
+        <Node id="522">
+         <Name>G_VALUE_COLLECT</Name>
+         <Path>gobject-Varargs-Value-Collection.html</Path>
+         <Anchor>G-VALUE-COLLECT:CAPS</Anchor>
+        </Node>
+        <Node id="523">
+         <Name>G_VALUE_LCOPY</Name>
+         <Path>gobject-Varargs-Value-Collection.html</Path>
+         <Anchor>G-VALUE-LCOPY:CAPS</Anchor>
+        </Node>
+        <Node id="524">
+         <Name>G_VALUE_COLLECT_FORMAT_MAX_LENGTH</Name>
+         <Path>gobject-Varargs-Value-Collection.html</Path>
+         <Anchor>G-VALUE-COLLECT-FORMAT-MAX-LENGTH:CAPS</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="29" type="folder">
+       <Name>GParamSpec</Name>
+       <Path>gobject-GParamSpec.html</Path>
+       <Subnodes>
+        <Node id="525">
+         <Name>G_TYPE_IS_PARAM</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-TYPE-IS-PARAM:CAPS</Anchor>
+        </Node>
+        <Node id="526">
+         <Name>G_PARAM_SPEC</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC:CAPS</Anchor>
+        </Node>
+        <Node id="527">
+         <Name>G_IS_PARAM_SPEC</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-IS-PARAM-SPEC:CAPS</Anchor>
+        </Node>
+        <Node id="528">
+         <Name>G_PARAM_SPEC_CLASS</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="529">
+         <Name>G_IS_PARAM_SPEC_CLASS</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-IS-PARAM-SPEC-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="530">
+         <Name>G_PARAM_SPEC_GET_CLASS</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC-GET-CLASS:CAPS</Anchor>
+        </Node>
+        <Node id="531">
+         <Name>G_PARAM_SPEC_TYPE</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="532">
+         <Name>G_PARAM_SPEC_TYPE_NAME</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC-TYPE-NAME:CAPS</Anchor>
+        </Node>
+        <Node id="533">
+         <Name>G_PARAM_SPEC_VALUE_TYPE</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-SPEC-VALUE-TYPE:CAPS</Anchor>
+        </Node>
+        <Node id="534">
+         <Name>GParamSpec</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>GParamSpec</Anchor>
+        </Node>
+        <Node id="535">
+         <Name>GParamSpecClass</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>GParamSpecClass</Anchor>
+        </Node>
+        <Node id="536">
+         <Name>GParamFlags</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>GParamFlags</Anchor>
+        </Node>
+        <Node id="537">
+         <Name>G_PARAM_READWRITE</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-READWRITE:CAPS</Anchor>
+        </Node>
+        <Node id="538">
+         <Name>G_PARAM_STATIC_STRINGS</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-STATIC-STRINGS:CAPS</Anchor>
+        </Node>
+        <Node id="539">
+         <Name>G_PARAM_MASK</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-MASK:CAPS</Anchor>
+        </Node>
+        <Node id="540">
+         <Name>G_PARAM_USER_SHIFT</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>G-PARAM-USER-SHIFT:CAPS</Anchor>
+        </Node>
+        <Node id="541">
+         <Name>g_param_spec_ref</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-ref</Anchor>
+        </Node>
+        <Node id="542">
+         <Name>g_param_spec_unref</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-unref</Anchor>
+        </Node>
+        <Node id="543">
+         <Name>g_param_spec_sink</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-sink</Anchor>
+        </Node>
+        <Node id="544">
+         <Name>g_param_spec_ref_sink</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-ref-sink</Anchor>
+        </Node>
+        <Node id="545">
+         <Name>g_param_value_set_default</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-value-set-default</Anchor>
+        </Node>
+        <Node id="546">
+         <Name>g_param_value_defaults</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-value-defaults</Anchor>
+        </Node>
+        <Node id="547">
+         <Name>g_param_value_validate</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-value-validate</Anchor>
+        </Node>
+        <Node id="548">
+         <Name>g_param_value_convert</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-value-convert</Anchor>
+        </Node>
+        <Node id="549">
+         <Name>g_param_values_cmp</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-values-cmp</Anchor>
+        </Node>
+        <Node id="550">
+         <Name>g_param_spec_get_name</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-get-name</Anchor>
+        </Node>
+        <Node id="551">
+         <Name>g_param_spec_get_nick</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-get-nick</Anchor>
+        </Node>
+        <Node id="552">
+         <Name>g_param_spec_get_blurb</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-get-blurb</Anchor>
+        </Node>
+        <Node id="553">
+         <Name>g_param_spec_get_qdata</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-get-qdata</Anchor>
+        </Node>
+        <Node id="554">
+         <Name>g_param_spec_set_qdata</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-set-qdata</Anchor>
+        </Node>
+        <Node id="555">
+         <Name>g_param_spec_set_qdata_full</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-set-qdata-full</Anchor>
+        </Node>
+        <Node id="556">
+         <Name>g_param_spec_steal_qdata</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-steal-qdata</Anchor>
+        </Node>
+        <Node id="557">
+         <Name>g_param_spec_get_redirect_target</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-get-redirect-target</Anchor>
+        </Node>
+        <Node id="558">
+         <Name>g_param_spec_internal</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-internal</Anchor>
+        </Node>
+        <Node id="559">
+         <Name>GParamSpecTypeInfo</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>GParamSpecTypeInfo</Anchor>
+        </Node>
+        <Node id="560">
+         <Name>g_param_type_register_static</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-type-register-static</Anchor>
+        </Node>
+        <Node id="561">
+         <Name>GParamSpecPool</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>GParamSpecPool</Anchor>
+        </Node>
+        <Node id="562">
+         <Name>g_param_spec_pool_new</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-new</Anchor>
+        </Node>
+        <Node id="563">
+         <Name>g_param_spec_pool_insert</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-insert</Anchor>
+        </Node>
+        <Node id="564">
+         <Name>g_param_spec_pool_remove</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-remove</Anchor>
+        </Node>
+        <Node id="565">
+         <Name>g_param_spec_pool_lookup</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-lookup</Anchor>
+        </Node>
+        <Node id="566">
+         <Name>g_param_spec_pool_list</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-list</Anchor>
+        </Node>
+        <Node id="567">
+         <Name>g_param_spec_pool_list_owned</Name>
+         <Path>gobject-GParamSpec.html</Path>
+         <Anchor>g-param-spec-pool-list-owned</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="30" type="folder">
+       <Name>Signals</Name>
+       <Path>gobject-Signals.html</Path>
+       <Subnodes>
+        <Node id="568">
+         <Name>GSignalInvocationHint</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalInvocationHint</Anchor>
+        </Node>
+        <Node id="569">
+         <Name>GSignalAccumulator</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalAccumulator</Anchor>
+        </Node>
+        <Node id="570">
+         <Name>GSignalCMarshaller</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalCMarshaller</Anchor>
+        </Node>
+        <Node id="571">
+         <Name>GSignalEmissionHook</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalEmissionHook</Anchor>
+        </Node>
+        <Node id="572">
+         <Name>GSignalFlags</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalFlags</Anchor>
+        </Node>
+        <Node id="573">
+         <Name>GSignalMatchType</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalMatchType</Anchor>
+        </Node>
+        <Node id="574">
+         <Name>GSignalQuery</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GSignalQuery</Anchor>
+        </Node>
+        <Node id="575">
+         <Name>G_SIGNAL_TYPE_STATIC_SCOPE</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>G-SIGNAL-TYPE-STATIC-SCOPE:CAPS</Anchor>
+        </Node>
+        <Node id="576">
+         <Name>G_SIGNAL_MATCH_MASK</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>G-SIGNAL-MATCH-MASK:CAPS</Anchor>
+        </Node>
+        <Node id="577">
+         <Name>G_SIGNAL_FLAGS_MASK</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>G-SIGNAL-FLAGS-MASK:CAPS</Anchor>
+        </Node>
+        <Node id="578">
+         <Name>g_signal_new</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-new</Anchor>
+        </Node>
+        <Node id="579">
+         <Name>g_signal_newv</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-newv</Anchor>
+        </Node>
+        <Node id="580">
+         <Name>g_signal_new_valist</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-new-valist</Anchor>
+        </Node>
+        <Node id="581">
+         <Name>g_signal_query</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-query</Anchor>
+        </Node>
+        <Node id="582">
+         <Name>g_signal_lookup</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-lookup</Anchor>
+        </Node>
+        <Node id="583">
+         <Name>g_signal_name</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-name</Anchor>
+        </Node>
+        <Node id="584">
+         <Name>g_signal_list_ids</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-list-ids</Anchor>
+        </Node>
+        <Node id="585">
+         <Name>g_signal_emit</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-emit</Anchor>
+        </Node>
+        <Node id="586">
+         <Name>g_signal_emit_by_name</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-emit-by-name</Anchor>
+        </Node>
+        <Node id="587">
+         <Name>g_signal_emitv</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-emitv</Anchor>
+        </Node>
+        <Node id="588">
+         <Name>g_signal_emit_valist</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-emit-valist</Anchor>
+        </Node>
+        <Node id="589">
+         <Name>g_signal_connect</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect</Anchor>
+        </Node>
+        <Node id="590">
+         <Name>g_signal_connect_after</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-after</Anchor>
+        </Node>
+        <Node id="591">
+         <Name>g_signal_connect_swapped</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-swapped</Anchor>
+        </Node>
+        <Node id="592">
+         <Name>g_signal_connect_object</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-object</Anchor>
+        </Node>
+        <Node id="593">
+         <Name>GConnectFlags</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>GConnectFlags</Anchor>
+        </Node>
+        <Node id="594">
+         <Name>g_signal_connect_data</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-data</Anchor>
+        </Node>
+        <Node id="595">
+         <Name>g_signal_connect_closure</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-closure</Anchor>
+        </Node>
+        <Node id="596">
+         <Name>g_signal_connect_closure_by_id</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-connect-closure-by-id</Anchor>
+        </Node>
+        <Node id="597">
+         <Name>g_signal_handler_block</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handler-block</Anchor>
+        </Node>
+        <Node id="598">
+         <Name>g_signal_handler_unblock</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handler-unblock</Anchor>
+        </Node>
+        <Node id="599">
+         <Name>g_signal_handler_disconnect</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handler-disconnect</Anchor>
+        </Node>
+        <Node id="600">
+         <Name>g_signal_handler_find</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handler-find</Anchor>
+        </Node>
+        <Node id="601">
+         <Name>g_signal_handlers_block_matched</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-block-matched</Anchor>
+        </Node>
+        <Node id="602">
+         <Name>g_signal_handlers_unblock_matched</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-unblock-matched</Anchor>
+        </Node>
+        <Node id="603">
+         <Name>g_signal_handlers_disconnect_matched</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-disconnect-matched</Anchor>
+        </Node>
+        <Node id="604">
+         <Name>g_signal_handler_is_connected</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handler-is-connected</Anchor>
+        </Node>
+        <Node id="605">
+         <Name>g_signal_handlers_block_by_func</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-block-by-func</Anchor>
+        </Node>
+        <Node id="606">
+         <Name>g_signal_handlers_unblock_by_func</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-unblock-by-func</Anchor>
+        </Node>
+        <Node id="607">
+         <Name>g_signal_handlers_disconnect_by_func</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-handlers-disconnect-by-func</Anchor>
+        </Node>
+        <Node id="608">
+         <Name>g_signal_has_handler_pending</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-has-handler-pending</Anchor>
+        </Node>
+        <Node id="609">
+         <Name>g_signal_stop_emission</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-stop-emission</Anchor>
+        </Node>
+        <Node id="610">
+         <Name>g_signal_stop_emission_by_name</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-stop-emission-by-name</Anchor>
+        </Node>
+        <Node id="611">
+         <Name>g_signal_override_class_closure</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-override-class-closure</Anchor>
+        </Node>
+        <Node id="612">
+         <Name>g_signal_chain_from_overridden</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-chain-from-overridden</Anchor>
+        </Node>
+        <Node id="613">
+         <Name>g_signal_new_class_handler</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-new-class-handler</Anchor>
+        </Node>
+        <Node id="614">
+         <Name>g_signal_override_class_handler</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-override-class-handler</Anchor>
+        </Node>
+        <Node id="615">
+         <Name>g_signal_chain_from_overridden_handler</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-chain-from-overridden-handler</Anchor>
+        </Node>
+        <Node id="616">
+         <Name>g_signal_add_emission_hook</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-add-emission-hook</Anchor>
+        </Node>
+        <Node id="617">
+         <Name>g_signal_remove_emission_hook</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-remove-emission-hook</Anchor>
+        </Node>
+        <Node id="618">
+         <Name>g_signal_parse_name</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-parse-name</Anchor>
+        </Node>
+        <Node id="619">
+         <Name>g_signal_get_invocation_hint</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-get-invocation-hint</Anchor>
+        </Node>
+        <Node id="620">
+         <Name>g_signal_type_cclosure_new</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-type-cclosure-new</Anchor>
+        </Node>
+        <Node id="621">
+         <Name>g_signal_accumulator_true_handled</Name>
+         <Path>gobject-Signals.html</Path>
+         <Anchor>g-signal-accumulator-true-handled</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="31" type="folder">
+       <Name>Closures</Name>
+       <Path>gobject-Closures.html</Path>
+       <Subnodes>
+        <Node id="622">
+         <Name>G_CLOSURE_NEEDS_MARSHAL</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-CLOSURE-NEEDS-MARSHAL:CAPS</Anchor>
+        </Node>
+        <Node id="623">
+         <Name>G_CLOSURE_N_NOTIFIERS</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-CLOSURE-N-NOTIFIERS:CAPS</Anchor>
+        </Node>
+        <Node id="624">
+         <Name>G_CCLOSURE_SWAP_DATA</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-CCLOSURE-SWAP-DATA:CAPS</Anchor>
+        </Node>
+        <Node id="625">
+         <Name>G_CALLBACK</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-CALLBACK:CAPS</Anchor>
+        </Node>
+        <Node id="626">
+         <Name>GCallback</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>GCallback</Anchor>
+        </Node>
+        <Node id="627">
+         <Name>GClosure</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>GClosure</Anchor>
+        </Node>
+        <Node id="628">
+         <Name>G_TYPE_CLOSURE</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-TYPE-CLOSURE:CAPS</Anchor>
+        </Node>
+        <Node id="629">
+         <Name>GCClosure</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>GCClosure</Anchor>
+        </Node>
+        <Node id="630">
+         <Name>GClosureMarshal</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>GClosureMarshal</Anchor>
+        </Node>
+        <Node id="631">
+         <Name>GClosureNotify</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>GClosureNotify</Anchor>
+        </Node>
+        <Node id="632">
+         <Name>g_cclosure_new</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-new</Anchor>
+        </Node>
+        <Node id="633">
+         <Name>g_cclosure_new_swap</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-new-swap</Anchor>
+        </Node>
+        <Node id="634">
+         <Name>g_cclosure_new_object</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-new-object</Anchor>
+        </Node>
+        <Node id="635">
+         <Name>g_cclosure_new_object_swap</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-new-object-swap</Anchor>
+        </Node>
+        <Node id="636">
+         <Name>g_closure_new_object</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-new-object</Anchor>
+        </Node>
+        <Node id="637">
+         <Name>g_closure_ref</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-ref</Anchor>
+        </Node>
+        <Node id="638">
+         <Name>g_closure_sink</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-sink</Anchor>
+        </Node>
+        <Node id="639">
+         <Name>g_closure_unref</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-unref</Anchor>
+        </Node>
+        <Node id="640">
+         <Name>g_closure_invoke</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-invoke</Anchor>
+        </Node>
+        <Node id="641">
+         <Name>g_closure_invalidate</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-invalidate</Anchor>
+        </Node>
+        <Node id="642">
+         <Name>g_closure_add_finalize_notifier</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-add-finalize-notifier</Anchor>
+        </Node>
+        <Node id="643">
+         <Name>g_closure_add_invalidate_notifier</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-add-invalidate-notifier</Anchor>
+        </Node>
+        <Node id="644">
+         <Name>g_closure_remove_finalize_notifier</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-remove-finalize-notifier</Anchor>
+        </Node>
+        <Node id="645">
+         <Name>g_closure_remove_invalidate_notifier</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-remove-invalidate-notifier</Anchor>
+        </Node>
+        <Node id="646">
+         <Name>g_closure_new_simple</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-new-simple</Anchor>
+        </Node>
+        <Node id="647">
+         <Name>g_closure_set_marshal</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-set-marshal</Anchor>
+        </Node>
+        <Node id="648">
+         <Name>g_closure_add_marshal_guards</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-add-marshal-guards</Anchor>
+        </Node>
+        <Node id="649">
+         <Name>g_closure_set_meta_marshal</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-closure-set-meta-marshal</Anchor>
+        </Node>
+        <Node id="650">
+         <Name>g_source_set_closure</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-source-set-closure</Anchor>
+        </Node>
+        <Node id="651">
+         <Name>G_TYPE_IO_CHANNEL</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-TYPE-IO-CHANNEL:CAPS</Anchor>
+        </Node>
+        <Node id="652">
+         <Name>G_TYPE_IO_CONDITION</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>G-TYPE-IO-CONDITION:CAPS</Anchor>
+        </Node>
+        <Node id="653">
+         <Name>g_cclosure_marshal_VOID__VOID</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--VOID</Anchor>
+        </Node>
+        <Node id="654">
+         <Name>g_cclosure_marshal_VOID__BOOLEAN</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--BOOLEAN</Anchor>
+        </Node>
+        <Node id="655">
+         <Name>g_cclosure_marshal_VOID__CHAR</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--CHAR</Anchor>
+        </Node>
+        <Node id="656">
+         <Name>g_cclosure_marshal_VOID__UCHAR</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--UCHAR</Anchor>
+        </Node>
+        <Node id="657">
+         <Name>g_cclosure_marshal_VOID__INT</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--INT</Anchor>
+        </Node>
+        <Node id="658">
+         <Name>g_cclosure_marshal_VOID__UINT</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--UINT</Anchor>
+        </Node>
+        <Node id="659">
+         <Name>g_cclosure_marshal_VOID__LONG</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--LONG</Anchor>
+        </Node>
+        <Node id="660">
+         <Name>g_cclosure_marshal_VOID__ULONG</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--ULONG</Anchor>
+        </Node>
+        <Node id="661">
+         <Name>g_cclosure_marshal_VOID__ENUM</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--ENUM</Anchor>
+        </Node>
+        <Node id="662">
+         <Name>g_cclosure_marshal_VOID__FLAGS</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--FLAGS</Anchor>
+        </Node>
+        <Node id="663">
+         <Name>g_cclosure_marshal_VOID__FLOAT</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--FLOAT</Anchor>
+        </Node>
+        <Node id="664">
+         <Name>g_cclosure_marshal_VOID__DOUBLE</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--DOUBLE</Anchor>
+        </Node>
+        <Node id="665">
+         <Name>g_cclosure_marshal_VOID__STRING</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--STRING</Anchor>
+        </Node>
+        <Node id="666">
+         <Name>g_cclosure_marshal_VOID__PARAM</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--PARAM</Anchor>
+        </Node>
+        <Node id="667">
+         <Name>g_cclosure_marshal_VOID__BOXED</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--BOXED</Anchor>
+        </Node>
+        <Node id="668">
+         <Name>g_cclosure_marshal_VOID__POINTER</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--POINTER</Anchor>
+        </Node>
+        <Node id="669">
+         <Name>g_cclosure_marshal_VOID__OBJECT</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--OBJECT</Anchor>
+        </Node>
+        <Node id="670">
+         <Name>g_cclosure_marshal_STRING__OBJECT_POINTER</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-STRING--OBJECT-POINTER</Anchor>
+        </Node>
+        <Node id="671">
+         <Name>g_cclosure_marshal_VOID__UINT_POINTER</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-VOID--UINT-POINTER</Anchor>
+        </Node>
+        <Node id="672">
+         <Name>g_cclosure_marshal_BOOLEAN__FLAGS</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-BOOLEAN--FLAGS</Anchor>
+        </Node>
+        <Node id="673">
+         <Name>g_cclosure_marshal_BOOL__FLAGS</Name>
+         <Path>gobject-Closures.html</Path>
+         <Anchor>g-cclosure-marshal-BOOL--FLAGS</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="32" type="folder">
+       <Name>Value arrays</Name>
+       <Path>gobject-Value-arrays.html</Path>
+       <Subnodes>
+        <Node id="674">
+         <Name>GValueArray</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>GValueArray</Anchor>
+        </Node>
+        <Node id="675">
+         <Name>g_value_array_get_nth</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-get-nth</Anchor>
+        </Node>
+        <Node id="676">
+         <Name>g_value_array_new</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-new</Anchor>
+        </Node>
+        <Node id="677">
+         <Name>g_value_array_copy</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-copy</Anchor>
+        </Node>
+        <Node id="678">
+         <Name>g_value_array_free</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-free</Anchor>
+        </Node>
+        <Node id="679">
+         <Name>g_value_array_append</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-append</Anchor>
+        </Node>
+        <Node id="680">
+         <Name>g_value_array_prepend</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-prepend</Anchor>
+        </Node>
+        <Node id="681">
+         <Name>g_value_array_insert</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-insert</Anchor>
+        </Node>
+        <Node id="682">
+         <Name>g_value_array_remove</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-remove</Anchor>
+        </Node>
+        <Node id="683">
+         <Name>g_value_array_sort</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-sort</Anchor>
+        </Node>
+        <Node id="684">
+         <Name>g_value_array_sort_with_data</Name>
+         <Path>gobject-Value-arrays.html</Path>
+         <Anchor>g-value-array-sort-with-data</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="33" type="folder">
+     <Name>Tools Reference</Name>
+     <Path>rn02.html</Path>
+     <Subnodes>
+      <Node id="34" type="folder">
+       <Name>glib-mkenums</Name>
+       <Path>glib-mkenums.html</Path>
+       <Subnodes>
+        <Node id="685">
+         <Name>Options</Name>
+         <Path>glib-mkenums.html</Path>
+         <Anchor>id2806989</Anchor>
+        </Node>
+        <Node id="686">
+         <Name>Production text substitutions</Name>
+         <Path>glib-mkenums.html</Path>
+         <Anchor>id2807258</Anchor>
+        </Node>
+        <Node id="687">
+         <Name>Trigraph extensions</Name>
+         <Path>glib-mkenums.html</Path>
+         <Anchor>id2807427</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="35" type="folder">
+       <Name>glib-genmarshal</Name>
+       <Path>glib-genmarshal.html</Path>
+       <Subnodes>
+        <Node id="688">
+         <Name>Options</Name>
+         <Path>glib-genmarshal.html</Path>
+         <Anchor>id2808226</Anchor>
+        </Node>
+        <Node id="689">
+         <Name>Marshaller list format</Name>
+         <Path>glib-genmarshal.html</Path>
+         <Anchor>id2808362</Anchor>
+        </Node>
+        <Node id="690">
+         <Name>Parameter types</Name>
+         <Path>glib-genmarshal.html</Path>
+         <Anchor>id2808434</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="36" type="folder">
+       <Name>gobject-query</Name>
+       <Path>gobject-query.html</Path>
+       <Subnodes>
+        <Node id="691">
+         <Name>Options</Name>
+         <Path>gobject-query.html</Path>
+         <Anchor>id2809716</Anchor>
+        </Node>
+       </Subnodes>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="37" type="folder">
+     <Name>Tutorial</Name>
+     <Path>pt02.html</Path>
+     <Subnodes>
+      <Node id="38" type="folder">
+       <Name>How to define and implement a new GObject</Name>
+       <Path>howto-gobject.html</Path>
+       <Subnodes>
+        <Node id="39">
+         <Name>Boilerplate header code</Name>
+         <Path>howto-gobject.html#howto-gobject-header</Path>
+        </Node>
+        <Node id="40">
+         <Name>Boilerplate code</Name>
+         <Path>howto-gobject-code.html</Path>
+        </Node>
+        <Node id="41">
+         <Name>Object Construction</Name>
+         <Path>howto-gobject-construction.html</Path>
+        </Node>
+        <Node id="42">
+         <Name>Object Destruction</Name>
+         <Path>howto-gobject-destruction.html</Path>
+        </Node>
+        <Node id="43">
+         <Name>Object methods</Name>
+         <Path>howto-gobject-methods.html</Path>
+        </Node>
+        <Node id="44">
+         <Name>Chaining up</Name>
+         <Path>howto-gobject-chainup.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="45" type="folder">
+       <Name>How to define and implement interfaces</Name>
+       <Path>howto-interface.html</Path>
+       <Subnodes>
+        <Node id="46">
+         <Name>How to define interfaces</Name>
+         <Path>howto-interface.html#howto-interface-define</Path>
+        </Node>
+        <Node id="47">
+         <Name>How To define implement an Interface?</Name>
+         <Path>howto-interface-implement.html</Path>
+        </Node>
+        <Node id="48">
+         <Name>Interface definition prerequisites</Name>
+         <Path>ch06s03.html</Path>
+        </Node>
+        <Node id="49">
+         <Name>Interface Properties</Name>
+         <Path>howto-interface-properties.html</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+      <Node id="50" type="folder">
+       <Name>How to create and use signals</Name>
+       <Path>howto-signals.html</Path>
+       <Subnodes>
+        <Node id="51">
+         <Name>Simple use of signals</Name>
+         <Path>howto-signals.html#howto-simple-signals</Path>
+        </Node>
+       </Subnodes>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="52" type="folder">
+     <Name>Related Tools</Name>
+     <Path>pt03.html</Path>
+     <Subnodes>
+      <Node id="53">
+       <Name>Vala</Name>
+       <Path>tools-vala.html</Path>
+      </Node>
+      <Node id="54">
+       <Name>GObject builder</Name>
+       <Path>tools-gob.html</Path>
+      </Node>
+      <Node id="55">
+       <Name>Graphical inspection of GObjects</Name>
+       <Path>tools-ginspector.html</Path>
+      </Node>
+      <Node id="56">
+       <Name>Debugging reference count problems</Name>
+       <Path>tools-refdb.html</Path>
+      </Node>
+      <Node id="57">
+       <Name>Writing API docs</Name>
+       <Path>tools-gtkdoc.html</Path>
+      </Node>
+     </Subnodes>
+    </Node>
+    <Node id="0" type="folder">
+     <Name>Index</Name>
+     <Subnodes>
+      <Node id="58">
+       <Name>Index</Name>
+       <Path>ix01.html</Path>
+      </Node>
+      <Node id="59">
+       <Name>Index of deprecated symbols</Name>
+       <Path>ix02.html</Path>
+      </Node>
+      <Node id="60">
+       <Name>Index of new symbols in 2.2</Name>
+       <Path>ix03.html</Path>
+      </Node>
+      <Node id="61">
+       <Name>Index of new symbols in 2.4</Name>
+       <Path>ix04.html</Path>
+      </Node>
+      <Node id="62">
+       <Name>Index of new symbols in 2.6</Name>
+       <Path>ix05.html</Path>
+      </Node>
+      <Node id="63">
+       <Name>Index of new symbols in 2.8</Name>
+       <Path>ix06.html</Path>
+      </Node>
+      <Node id="64">
+       <Name>Index of new symbols in 2.10</Name>
+       <Path>ix07.html</Path>
+      </Node>
+      <Node id="65">
+       <Name>Index of new symbols in 2.12</Name>
+       <Path>ix08.html</Path>
+      </Node>
+      <Node id="66">
+       <Name>Index of new symbols in 2.14</Name>
+       <Path>ix09.html</Path>
+      </Node>
+      <Node id="67">
+       <Name>Index of new symbols in 2.14</Name>
+       <Path>ix10.html</Path>
+      </Node>
+     </Subnodes>
+    </Node>
+   </Subnodes>
+  </Node>
+ </TOC>
+</DocSetNodes>

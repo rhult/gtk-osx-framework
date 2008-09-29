@@ -1,0 +1,4099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_version</Name>
+   <Type>data</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>gdk-pixbuf-version</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">Contains the full version of the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library as a string.
+This is the version currently in use by a running program.</Abstract>
+  <Declaration type="html">&lt;pre&gt;extern const char *gdk_pixbuf_version;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_major_version</Name>
+   <Type>data</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>gdk-pixbuf-major-version</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">The major version number of the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library.  (e.g. in 
+&lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; version 1.2.5 this is 1.) </Abstract>
+  <Declaration type="html">&lt;pre&gt;extern const guint gdk_pixbuf_major_version;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_minor_version</Name>
+   <Type>data</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>gdk-pixbuf-minor-version</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">The minor version number of the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library.  (e.g. in 
+&lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; version 1.2.5 this is 2.) </Abstract>
+  <Declaration type="html">&lt;pre&gt;extern const guint gdk_pixbuf_minor_version;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_micro_version</Name>
+   <Type>data</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>gdk-pixbuf-micro-version</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">The micro version number of the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library.  (e.g. in 
+&lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; version 1.2.5 this is 5.) </Abstract>
+  <Declaration type="html">&lt;pre&gt;extern const guint gdk_pixbuf_micro_version;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_VERSION</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>GDK-PIXBUF-VERSION:CAPS</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">Contains the full version of the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; header as a string.
+This is the version being compiled against; contrast with
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Versioning.html#gdk-pixbuf-version&quot; title=&quot;gdk_pixbuf_version&quot;&gt;&lt;span class=&quot;type&quot;&gt;gdk_pixbuf_version&lt;/span&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_VERSION &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_MAJOR</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>GDK-PIXBUF-MAJOR:CAPS</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">Major version of &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library, that is the first &quot;0&quot; in
+&quot;0.8.0&quot; for example.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_MAJOR (2)&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_MINOR</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>GDK-PIXBUF-MINOR:CAPS</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">Minor version of &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library, that is the &quot;8&quot; in
+&quot;0.8.0&quot; for example.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_MINOR (14)&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_MICRO</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Versioning.html</Path>
+  <Anchor>GDK-PIXBUF-MICRO:CAPS</Anchor>
+  <NodeRef refid="2"/>
+  <Abstract type="html">Micro version of &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library, that is the last &quot;0&quot; in
+&quot;0.8.0&quot; for example.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_MICRO (3)&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_CORRUPT_IMAGE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_CORRUPT_IMAGE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_BAD_OPTION</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_BAD_OPTION&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_UNKNOWN_TYPE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_UNKNOWN_TYPE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR_FAILED</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="45"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ERROR_FAILED&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufError</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufError</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufError</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">An error code in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; domain. Many &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt;
+operations can cause errors in this domain, or in the &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt;
+domain.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_PIXBUF_ERROR_CORRUPT_IMAGE,
+    GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,
+    GDK_PIXBUF_ERROR_BAD_OPTION,
+    GDK_PIXBUF_ERROR_UNKNOWN_TYPE,
+    GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,
+    GDK_PIXBUF_ERROR_FAILED 
+} GdkPixbufError;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ERROR</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GDK-PIXBUF-ERROR:CAPS</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Error domain used for pixbuf operations. Indicates that the error code
+will be in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbufError&quot; title=&quot;enum GdkPixbufError&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufError&lt;/span&gt;&lt;/a&gt; enumeration. See &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;GError&lt;/span&gt;&lt;/a&gt; for
+information on error domains and error codes.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_ERROR gdk_pixbuf_error_quark ()&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_COLORSPACE_RGB</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkColorspace</Anchor>
+  <NodeRef refid="47"/>
+  <Declaration type="html">&lt;pre&gt;GDK_COLORSPACE_RGB&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkColorspace</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkColorspace</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkColorspace</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">    This enumeration defines the color spaces that are supported by
+    the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library.  Currently only RGB is supported.
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_COLORSPACE_RGB 
+} GdkColorspace;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ALPHA_BILEVEL</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufAlphaMode</Anchor>
+  <NodeRef refid="48"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ALPHA_BILEVEL&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufAlphaMode</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ALPHA_FULL</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufAlphaMode</Anchor>
+  <NodeRef refid="48"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ALPHA_FULL&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufAlphaMode</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufAlphaMode</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbufAlphaMode</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">    These values can be passed to
+    &lt;a
+href=&quot;/usr/share/gtk-doc/html/gdk/gdk-Pixbufs.html#gdk-pixbuf-render-to-drawable-alpha&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_render_to_drawable_alpha()&lt;/code&gt;&lt;/a&gt; to control how the alpha
+    channel of an image should be handled.  This function can create a
+    bilevel clipping mask (black and white) and use it while painting
+    the image.  In the future, when the X Window System gets an alpha
+    channel extension, it will be possible to do full alpha
+    compositing onto arbitrary drawables.  For now both cases fall
+    back to a bilevel clipping mask.
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_PIXBUF_ALPHA_BILEVEL,
+    GDK_PIXBUF_ALPHA_FULL 
+} GdkPixbufAlphaMode;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbuf</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>GdkPixbuf-struct</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">    This is the main structure in the &lt;span class=&quot;application&quot;&gt;gdk-pixbuf&lt;/span&gt; library.  It is
+    used to represent images.  It contains information about the
+    image's pixel data, its color space, bits per sample, width and
+    height, and the rowstride (the number of bytes between the start of
+    one row and the start of the next). 
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct _GdkPixbuf GdkPixbuf;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_colorspace</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-colorspace</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the color space of a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkColorspace&quot; href=&quot;enum GdkColorspace&quot; title=&quot;link&quot;&gt;GdkColorspace&lt;/a&gt; gdk_pixbuf_get_colorspace (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_n_channels</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-n-channels</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the number of channels of a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_get_n_channels (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_has_alpha</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-has-alpha</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries whether a pixbuf has an alpha channel (opacity information).</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_get_has_alpha (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_bits_per_sample</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-bits-per-sample</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the number of bits per color sample in a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_get_bits_per_sample (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_pixels</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-pixels</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries a pointer to the pixel data of a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;guchar&lt;/a&gt;* gdk_pixbuf_get_pixels (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_width</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-width</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the width of a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_get_width (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_height</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-height</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the height of a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_get_height (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_rowstride</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-rowstride</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Queries the rowstride of a pixbuf, which is the number of bytes between the start of a row
+and the start of the next row.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_get_rowstride (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_option</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf.html</Path>
+  <Anchor>gdk-pixbuf-get-option</Anchor>
+  <NodeRef refid="3"/>
+  <Abstract type="html">Looks up &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;key&lt;/code&gt;&lt;/em&gt; in the list of options that may have been attached to the
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt; when it was loaded, or that may have been attached by another
+function using &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#gdk-pixbuf-set-option&quot; title=&quot;gdk_pixbuf_set_option ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_set_option()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;const &lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;* gdk_pixbuf_get_option (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    const &lt;a href= &gt;gchar&lt;/a&gt; *key);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_ref</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-refcounting.html</Path>
+  <Anchor>gdk-pixbuf-ref</Anchor>
+  <NodeRef refid="4"/>
+  <Abstract type="html">Adds a reference to a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_ref (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <DeprecationSummary>&lt;code class=&quot;literal&quot;&gt;gdk_pixbuf_ref&lt;/code&gt; is deprecated and should not be used in newly-written code. Use &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-ref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_ref()&lt;/code&gt;&lt;/a&gt;.</DeprecationSummary>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_unref</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-refcounting.html</Path>
+  <Anchor>gdk-pixbuf-unref</Anchor>
+  <NodeRef refid="4"/>
+  <Abstract type="html">Removes a reference from a pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_unref (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <DeprecationSummary>&lt;code class=&quot;literal&quot;&gt;gdk_pixbuf_unref&lt;/code&gt; is deprecated and should not be used in newly-written code. Use &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_unref()&lt;/code&gt;&lt;/a&gt;.</DeprecationSummary>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufDestroyNotify</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-refcounting.html</Path>
+  <Anchor>GdkPixbufDestroyNotify</Anchor>
+  <NodeRef refid="4"/>
+  <Abstract type="html">    A function of this type is responsible for freeing the pixel array
+    of a pixbuf.  The &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-creating.html#gdk-pixbuf-new-from-data&quot; title=&quot;gdk_pixbuf_new_from_data ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_new_from_data()&lt;/code&gt;&lt;/a&gt; function lets you
+    pass in a pre-allocated pixel array so that a pixbuf can be
+    created from it; in this case you will need to pass in a function
+    of &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-refcounting.html#GdkPixbufDestroyNotify&quot; title=&quot;GdkPixbufDestroyNotify ()&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufDestroyNotify&lt;/span&gt;&lt;/a&gt; so that the pixel data can be freed
+    when the pixbuf is finalized.
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufDestroyNotify) (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot; &gt;guchar&lt;/a&gt; *pixels,
+    &lt;a href= &gt;gpointer&lt;/a&gt; data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_file</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-new-from-file</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Creates a new pixbuf by loading an image from a file.  The file format is
+detected automatically. If &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt; is returned, then &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; will be set.
+Possible errors are in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; and &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt; domains.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_file (
+    const char *filename,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_file_at_size</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-new-from-file-at-size</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Creates a new pixbuf by loading an image from a file.  
+The file format is detected automatically. If &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt; is returned, then 
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; will be set. Possible errors are in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; and 
+&lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt; domains.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_file_at_size (
+    const char *filename,
+    int width,
+    int height,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_file_at_scale</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-new-from-file-at-scale</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Creates a new pixbuf by loading an image from a file.  The file format is
+detected automatically. If &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt; is returned, then &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; will be set.
+Possible errors are in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; and &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt; domains.
+The image will be scaled to fit in the requested size, optionally preserving
+the image's aspect ratio. </Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_file_at_scale (
+    const char *filename,
+    int width,
+    int height,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gboolean&lt;/a&gt; preserve_aspect_ratio,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_file_info</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-get-file-info</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Parses an image file far enough to determine its format and size.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixbufFormat&lt;/a&gt;* gdk_pixbuf_get_file_info (
+    const &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;gchar&lt;/a&gt; *filename,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;gint&lt;/a&gt; *width,
+    &lt;a href= &gt;gint&lt;/a&gt; *height);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_stream</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-new-from-stream</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Creates a new pixbuf by loading an image from an input stream.  </Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/gio/GInputStream.html&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_stream (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/gio/GCancellable.html&quot; &gt;GInputStream&lt;/a&gt; *stream,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;GCancellable&lt;/a&gt; *cancellable,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.14</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_stream_at_scale</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-loading.html</Path>
+  <Anchor>gdk-pixbuf-new-from-stream-at-scale</Anchor>
+  <NodeRef refid="5"/>
+  <Abstract type="html">Creates a new pixbuf by loading an image from an input stream.  </Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/gio/GInputStream.html&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_stream_at_scale (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;GInputStream&lt;/a&gt; *stream,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;gint&lt;/a&gt; width,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot; &gt;gint&lt;/a&gt; height,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/gio/GCancellable.html&quot; &gt;gboolean&lt;/a&gt; preserve_aspect_ratio,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;GCancellable&lt;/a&gt; *cancellable,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.14</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_savev</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-savev</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf to a file in &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt;, which is currently &quot;jpeg&quot;, &quot;png&quot;, &quot;tiff&quot;, &quot;ico&quot; or &quot;bmp&quot;.
+If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; is set, &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; will be returned. 
+See &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save&quot; title=&quot;gdk_pixbuf_save ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save()&lt;/code&gt;&lt;/a&gt; for more details.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_savev (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    const char *filename,
+    const char *type,
+    char **option_keys,
+    char **option_values,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf to a file in format &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt;. By default, &quot;jpeg&quot;, &quot;png&quot;, &quot;ico&quot; 
+and &quot;bmp&quot; are possible file formats to save in, but more formats may be
+installed. The list of all writable formats can be determined in the 
+following way:</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    const char *filename,
+    const char *type,
+    &lt;a href= &gt;GError&lt;/a&gt; **error,
+    ...);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufSaveFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>GdkPixbufSaveFunc</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Specifies the type of the function passed to
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-callback&quot; title=&quot;gdk_pixbuf_save_to_callback ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_callback()&lt;/code&gt;&lt;/a&gt;.  It is called once for each block of
+bytes that is &quot;written&quot; by &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-callback&quot; title=&quot;gdk_pixbuf_save_to_callback ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_callback()&lt;/code&gt;&lt;/a&gt;.  If
+successful it should return &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt;.  If an error occurs it should set
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; and return &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt;, in which case &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-callback&quot; title=&quot;gdk_pixbuf_save_to_callback ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_callback()&lt;/code&gt;&lt;/a&gt;
+will fail with the same error.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot; &gt;gboolean&lt;/a&gt; (
+    *GdkPixbufSaveFunc) (
+    const &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gchar&lt;/a&gt; *buf,
+    gsize count,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot; &gt;GError&lt;/a&gt; **error,
+    &lt;a href= &gt;gpointer&lt;/a&gt; data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save_to_callback</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save-to-callback</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf in format &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt; by feeding the produced data to a 
+callback. Can be used when you want to store the image to something 
+other than a file, such as an in-memory buffer or a socket.  
+If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; is set, &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; will be returned. Possible errors
+include those in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; domain and whatever the save
+function generates.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save_to_callback (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a class=&quot;gdk-pixbuf-file-saving.html#GdkPixbufSaveFunc&quot; href=&quot;GdkPixbufSaveFunc ()&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot;&gt;GdkPixbufSaveFunc&lt;/a&gt; save_func,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gpointer&lt;/a&gt; user_data,
+    const char *type,
+    &lt;a href= &gt;GError&lt;/a&gt; **error,
+    ...);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save_to_callbackv</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save-to-callbackv</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf to a callback in format &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt;, which is currently &quot;jpeg&quot;,
+&quot;png&quot;, &quot;tiff&quot;, &quot;ico&quot; or &quot;bmp&quot;.  If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; is set, &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; will be returned. See
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-callback&quot; title=&quot;gdk_pixbuf_save_to_callback ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_callback()&lt;/code&gt;&lt;/a&gt; for more details.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save_to_callbackv (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a class=&quot;gdk-pixbuf-file-saving.html#GdkPixbufSaveFunc&quot; href=&quot;GdkPixbufSaveFunc ()&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot;&gt;GdkPixbufSaveFunc&lt;/a&gt; save_func,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gpointer&lt;/a&gt; user_data,
+    const char *type,
+    char **option_keys,
+    char **option_values,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save_to_buffer</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save-to-buffer</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf to a new buffer in format &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt;, which is currently &quot;jpeg&quot;,
+&quot;png&quot;, &quot;tiff&quot;, &quot;ico&quot; or &quot;bmp&quot;.  This is a convenience function that uses
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-callback&quot; title=&quot;gdk_pixbuf_save_to_callback ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_callback()&lt;/code&gt;&lt;/a&gt; to do the real work. Note that the buffer 
+is not nul-terminated and may contain embedded  nuls.
+If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; is set, &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; will be returned and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;buffer&lt;/code&gt;&lt;/em&gt; will be set to
+&lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt;. Possible errors include those in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt;
+domain.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save_to_buffer (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gchar&lt;/a&gt; **buffer,
+    gsize *buffer_size,
+    const char *type,
+    &lt;a href= &gt;GError&lt;/a&gt; **error,
+    ...);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save_to_bufferv</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save-to-bufferv</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves pixbuf to a new buffer in format &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/em&gt;, which is currently &quot;jpeg&quot;,
+&quot;tiff&quot;, &quot;png&quot;, &quot;ico&quot; or &quot;bmp&quot;.  See &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-file-saving.html#gdk-pixbuf-save-to-buffer&quot; title=&quot;gdk_pixbuf_save_to_buffer ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_save_to_buffer()&lt;/code&gt;&lt;/a&gt; 
+for more details.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save_to_bufferv (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gchar&lt;/a&gt; **buffer,
+    gsize *buffer_size,
+    const char *type,
+    char **option_keys,
+    char **option_values,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_save_to_stream</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-file-saving.html</Path>
+  <Anchor>gdk-pixbuf-save-to-stream</Anchor>
+  <NodeRef refid="6"/>
+  <Abstract type="html">Saves &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt; to an output stream.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_save_to_stream (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/gio/GOutputStream.html&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/gio/GCancellable.html&quot; &gt;GOutputStream&lt;/a&gt; *stream,
+    const char *type,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;GCancellable&lt;/a&gt; *cancellable,
+    &lt;a href= &gt;GError&lt;/a&gt; **error,
+    ...);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.14</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-new</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Creates a new &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; structure and allocates a buffer for it.  The 
+buffer has an optimal rowstride.  Note that the buffer is not cleared;
+you will have to fill it completely yourself.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkColorspace&quot; href=&quot;enum GdkColorspace&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkColorspace&lt;/a&gt; colorspace,
+    &lt;a href= &gt;gboolean&lt;/a&gt; has_alpha,
+    int bits_per_sample,
+    int width,
+    int height);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_data</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-new-from-data</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Creates a new &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; out of in-memory image data.  Currently only RGB
+images with 8 bits per sample are supported.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_data (
+    const &lt;a href=&quot;link&quot; &gt;guchar&lt;/a&gt; *data,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkColorspace&quot; href=&quot;enum GdkColorspace&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkColorspace&lt;/a&gt; colorspace,
+    &lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; has_alpha,
+    int bits_per_sample,
+    int width,
+    int height,
+    int rowstride,
+    &lt;a class=&quot;gdk-pixbuf-refcounting.html#GdkPixbufDestroyNotify&quot; href=&quot;GdkPixbufDestroyNotify ()&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot;&gt;GdkPixbufDestroyNotify&lt;/a&gt; destroy_fn,
+    &lt;a href= &gt;gpointer&lt;/a&gt; destroy_fn_data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_xpm_data</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-new-from-xpm-data</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Creates a new pixbuf by parsing XPM data in memory.  This data is commonly
+the result of including an XPM file into a program's C source.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_xpm_data (
+    const char **data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_from_inline</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-new-from-inline</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Create a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; from a flat representation that is suitable for
+storing as inline data in a program. This is useful if you want to
+ship a program with images, but don't want to depend on any
+external files.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_from_inline (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot; &gt;gint&lt;/a&gt; data_length,
+    const guint8 *data,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gboolean&lt;/a&gt; copy_pixels,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_new_subpixbuf</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-new-subpixbuf</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Creates a new pixbuf which represents a sub-region of
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src_pixbuf&lt;/code&gt;&lt;/em&gt;. The new pixbuf shares its pixels with the
+original pixbuf, so writing to one affects both.
+The new pixbuf holds a reference to &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src_pixbuf&lt;/code&gt;&lt;/em&gt;, so
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src_pixbuf&lt;/code&gt;&lt;/em&gt; will not be finalized until the new pixbuf
+is finalized.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_new_subpixbuf (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *src_pixbuf,
+    int src_x,
+    int src_y,
+    int width,
+    int height);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_copy</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-creating.html</Path>
+  <Anchor>gdk-pixbuf-copy</Anchor>
+  <NodeRef refid="7"/>
+  <Abstract type="html">Creates a new &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; with a copy of the information in the specified
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_copy (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixdata</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdata</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">A &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; contains pixbuf information in a form suitable for 
+serialization and streaming.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    guint32 magic;
+    gint32 length;
+    guint32 pixdata_type;
+    guint32 rowstride;
+    guint32 width;
+    guint32 height;
+    guint8 *pixel_data;
+} GdkPixdata;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_COLOR_TYPE_RGB</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_COLOR_TYPE_RGB&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_COLOR_TYPE_RGBA</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_COLOR_TYPE_RGBA&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_COLOR_TYPE_MASK</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_COLOR_TYPE_MASK&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_SAMPLE_WIDTH_8</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_SAMPLE_WIDTH_8&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_SAMPLE_WIDTH_MASK</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_SAMPLE_WIDTH_MASK&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_ENCODING_RAW</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_ENCODING_RAW&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_ENCODING_RLE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_ENCODING_RLE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_ENCODING_MASK</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="91"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_ENCODING_MASK&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixdataType</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataType</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">An enumeration containing three sets of flags for a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; struct: 
+one for the used colorspace, one for the width of the samples and one 
+for the encoding of the pixel data.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_PIXDATA_COLOR_TYPE_RGB = 0x01,
+    GDK_PIXDATA_COLOR_TYPE_RGBA = 0x02,
+    GDK_PIXDATA_COLOR_TYPE_MASK = 0xff,
+    GDK_PIXDATA_SAMPLE_WIDTH_8 = 0x01 &amp;lt;&amp;lt; 16,
+    GDK_PIXDATA_SAMPLE_WIDTH_MASK = 0x0f &amp;lt;&amp;lt; 16,
+    GDK_PIXDATA_ENCODING_RAW = 0x01 &amp;lt;&amp;lt; 24,
+    GDK_PIXDATA_ENCODING_RLE = 0x02 &amp;lt;&amp;lt; 24,
+    GDK_PIXDATA_ENCODING_MASK = 0x0f &amp;lt;&amp;lt; 24 
+} GdkPixdataType;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_PIXDATA_STREAM</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_PIXDATA_STREAM&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_PIXDATA_STRUCT</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_PIXDATA_STRUCT&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_MACROS</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_MACROS&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_GTYPES</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_GTYPES&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_CTYPES</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_CTYPES&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_STATIC</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_STATIC&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_CONST</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_CONST&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_DUMP_RLE_DECODER</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="92"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXDATA_DUMP_RLE_DECODER&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixdataDumpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixdataDumpType</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GdkPixdataDumpType</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">An enumeration which is used by &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#gdk-pixdata-to-csource&quot; title=&quot;gdk_pixdata_to_csource ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixdata_to_csource()&lt;/code&gt;&lt;/a&gt; to
+determine the form of C source to be generated. The three values
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_PIXDATA_DUMP_PIXDATA_STREAM&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_PIXDATA_DUMP_PIXDATA_STRUCT&lt;/code&gt;&lt;/em&gt;
+and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_PIXDATA_DUMP_MACROS&lt;/code&gt;&lt;/em&gt; are mutually exclusive, as are
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_PIXBUF_DUMP_GTYPES&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_PIXBUF_DUMP_CTYPES&lt;/code&gt;&lt;/em&gt;. The remaining
+elements are optional flags that can be freely added.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_PIXDATA_DUMP_PIXDATA_STREAM = 0,
+    GDK_PIXDATA_DUMP_PIXDATA_STRUCT = 1,
+    GDK_PIXDATA_DUMP_MACROS = 2,
+    GDK_PIXDATA_DUMP_GTYPES = 0,
+    GDK_PIXDATA_DUMP_CTYPES = 1 &amp;lt;&amp;lt; 8,
+    GDK_PIXDATA_DUMP_STATIC = 1 &amp;lt;&amp;lt; 9,
+    GDK_PIXDATA_DUMP_CONST = 1 &amp;lt;&amp;lt; 10,
+    GDK_PIXDATA_DUMP_RLE_DECODER = 1 &amp;lt;&amp;lt; 16 
+} GdkPixdataDumpType;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_MAGIC_NUMBER</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GDK-PIXBUF-MAGIC-NUMBER:CAPS</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Magic number for &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; structures.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXBUF_MAGIC_NUMBER (0x47646b50) &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXDATA_HEADER_LENGTH</Name>
+   <Type>macro</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>GDK-PIXDATA-HEADER-LENGTH:CAPS</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">The length of a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; structure without the &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixel_data&lt;/code&gt;&lt;/em&gt; pointer.</Abstract>
+  <Declaration type="html">&lt;pre&gt;#define GDK_PIXDATA_HEADER_LENGTH (4 + 4 + 4 + 4 + 4 + 4)&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixdata_from_pixbuf</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>gdk-pixdata-from-pixbuf</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Converts a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; to a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt;. If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;use_rle&lt;/code&gt;&lt;/em&gt; is &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt;, the
+pixel data is run-length encoded into newly-allocated memory and a 
+pointer to that memory is returned.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gpointer&lt;/a&gt; gdk_pixdata_from_pixbuf (
+    &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; href=&quot;GdkPixdata&quot; title=&quot;link&quot;&gt;GdkPixdata&lt;/a&gt; *pixdata,
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a href= &gt;gboolean&lt;/a&gt; use_rle);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_from_pixdata</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>gdk-pixbuf-from-pixdata</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Converts a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; to a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt;. If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;copy_pixels&lt;/code&gt;&lt;/em&gt; is &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt; or
+if the pixel data is run-length-encoded, the pixel data is copied into
+newly-allocated memory; otherwise it is reused.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_from_pixdata (
+    const &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; href=&quot;GdkPixdata&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixdata&lt;/a&gt; *pixdata,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;gboolean&lt;/a&gt; copy_pixels,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixdata_serialize</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>gdk-pixdata-serialize</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Serializes a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; structure into a byte stream.
+The byte stream consists of a straightforward writeout of the
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; fields in network byte order, plus the &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixel_data&lt;/code&gt;&lt;/em&gt;
+bytes the structure points to.</Abstract>
+  <Declaration type="html">&lt;pre&gt;guint8* gdk_pixdata_serialize (
+    const &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; href=&quot;GdkPixdata&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint&quot;&gt;GdkPixdata&lt;/a&gt; *pixdata,
+    &lt;a href= &gt;guint&lt;/a&gt; *stream_length_p);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixdata_deserialize</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>gdk-pixdata-deserialize</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Deserializes (reconstruct) a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; structure from a byte stream.
+The byte stream consists of a straightforward writeout of the
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; title=&quot;GdkPixdata&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixdata&lt;/span&gt;&lt;/a&gt; fields in network byte order, plus the &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixel_data&lt;/code&gt;&lt;/em&gt;
+bytes the structure points to.
+The &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixdata&lt;/code&gt;&lt;/em&gt; contents are reconstructed byte by byte and are checked
+for validity. This function may fail with &lt;code class=&quot;literal&quot;&gt;GDK_PIXBUF_CORRUPT_IMAGE&lt;/code&gt;
+or &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR-UNKNOWN-TYPE:CAPS&quot;&gt;&lt;code class=&quot;literal&quot;&gt;GDK_PIXBUF_ERROR_UNKNOWN_TYPE&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixdata_deserialize (
+    &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; href=&quot;GdkPixdata&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint&quot;&gt;GdkPixdata&lt;/a&gt; *pixdata,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;guint&lt;/a&gt; stream_length,
+    const guint8 *stream,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixdata_to_csource</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-inline.html</Path>
+  <Anchor>gdk-pixdata-to-csource</Anchor>
+  <NodeRef refid="8"/>
+  <Abstract type="html">Generates C source code suitable for compiling images directly 
+into programs. </Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;GString&lt;/a&gt;* gdk_pixdata_to_csource (
+    &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdata&quot; href=&quot;GdkPixdata&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixdata&lt;/a&gt; *pixdata,
+    const &lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt; *name,
+    &lt;a class=&quot;gdk-pixbuf-inline.html#GdkPixdataDumpType&quot; href=&quot;enum GdkPixdataDumpType&quot; title=&gt;GdkPixdataDumpType&lt;/a&gt; dump_type);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixdata.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_INTERP_NEAREST</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkInterpType</Anchor>
+  <NodeRef refid="100"/>
+  <Declaration type="html">&lt;pre&gt;GDK_INTERP_NEAREST&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkInterpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_INTERP_TILES</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkInterpType</Anchor>
+  <NodeRef refid="100"/>
+  <Declaration type="html">&lt;pre&gt;GDK_INTERP_TILES&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkInterpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_INTERP_BILINEAR</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkInterpType</Anchor>
+  <NodeRef refid="100"/>
+  <Declaration type="html">&lt;pre&gt;GDK_INTERP_BILINEAR&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkInterpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_INTERP_HYPER</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkInterpType</Anchor>
+  <NodeRef refid="100"/>
+  <Declaration type="html">&lt;pre&gt;GDK_INTERP_HYPER&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkInterpType</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkInterpType</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkInterpType</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">    This enumeration describes the different interpolation modes that
+    can be used with the scaling functions. &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_INTERP_NEAREST&lt;/code&gt;&lt;/em&gt; is 
+    the fastest scaling method, but has horrible quality when 
+    scaling down. &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;GDK_INTERP_BILINEAR&lt;/code&gt;&lt;/em&gt; is the best choice if you 
+    aren't sure what to choose, it has a good speed/quality balance.
+
+    </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_INTERP_NEAREST,
+    GDK_INTERP_TILES,
+    GDK_INTERP_BILINEAR,
+    GDK_INTERP_HYPER 
+} GdkInterpType;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_scale_simple</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-scale-simple</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Create a new &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; containing a copy of &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; scaled to
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_width&lt;/code&gt;&lt;/em&gt; x &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_height&lt;/code&gt;&lt;/em&gt;. Leaves &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; unaffected.  &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;interp_type&lt;/code&gt;&lt;/em&gt;
+should be &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-scaling.html#GDK-INTERP-NEAREST:CAPS&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_INTERP_NEAREST&lt;/span&gt;&lt;/a&gt; if you want maximum speed (but when
+scaling down &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-scaling.html#GDK-INTERP-NEAREST:CAPS&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_INTERP_NEAREST&lt;/span&gt;&lt;/a&gt; is usually unusably ugly).  The
+default &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;interp_type&lt;/code&gt;&lt;/em&gt; should be &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-scaling.html#GDK-INTERP-BILINEAR:CAPS&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_INTERP_BILINEAR&lt;/span&gt;&lt;/a&gt; which offers
+reasonable quality and speed.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_scale_simple (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    int dest_width,
+    int dest_height,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkInterpType&quot; href=&quot;enum GdkInterpType&quot; title=&gt;GdkInterpType&lt;/a&gt; interp_type);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_scale</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-scale</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Creates a transformation of the source image &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; by scaling by
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_y&lt;/code&gt;&lt;/em&gt; then translating by &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_y&lt;/code&gt;&lt;/em&gt;,
+then renders the rectangle (&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_x&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_y&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_width&lt;/code&gt;&lt;/em&gt;,
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_height&lt;/code&gt;&lt;/em&gt;) of the resulting image onto the destination image
+replacing the previous contents.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_scale (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *dest,
+    int dest_x,
+    int dest_y,
+    int dest_width,
+    int dest_height,
+    double offset_x,
+    double offset_y,
+    double scale_x,
+    double scale_y,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkInterpType&quot; href=&quot;enum GdkInterpType&quot; title=&gt;GdkInterpType&lt;/a&gt; interp_type);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_composite_color_simple</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-composite-color-simple</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Creates a new &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; by scaling &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; to &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_width&lt;/code&gt;&lt;/em&gt; x
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_height&lt;/code&gt;&lt;/em&gt; and compositing the result with a checkboard of colors
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;color1&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;color2&lt;/code&gt;&lt;/em&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_composite_color_simple (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    int dest_width,
+    int dest_height,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkInterpType&quot; href=&quot;enum GdkInterpType&quot; title=&gt;GdkInterpType&lt;/a&gt; interp_type,
+    int overall_alpha,
+    int check_size,
+    guint32 color1,
+    guint32 color2);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_composite</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-composite</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Creates a transformation of the source image &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; by scaling by
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_y&lt;/code&gt;&lt;/em&gt; then translating by &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_y&lt;/code&gt;&lt;/em&gt;.
+This gives an image in the coordinates of the destination pixbuf.
+The rectangle (&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_x&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_y&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_width&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_height&lt;/code&gt;&lt;/em&gt;)
+is then composited onto the corresponding rectangle of the
+original destination image.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_composite (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *dest,
+    int dest_x,
+    int dest_y,
+    int dest_width,
+    int dest_height,
+    double offset_x,
+    double offset_y,
+    double scale_x,
+    double scale_y,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkInterpType&quot; href=&quot;enum GdkInterpType&quot; title=&gt;GdkInterpType&lt;/a&gt; interp_type,
+    int overall_alpha);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_composite_color</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-composite-color</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Creates a transformation of the source image &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; by scaling by
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;scale_y&lt;/code&gt;&lt;/em&gt; then translating by &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_x&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;offset_y&lt;/code&gt;&lt;/em&gt;,
+then composites the rectangle (&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_x&lt;/code&gt;&lt;/em&gt; ,&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_y&lt;/code&gt;&lt;/em&gt;, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_width&lt;/code&gt;&lt;/em&gt;,
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_height&lt;/code&gt;&lt;/em&gt;) of the resulting image with a checkboard of the
+colors &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;color1&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;color2&lt;/code&gt;&lt;/em&gt; and renders it onto the destination
+image.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_composite_color (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *dest,
+    int dest_x,
+    int dest_y,
+    int dest_width,
+    int dest_height,
+    double offset_x,
+    double offset_y,
+    double scale_x,
+    double scale_y,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkInterpType&quot; href=&quot;enum GdkInterpType&quot; title=&gt;GdkInterpType&lt;/a&gt; interp_type,
+    int overall_alpha,
+    int check_x,
+    int check_y,
+    int check_size,
+    guint32 color1,
+    guint32 color2);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ROTATE_NONE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkPixbufRotation</Anchor>
+  <NodeRef refid="106"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ROTATE_NONE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufRotation</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkPixbufRotation</Anchor>
+  <NodeRef refid="106"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufRotation</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ROTATE_UPSIDEDOWN</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkPixbufRotation</Anchor>
+  <NodeRef refid="106"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ROTATE_UPSIDEDOWN&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufRotation</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_ROTATE_CLOCKWISE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkPixbufRotation</Anchor>
+  <NodeRef refid="106"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_ROTATE_CLOCKWISE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufRotation</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufRotation</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>GdkPixbufRotation</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">The possible rotations which can be passed to &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-scaling.html#gdk-pixbuf-rotate-simple&quot; title=&quot;gdk_pixbuf_rotate_simple ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_rotate_simple()&lt;/code&gt;&lt;/a&gt;.
+To make them easier to use, their numerical values are the actual degrees.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    GDK_PIXBUF_ROTATE_NONE = 0,
+    GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE = 90,
+    GDK_PIXBUF_ROTATE_UPSIDEDOWN = 180,
+    GDK_PIXBUF_ROTATE_CLOCKWISE = 270 
+} GdkPixbufRotation;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_rotate_simple</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-rotate-simple</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Rotates a pixbuf by a multiple of 90 degrees, and returns the
+result in a new pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_rotate_simple (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a class=&quot;gdk-pixbuf-scaling.html#GdkPixbufRotation&quot; href=&quot;enum GdkPixbufRotation&quot; title=&gt;GdkPixbufRotation&lt;/a&gt; angle);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_flip</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-scaling.html</Path>
+  <Anchor>gdk-pixbuf-flip</Anchor>
+  <NodeRef refid="9"/>
+  <Abstract type="html">Flips a pixbuf horizontally or vertically and returns the
+result in a new pixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_flip (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a href= &gt;gboolean&lt;/a&gt; horizontal);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_add_alpha</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-util.html</Path>
+  <Anchor>gdk-pixbuf-add-alpha</Anchor>
+  <NodeRef refid="12"/>
+  <Abstract type="html">Takes an existing pixbuf and adds an alpha channel to it.
+If the existing pixbuf already had an alpha channel, the channel
+values are copied from the original; otherwise, the alpha channel
+is initialized to 255 (full opacity).</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_add_alpha (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar&quot; &gt;gboolean&lt;/a&gt; substitute_color,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar&quot; &gt;guchar&lt;/a&gt; r,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar&quot; &gt;guchar&lt;/a&gt; g,
+    &lt;a href= &gt;guchar&lt;/a&gt; b);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_copy_area</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-util.html</Path>
+  <Anchor>gdk-pixbuf-copy-area</Anchor>
+  <NodeRef refid="12"/>
+  <Abstract type="html">Copies a rectangular area from &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src_pixbuf&lt;/code&gt;&lt;/em&gt; to &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest_pixbuf&lt;/code&gt;&lt;/em&gt;.  Conversion of
+pixbuf formats is done automatically.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_copy_area (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src_pixbuf,
+    int src_x,
+    int src_y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *dest_pixbuf,
+    int dest_x,
+    int dest_y);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_saturate_and_pixelate</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-util.html</Path>
+  <Anchor>gdk-pixbuf-saturate-and-pixelate</Anchor>
+  <NodeRef refid="12"/>
+  <Abstract type="html">Modifies saturation and optionally pixelates &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt;, placing the result in
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest&lt;/code&gt;&lt;/em&gt;. &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest&lt;/code&gt;&lt;/em&gt; may be the same pixbuf with no ill effects.  If
+&lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;saturation&lt;/code&gt;&lt;/em&gt; is 1.0 then saturation is not changed. If it's less than 1.0,
+saturation is reduced (the image turns toward grayscale); if greater than
+1.0, saturation is increased (the image gets more vivid colors). If &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixelate&lt;/code&gt;&lt;/em&gt;
+is &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt;, then pixels are faded in a checkerboard pattern to create a
+pixelated image. &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;src&lt;/code&gt;&lt;/em&gt; and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;dest&lt;/code&gt;&lt;/em&gt; must have the same image format, size, and
+rowstride.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_saturate_and_pixelate (
+    const &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *src,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat&quot;&gt;GdkPixbuf&lt;/a&gt; *dest,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot; &gt;gfloat&lt;/a&gt; saturation,
+    &lt;a href= &gt;gboolean&lt;/a&gt; pixelate);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_apply_embedded_orientation</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-util.html</Path>
+  <Anchor>gdk-pixbuf-apply-embedded-orientation</Anchor>
+  <NodeRef refid="12"/>
+  <Abstract type="html">Takes an existing pixbuf and checks for the presence of an
+associated &quot;orientation&quot; option, which may be provided by the 
+jpeg loader (which reads the exif orientation tag) or the 
+tiff loader (which reads the tiff orientation tag, and
+compensates it for the partial transforms performed by 
+libtiff). If an orientation option/tag is present, the
+appropriate transform will be performed so that the pixbuf
+is oriented correctly.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_apply_embedded_orientation (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *src);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_fill</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-util.html</Path>
+  <Anchor>gdk-pixbuf-fill</Anchor>
+  <NodeRef refid="12"/>
+  <Abstract type="html">Clears a pixbuf to the given RGBA value, converting the RGBA value into
+the pixbuf's pixel format. The alpha will be ignored if the pixbuf
+doesn't have an alpha channel.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_fill (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    guint32 pixel);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufAnimation</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>GdkPixbufAnimation-struct</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">And opaque struct representing an animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct _GdkPixbufAnimation GdkPixbufAnimation;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufAnimationIter</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>GdkPixbufAnimationIter-struct</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">And opaque struct representing an iterator which points to a
+certain position in an animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct _GdkPixbufAnimationIter GdkPixbufAnimationIter;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_new_from_file</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-new-from-file</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Creates a new animation by loading it from a file.  The file format is
+detected automatically.  If the file's format does not support multi-frame
+images, then an animation with a single frame will be created. Possible errors
+are in the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; and &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt; domains.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbufAnimation&lt;/a&gt;* gdk_pixbuf_animation_new_from_file (
+    const char *filename,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_ref</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-ref</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Adds a reference to an animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&quot;link&quot;&gt;GdkPixbufAnimation&lt;/a&gt;* gdk_pixbuf_animation_ref (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <DeprecationSummary>&lt;code class=&quot;literal&quot;&gt;gdk_pixbuf_animation_ref&lt;/code&gt; is deprecated and should not be used in newly-written code. Use &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-ref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_ref()&lt;/code&gt;&lt;/a&gt;.</DeprecationSummary>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_unref</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-unref</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Removes a reference from an animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_animation_unref (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <DeprecationSummary>&lt;code class=&quot;literal&quot;&gt;gdk_pixbuf_animation_unref&lt;/code&gt; is deprecated and should not be used in newly-written code. Use &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_unref()&lt;/code&gt;&lt;/a&gt;.</DeprecationSummary>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_get_width</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-get-width</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Queries the width of the bounding box of a pixbuf animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_animation_get_width (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_get_height</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-get-height</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Queries the height of the bounding box of a pixbuf animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_animation_get_height (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_get_iter</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-get-iter</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Get an iterator for displaying an animation. The iterator provides
+the frames that should be displayed at a given time.
+It should be freed after use with &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_unref()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot; href=&quot;link&quot;&gt;GdkPixbufAnimationIter&lt;/a&gt;* gdk_pixbuf_animation_get_iter (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Date-and-Time-Functions.html#GTimeVal&quot;&gt;GdkPixbufAnimation&lt;/a&gt; *animation,
+    const &lt;a href= &gt;GTimeVal&lt;/a&gt; *start_time);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_is_static_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-is-static-image</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">If you load a file with &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-new-from-file&quot; title=&quot;gdk_pixbuf_animation_new_from_file ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_new_from_file()&lt;/code&gt;&lt;/a&gt; and it turns
+out to be a plain, unanimated image, then this function will return
+&lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt;. Use &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-get-static-image&quot; title=&quot;gdk_pixbuf_animation_get_static_image ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_get_static_image()&lt;/code&gt;&lt;/a&gt; to retrieve
+the image.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_animation_is_static_image (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_get_static_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-get-static-image</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">If an animation is really just a plain image (has only one frame),
+this function returns that image. If the animation is an animation,
+this function returns a reasonable thing to display as a static
+unanimated image, which might be the first frame, or something more
+sophisticated. If an animation hasn't loaded any frames yet, this
+function will return &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_animation_get_static_image (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&gt;GdkPixbufAnimation&lt;/a&gt; *animation);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_iter_advance</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-iter-advance</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Possibly advances an animation to a new frame. Chooses the frame based
+on the start time passed to &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-get-iter&quot; title=&quot;gdk_pixbuf_animation_get_iter ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_get_iter()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_animation_iter_advance (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Date-and-Time-Functions.html#GTimeVal&quot;&gt;GdkPixbufAnimationIter&lt;/a&gt; *iter,
+    const &lt;a href= &gt;GTimeVal&lt;/a&gt; *current_time);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_iter_get_delay_time</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-iter-get-delay-time</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Gets the number of milliseconds the current pixbuf should be displayed,
+or -1 if the current pixbuf should be displayed forever. &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-timeout-add&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_timeout_add()&lt;/code&gt;&lt;/a&gt;
+conveniently takes a timeout in milliseconds, so you can use a timeout
+to schedule the next update.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int gdk_pixbuf_animation_iter_get_delay_time (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot; href=&gt;GdkPixbufAnimationIter&lt;/a&gt; *iter);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_iter_on_currently_loading_frame</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-iter-on-currently-loading-frame</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Used to determine how to respond to the area_updated signal on
+&lt;a class=&quot;link&quot; href=&quot;GdkPixbufLoader.html&quot; title=&quot;GdkPixbufLoader&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufLoader&lt;/span&gt;&lt;/a&gt; when loading an animation. area_updated is emitted
+for an area of the frame currently streaming in to the loader. So if
+you're on the currently loading frame, you need to redraw the screen for
+the updated area.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_animation_iter_on_currently_loading_frame (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot; href=&gt;GdkPixbufAnimationIter&lt;/a&gt; *iter);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_animation_iter_get_pixbuf</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-animation-iter-get-pixbuf</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Gets the current pixbuf which should be displayed; the pixbuf will
+be the same size as the animation itself
+(&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-get-width&quot; title=&quot;gdk_pixbuf_animation_get_width ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_get_width()&lt;/code&gt;&lt;/a&gt;, &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-get-height&quot; title=&quot;gdk_pixbuf_animation_get_height ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_get_height()&lt;/code&gt;&lt;/a&gt;). 
+This pixbuf should be displayed for 
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-iter-get-delay-time&quot; title=&quot;gdk_pixbuf_animation_iter_get_delay_time ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_iter_get_delay_time()&lt;/code&gt;&lt;/a&gt; milliseconds.  The caller
+of this function does not own a reference to the returned pixbuf;
+the returned pixbuf will become invalid when the iterator advances
+to the next frame, which may happen anytime you call
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-iter-advance&quot; title=&quot;gdk_pixbuf_animation_iter_advance ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_iter_advance()&lt;/code&gt;&lt;/a&gt;. Copy the pixbuf to keep it
+(don't just add a reference), as it may get recycled as you advance
+the iterator.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_animation_iter_get_pixbuf (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot; href=&gt;GdkPixbufAnimationIter&lt;/a&gt; *iter);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufSimpleAnim</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>GdkPixbufSimpleAnim</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">An</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct _GdkPixbufSimpleAnim GdkPixbufSimpleAnim;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_simple_anim_new</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-simple-anim-new</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Creates a new, empty animation.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufSimpleAnim&quot; href=&quot;GdkPixbufSimpleAnim&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot;&gt;GdkPixbufSimpleAnim&lt;/a&gt;* gdk_pixbuf_simple_anim_new (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;gint&lt;/a&gt; width,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat&quot; &gt;gint&lt;/a&gt; height,
+    &lt;a href= &gt;gfloat&lt;/a&gt; rate);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.8</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_simple_anim_add_frame</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-animation.html</Path>
+  <Anchor>gdk-pixbuf-simple-anim-add-frame</Anchor>
+  <NodeRef refid="13"/>
+  <Abstract type="html">Adds a new frame to &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/em&gt;. The &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt; must
+have the dimensions specified when the animation 
+was constructed.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_simple_anim_add_frame (
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufSimpleAnim&quot; href=&quot;GdkPixbufSimpleAnim&quot; title=&quot;link&quot;&gt;GdkPixbufSimpleAnim&lt;/a&gt; *animation,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.8</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufLoader</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>GdkPixbufLoader-struct</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">The &lt;span class=&quot;structname&quot;&gt;GdkPixbufLoader&lt;/span&gt; struct contains only private
+fields. </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct _GdkPixbufLoader GdkPixbufLoader;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_new</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-new</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Creates a new pixbuf loader object.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&gt;GdkPixbufLoader&lt;/a&gt;* gdk_pixbuf_loader_new (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_new_with_type</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-new-with-type</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Creates a new pixbuf loader object that always attempts to parse
+image data as if it were an image of type &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;image_type&lt;/code&gt;&lt;/em&gt;, instead of
+identifying the type automatically. Useful if you want an error if
+the image isn't the expected type, for loading image formats
+that can't be reliably identified by looking at the data, or if
+the user manually forces a specific type.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbufLoader&lt;/a&gt;* gdk_pixbuf_loader_new_with_type (
+    const char *image_type,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_new_with_mime_type</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-new-with-mime-type</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Creates a new pixbuf loader object that always attempts to parse
+image data as if it were an image of mime type &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;mime_type&lt;/code&gt;&lt;/em&gt;, instead of
+identifying the type automatically. Useful if you want an error if
+the image isn't the expected mime type, for loading image formats
+that can't be reliably identified by looking at the data, or if
+the user manually forces a specific mime type.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbufLoader&lt;/a&gt;* gdk_pixbuf_loader_new_with_mime_type (
+    const char *mime_type,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.4</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_get_format</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-get-format</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Obtains the available information about the format of the 
+currently loading image file.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&quot;link&quot;&gt;GdkPixbufFormat&lt;/a&gt;* gdk_pixbuf_loader_get_format (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&gt;GdkPixbufLoader&lt;/a&gt; *loader);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_write</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-write</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">This will cause a pixbuf loader to parse the next &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;count&lt;/code&gt;&lt;/em&gt; bytes of
+an image.  It will return &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;TRUE&lt;/code&gt;&lt;/a&gt; if the data was loaded successfully,
+and &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; if an error occurred.  In the latter case, the loader
+will be closed, and will not accept further writes. If &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; is
+returned, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; will be set to an error from the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt;
+or &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt; domains.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_loader_write (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar&quot;&gt;GdkPixbufLoader&lt;/a&gt; *loader,
+    const &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot; &gt;guchar&lt;/a&gt; *buf,
+    gsize count,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_set_size</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-set-size</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Causes the image to be scaled while it is loaded. The desired
+image size can be determined relative to the original size of
+the image by calling &lt;a class=&quot;link&quot; href=&quot;GdkPixbufLoader.html#gdk-pixbuf-loader-set-size&quot; title=&quot;gdk_pixbuf_loader_set_size ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_loader_set_size()&lt;/code&gt;&lt;/a&gt; from a
+signal handler for the ::size-prepared signal.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_loader_set_size (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&gt;GdkPixbufLoader&lt;/a&gt; *loader,
+    int width,
+    int height);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_get_pixbuf</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-get-pixbuf</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Queries the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt; that a pixbuf loader is currently creating.
+In general it only makes sense to call this function after the
+&quot;area-prepared&quot; signal has been emitted by the loader; this means
+that enough data has been read to know the size of the image that
+will be allocated.  If the loader has not received enough data via
+&lt;a class=&quot;link&quot; href=&quot;GdkPixbufLoader.html#gdk-pixbuf-loader-write&quot; title=&quot;gdk_pixbuf_loader_write ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_loader_write()&lt;/code&gt;&lt;/a&gt;, then this function returns &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt;.  The
+returned pixbuf will be the same in all future calls to the loader,
+so simply calling &lt;a
+href=&quot;/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-ref&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_object_ref()&lt;/code&gt;&lt;/a&gt; should be sufficient to continue
+using it.  Additionally, if the loader is an animation, it will
+return the &quot;static image&quot; of the animation
+(see &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#gdk-pixbuf-animation-get-static-image&quot; title=&quot;gdk_pixbuf_animation_get_static_image ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_animation_get_static_image()&lt;/code&gt;&lt;/a&gt;).</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_loader_get_pixbuf (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&gt;GdkPixbufLoader&lt;/a&gt; *loader);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_get_animation</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-get-animation</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Queries the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufAnimation&lt;/span&gt;&lt;/a&gt; that a pixbuf loader is currently creating.
+In general it only makes sense to call this function after the &quot;area-prepared&quot;
+signal has been emitted by the loader. If the loader doesn't have enough
+bytes yet (hasn't emitted the &quot;area-prepared&quot; signal) this function will 
+return &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&quot;link&quot;&gt;GdkPixbufAnimation&lt;/a&gt;* gdk_pixbuf_loader_get_animation (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&gt;GdkPixbufLoader&lt;/a&gt; *loader);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_loader_close</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>GdkPixbufLoader.html</Path>
+  <Anchor>gdk-pixbuf-loader-close</Anchor>
+  <NodeRef refid="14"/>
+  <Abstract type="html">Informs a pixbuf loader that no further writes with
+&lt;a class=&quot;link&quot; href=&quot;GdkPixbufLoader.html#gdk-pixbuf-loader-write&quot; title=&quot;gdk_pixbuf_loader_write ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_loader_write()&lt;/code&gt;&lt;/a&gt; will occur, so that it can free its
+internal loading structures. Also, tries to parse any data that
+hasn't yet been parsed; if the remaining data is partial or
+corrupt, an error will be returned.  If &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; is returned, &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt;
+will be set to an error from the &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GDK-PIXBUF-ERROR:CAPS&quot; title=&quot;GDK_PIXBUF_ERROR&quot;&gt;&lt;span class=&quot;type&quot;&gt;GDK_PIXBUF_ERROR&lt;/span&gt;&lt;/a&gt; or &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-File-Utilities.html#G-FILE-ERROR:CAPS&quot;
+&gt;&lt;span class=&quot;type&quot;&gt;G_FILE_ERROR&lt;/span&gt;&lt;/a&gt;
+domains. If you're just cancelling a load rather than expecting it
+to be finished, passing &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt; for &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;error&lt;/code&gt;&lt;/em&gt; to ignore it is
+reasonable.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_loader_close (
+    &lt;a class=&quot;GdkPixbufLoader.html&quot; href=&quot;GdkPixbufLoader&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError&quot;&gt;GdkPixbufLoader&lt;/a&gt; *loader,
+    &lt;a href= &gt;GError&lt;/a&gt; **error);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_set_option</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-set-option</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Attaches a key/value pair as an option to a &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbuf&lt;/span&gt;&lt;/a&gt;. If &lt;code class=&quot;literal&quot;&gt;key&lt;/code&gt; already
+exists in the list of options attached to &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt;, the new value is 
+ignored and &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;FALSE&lt;/code&gt;&lt;/a&gt; is returned.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_set_option (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    const &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar&quot; &gt;gchar&lt;/a&gt; *key,
+    const &lt;a href= &gt;gchar&lt;/a&gt; *value);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_get_formats</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-get-formats</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Obtains the available information about the image formats supported
+by GdkPixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href= &gt;GSList&lt;/a&gt;* gdk_pixbuf_get_formats (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_get_name</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-get-name</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns the name of the format.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;* gdk_pixbuf_format_get_name (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_get_description</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-get-description</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns a description of the format.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;* gdk_pixbuf_format_get_description (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_get_mime_types</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-get-mime-types</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns the mime types supported by the format.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;** gdk_pixbuf_format_get_mime_types (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_get_extensions</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-get-extensions</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns the filename extensions typically used for files in the 
+given format.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;** gdk_pixbuf_format_get_extensions (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_is_writable</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-is-writable</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns whether pixbufs can be saved in the given format.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_format_is_writable (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_is_scalable</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-is-scalable</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns whether this image format is scalable. If a file is in a 
+scalable format, it is preferable to load it at the desired size, 
+rather than loading it at the default size and scaling the 
+resulting pixbuf to the desired size.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_format_is_scalable (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_is_disabled</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-is-disabled</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns whether this image format is disabled. See
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#gdk-pixbuf-format-set-disabled&quot; title=&quot;gdk_pixbuf_format_set_disabled ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_format_set_disabled()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gboolean&lt;/a&gt; gdk_pixbuf_format_is_disabled (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_set_disabled</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-set-disabled</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Disables or enables an image format. If a format is disabled, 
+gdk-pixbuf won't use the image loader for this format to load 
+images. Applications can use this to avoid using image loaders 
+with an inappropriate license, see &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#gdk-pixbuf-format-get-license&quot; title=&quot;gdk_pixbuf_format_get_license ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_format_get_license()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_format_set_disabled (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean&quot;&gt;GdkPixbufFormat&lt;/a&gt; *format,
+    &lt;a href= &gt;gboolean&lt;/a&gt; disabled);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_format_get_license</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>gdk-pixbuf-format-get-license</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Returns information about the license of the image loader for the format. The
+returned string should be a shorthand for a wellknown license, e.g. &quot;LGPL&quot;,
+&quot;GPL&quot;, &quot;QPL&quot;, &quot;GPL/QPL&quot;, or &quot;other&quot; to indicate some other license.  This
+string should be freed with &lt;a
+href=&quot;/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free&quot;
+&gt;&lt;code class=&quot;function&quot;&gt;g_free()&lt;/code&gt;&lt;/a&gt; when it's no longer needed.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a href=&quot;link&quot; &gt;gchar&lt;/a&gt;* gdk_pixbuf_format_get_license (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *format);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.6</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufFormat</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufFormat</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">A &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; title=&quot;GdkPixbufFormat&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufFormat&lt;/span&gt;&lt;/a&gt; contains information about the image format accepted by a
+module. Only modules should access the fields directly, applications should
+use the &lt;code class=&quot;function&quot;&gt;gdk_pixbuf_format_*&lt;/code&gt; functions.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    gchar *name;
+    GdkPixbufModulePattern *signature;
+    gchar *domain;
+    gchar *description;
+    gchar **mime_types;
+    gchar **extensions;
+    guint32 flags;
+    gboolean disabled;
+    gchar *license;
+} GdkPixbufFormat;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_FORMAT_WRITABLE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufFormatFlags</Anchor>
+  <NodeRef refid="158"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_FORMAT_WRITABLE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="GdkPixbufFormatFlags">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufFormatFlags</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_FORMAT_SCALABLE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufFormatFlags</Anchor>
+  <NodeRef refid="158"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_FORMAT_SCALABLE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="GdkPixbufFormatFlags">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufFormatFlags</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GDK_PIXBUF_FORMAT_THREADSAFE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufFormatFlags</Anchor>
+  <NodeRef refid="158"/>
+  <Declaration type="html">&lt;pre&gt;GDK_PIXBUF_FORMAT_THREADSAFE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="GdkPixbufFormatFlags">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>GdkPixbufFormatFlags</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufFormatFlags</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufFormatFlags</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Flags which allow a module to specify further details about the supported
+operations.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum  {
+    GDK_PIXBUF_FORMAT_WRITABLE = 1 &amp;lt;&amp;lt; 0,
+    GDK_PIXBUF_FORMAT_SCALABLE = 1 &amp;lt;&amp;lt; 1,
+    GDK_PIXBUF_FORMAT_THREADSAFE = 1 &amp;lt;&amp;lt; 2 
+} GdkPixbufFormatFlags;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModulePattern</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModulePattern</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">The signature of a module is a set of prefixes. Prefixes are encoded as
+pairs of ordinary strings, where the second string, called the mask, if 
+not &lt;a
+href=&quot;/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL:CAPS&quot;
+&gt;&lt;code class=&quot;literal&quot;&gt;NULL&lt;/code&gt;&lt;/a&gt;, must be of the same length as the first one and may contain 
+' ', '!', 'x', 'z', and 'n' to indicate bytes that must be matched, 
+not matched, &quot;don't-care&quot;-bytes, zeros and non-zeros. 
+Each prefix has an associated integer that describes the relevance of 
+the prefix, with 0 meaning a mismatch and 100 a &quot;perfect match&quot;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    char *prefix;
+    char *mask;
+    int relevance;
+} GdkPixbufModulePattern;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModuleFillVtableFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModuleFillVtableFunc</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Defines the type of the function used to set the vtable of a 
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufModule&quot; title=&quot;GdkPixbufModule&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufModule&lt;/span&gt;&lt;/a&gt; when it is loaded. </Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufModuleFillVtableFunc) (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufModule&quot; href=&quot;GdkPixbufModule&quot; title=&gt;GdkPixbufModule&lt;/a&gt; *module);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModuleFillInfoFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModuleFillInfoFunc</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Defines the type of the function used to fill a 
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; title=&quot;GdkPixbufFormat&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufFormat&lt;/span&gt;&lt;/a&gt; structure with information about a module.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufModuleFillInfoFunc) (
+    &lt;a class=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufFormat&quot; href=&quot;GdkPixbufFormat&quot; title=&gt;GdkPixbufFormat&lt;/a&gt; *info);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModuleSizeFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModuleSizeFunc</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Defines the type of the function that gets called once the size 
+of the loaded image is known.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufModuleSizeFunc) (
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint&quot; &gt;gint&lt;/a&gt; *width,
+    &lt;a href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot; &gt;gint&lt;/a&gt; *height,
+    &lt;a href= &gt;gpointer&lt;/a&gt; user_data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModulePreparedFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModulePreparedFunc</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Defines the type of the function that gets called once the initial 
+setup of &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt; is done.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufModulePreparedFunc) (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    &lt;a class=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot;&gt;GdkPixbufAnimation&lt;/a&gt; *anim,
+    &lt;a href= &gt;gpointer&lt;/a&gt; user_data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModuleUpdatedFunc</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModuleUpdatedFunc</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Defines the type of the function that gets called every time a region
+of &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixbuf&lt;/code&gt;&lt;/em&gt; is updated.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void (
+    *GdkPixbufModuleUpdatedFunc) (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a href= &gt;gpointer&lt;/a&gt; user_data);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <Availability distribution="gdk-pixbuf">
+   <IntroducedInVersion>2.2</IntroducedInVersion>
+  </Availability>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufModule</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufModule</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">A &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-Module-Interface.html#GdkPixbufModule&quot; title=&quot;GdkPixbufModule&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufModule&lt;/span&gt;&lt;/a&gt; contains the necessary functions to load and save 
+images in a certain file format. </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    char *module_name;
+    char *module_path;
+    GModule *module;
+    GdkPixbufFormat *info;
+    GdkPixbuf *(* load) (FILE *f, GError **error);
+    GdkPixbuf *(* load_xpm_data) (const char **data);
+    gpointer (* begin_load) (GdkPixbufModuleSizeFunc size_func, GdkPixbufModulePreparedFunc prepare_func, GdkPixbufModuleUpdatedFunc update_func, gpointer user_data, GError **error);
+    gboolean (* stop_load) (gpointer context, GError **error);
+    gboolean (* load_increment) (gpointer context, const guchar *buf, guint size, GError **error);
+    GdkPixbufAnimation *(* load_animation) (FILE *f, GError **error);
+    gboolean (* save) (FILE *f, GdkPixbuf *pixbuf, gchar **param_keys, gchar **param_values, GError **error);
+    gboolean (*save_to_callback) (GdkPixbufSaveFunc save_func, gpointer user_data, GdkPixbuf *pixbuf, gchar **option_keys, gchar **option_values, GError **error);
+} GdkPixbufModule;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufAnimationClass</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufAnimationClass</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Modules supporting animations must derive a type from 
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimation&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufAnimation&lt;/span&gt;&lt;/a&gt;, providing suitable implementations of the 
+virtual functions.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    GObjectClass parent_class;
+    gboolean (*is_static_image) (GdkPixbufAnimation *anim);
+    GdkPixbuf* (*get_static_image) (GdkPixbufAnimation *anim);
+    void (*get_size) (GdkPixbufAnimation *anim, int *width, int *height);
+    GdkPixbufAnimationIter* (*get_iter) (GdkPixbufAnimation *anim, const GTimeVal *start_time);
+} GdkPixbufAnimationClass;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>GdkPixbufAnimationIterClass</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-Module-Interface.html</Path>
+  <Anchor>GdkPixbufAnimationIterClass</Anchor>
+  <NodeRef refid="15"/>
+  <Abstract type="html">Modules supporting animations must derive a type from 
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-animation.html#GdkPixbufAnimationIter&quot;&gt;&lt;span class=&quot;type&quot;&gt;GdkPixbufAnimationIter&lt;/span&gt;&lt;/a&gt;, providing suitable implementations of the 
+virtual functions.</Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    GObjectClass parent_class;
+    int (*get_delay_time) (GdkPixbufAnimationIter *iter);
+    GdkPixbuf* (*get_pixbuf) (GdkPixbufAnimationIter *iter);
+    gboolean (*on_currently_loading_frame) (GdkPixbufAnimationIter *iter);
+    gboolean (*advance) (GdkPixbufAnimationIter *iter, const GTimeVal *current_time);
+} GdkPixbufAnimationIterClass;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_init</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-init.html</Path>
+  <Anchor>gdk-pixbuf-xlib-init</Anchor>
+  <NodeRef refid="16"/>
+  <Abstract type="html">Initializes the gdk-pixbuf Xlib machinery by calling &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-rgb-init&quot; title=&quot;xlib_rgb_init ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_rgb_init()&lt;/code&gt;&lt;/a&gt;.  This
+function should be called near the beginning of your program, or before using
+any of the gdk-pixbuf-xlib functions.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_init (
+    Display *display,
+    int screen_num);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_init_with_depth</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-init.html</Path>
+  <Anchor>gdk-pixbuf-xlib-init-with-depth</Anchor>
+  <NodeRef refid="16"/>
+  <Abstract type="html">Similar to &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-init.html#gdk-pixbuf-xlib-init&quot; title=&quot;gdk_pixbuf_xlib_init ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_xlib_init()&lt;/code&gt;&lt;/a&gt;, but also lets you specify the preferred
+depth for XlibRGB if you do not want it to use the default depth it picks.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_init_with_depth (
+    Display *display,
+    int screen_num,
+    int prefDepth);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_render_threshold_alpha</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+  <Anchor>gdk-pixbuf-xlib-render-threshold-alpha</Anchor>
+  <NodeRef refid="17"/>
+  <Abstract type="html">Takes the opacity values in a rectangular portion of a pixbuf and thresholds
+them to produce a bi-level alpha mask that can be used as a clipping mask for
+a drawable.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_render_threshold_alpha (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    Pixmap bitmap,
+    int src_x,
+    int src_y,
+    int dest_x,
+    int dest_y,
+    int width,
+    int height,
+    int alpha_threshold);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_render_to_drawable</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+  <Anchor>gdk-pixbuf-xlib-render-to-drawable</Anchor>
+  <NodeRef refid="17"/>
+  <Abstract type="html">Renders a rectangular portion of a pixbuf to a drawable while using the
+specified GC.  This is done using XlibRGB, so the specified drawable must
+have the XlibRGB visual and colormap.  Note that this function will ignore
+the opacity information for images with an alpha channel; the GC must already
+have the clipping mask set if you want transparent regions to show through.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_render_to_drawable (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    Drawable drawable,
+    GC gc,
+    int src_x,
+    int src_y,
+    int dest_x,
+    int dest_y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dither,
+    int x_dither,
+    int y_dither);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_render_to_drawable_alpha</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+  <Anchor>gdk-pixbuf-xlib-render-to-drawable-alpha</Anchor>
+  <NodeRef refid="17"/>
+  <Abstract type="html">Renders a rectangular portion of a pixbuf to a drawable.  This is done using
+XlibRGB, so the specified drawable must have the XlibRGB visual and colormap.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_render_to_drawable_alpha (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    Drawable drawable,
+    int src_x,
+    int src_y,
+    int dest_x,
+    int dest_y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbufAlphaMode&quot; href=&quot;enum GdkPixbufAlphaMode&quot; title=&quot;link&quot;&gt;GdkPixbufAlphaMode&lt;/a&gt; alpha_mode,
+    int alpha_threshold,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dither,
+    int x_dither,
+    int y_dither);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_render_pixmap_and_mask</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rendering.html</Path>
+  <Anchor>gdk-pixbuf-xlib-render-pixmap-and-mask</Anchor>
+  <NodeRef refid="17"/>
+  <Abstract type="html">Creates a pixmap and a mask bitmap which are returned in the &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;pixmap_return&lt;/code&gt;&lt;/em&gt;
+and &lt;em class=&quot;parameter&quot;&gt;&lt;code&gt;mask_return&lt;/code&gt;&lt;/em&gt; arguments, respectively, and renders a pixbuf and its
+corresponding tresholded alpha mask to them.  This is merely a convenience
+function; applications that need to render pixbufs with dither offsets or to
+given drawables should use &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rendering.html#gdk-pixbuf-xlib-render-to-drawable-alpha&quot; title=&quot;gdk_pixbuf_xlib_render_to_drawable_alpha ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_xlib_render_to_drawable_alpha()&lt;/code&gt;&lt;/a&gt; or
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rendering.html#gdk-pixbuf-xlib-render-to-drawable&quot; title=&quot;gdk_pixbuf_xlib_render_to_drawable ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_xlib_render_to_drawable()&lt;/code&gt;&lt;/a&gt;, and
+&lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rendering.html#gdk-pixbuf-xlib-render-threshold-alpha&quot; title=&quot;gdk_pixbuf_xlib_render_threshold_alpha ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;gdk_pixbuf_xlib_render_threshold_alpha()&lt;/code&gt;&lt;/a&gt;.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void gdk_pixbuf_xlib_render_pixmap_and_mask (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *pixbuf,
+    Pixmap *pixmap_return,
+    Pixmap *mask_return,
+    int alpha_threshold);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>gdk_pixbuf_xlib_get_from_drawable</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-from-drawables.html</Path>
+  <Anchor>gdk-pixbuf-xlib-get-from-drawable</Anchor>
+  <NodeRef refid="18"/>
+  <Abstract type="html">Transfers image data from a Gdk drawable and converts it to an RGB(A)
+representation inside a GdkPixbuf.</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&quot;link&quot;&gt;GdkPixbuf&lt;/a&gt;* gdk_pixbuf_xlib_get_from_drawable (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf.html#GdkPixbuf&quot; href=&gt;GdkPixbuf&lt;/a&gt; *dest,
+    Drawable src,
+    Colormap cmap,
+    Visual *visual,
+    int src_x,
+    int src_y,
+    int dest_x,
+    int dest_y,
+    int width,
+    int height);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>XlibRgbCmap</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>XlibRgbCmap</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">    FIXME: Describe this.
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef struct {
+    unsigned int colors[256];
+    unsigned char lut[256];
+} XlibRgbCmap;
+    &lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>XLIB_RGB_DITHER_NONE</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>XlibRgbDither</Anchor>
+  <NodeRef refid="176"/>
+  <Declaration type="html">&lt;pre&gt;XLIB_RGB_DITHER_NONE&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>XlibRgbDither</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>XLIB_RGB_DITHER_NORMAL</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>XlibRgbDither</Anchor>
+  <NodeRef refid="176"/>
+  <Declaration type="html">&lt;pre&gt;XLIB_RGB_DITHER_NORMAL&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>XlibRgbDither</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>XLIB_RGB_DITHER_MAX</Name>
+   <Type>econst</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>XlibRgbDither</Anchor>
+  <NodeRef refid="176"/>
+  <Declaration type="html">&lt;pre&gt;XLIB_RGB_DITHER_MAX&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+  <RelatedTokens>
+   <TokenIdentifier>
+    <Name>XlibRgbDither</Name>
+    <Type>tdef</Type>
+    <APILanguage>c</APILanguage>
+   </TokenIdentifier>
+  </RelatedTokens>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>XlibRgbDither</Name>
+   <Type>tdef</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>XlibRgbDither</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">    These values are used to specify which dithering method should be
+    used.  &lt;span class=&quot;symbol&quot;&gt;XLIB_RGB_DITHER_NONE&lt;/span&gt; will use no dithering
+    and simply map the colors in an RGB buffer to the closest colors
+    that the display can provide.
+    &lt;span class=&quot;symbol&quot;&gt;XLIB_RGB_DITHER_NORMAL&lt;/span&gt; will provide dithering
+    only on pseudocolor displays.
+    &lt;span class=&quot;symbol&quot;&gt;XLIB_RGB_DITHER_MAX&lt;/span&gt; will provide dithering on
+    pseudocolor and 16-bit truecolor or “high color”
+    displays.
+  </Abstract>
+  <Declaration type="html">&lt;pre&gt;typedef enum {
+    XLIB_RGB_DITHER_NONE,
+    XLIB_RGB_DITHER_NORMAL,
+    XLIB_RGB_DITHER_MAX 
+} XlibRgbDither;&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_init</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-init</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Initializes the XlibRGB machinery with the default depth.  If you use this
+function XlibRGB will automatically pick the best visual available on your
+display.  This function or &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-rgb-init-with-depth&quot; title=&quot;xlib_rgb_init_with_depth ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_rgb_init_with_depth()&lt;/code&gt;&lt;/a&gt; must be called before
+using any of the other functions in XlibRGB.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_init (
+    Display *display,
+    Screen *screen);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_init_with_depth</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-init-with-depth</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Initializes the XlibRGB machinery with a particular depth you specify,
+instead of automatically picking the best depth in the display.  This
+function or &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-rgb-init&quot; title=&quot;xlib_rgb_init ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_rgb_init()&lt;/code&gt;&lt;/a&gt; must be called before using any of the other
+functions in XlibRGB.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_init_with_depth (
+    Display *display,
+    Screen *screen,
+    int prefDepth);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_xpixel_from_rgb</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-xpixel-from-rgb</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Converts an RGB triplet into the closest color that XlibRGB visual can
+handle.</Abstract>
+  <Declaration type="html">&lt;pre&gt;unsigned long xlib_rgb_xpixel_from_rgb (
+    guint32 rgb);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_gc_set_foreground</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-gc-set-foreground</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">This is a convenience function to set the foreground of a GC from an RGB
+triplet.  It calls &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-rgb-xpixel-from-rgb&quot; title=&quot;xlib_rgb_xpixel_from_rgb ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_rgb_xpixel_from_rgb()&lt;/code&gt;&lt;/a&gt; internally and uses the
+returned pixel value to set the GC's foreground.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_gc_set_foreground (
+    GC gc,
+    guint32 rgb);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_gc_set_background</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-gc-set-background</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">This is a convenience function to set the background of a GC from an RGB
+triplet.  It calls &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-rgb-xpixel-from-rgb&quot; title=&quot;xlib_rgb_xpixel_from_rgb ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_rgb_xpixel_from_rgb()&lt;/code&gt;&lt;/a&gt; internally and uses the
+returned pixel value to set the GC's background.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_gc_set_background (
+    GC gc,
+    guint32 rgb);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_draw_rgb_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-draw-rgb-image</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Renders an RGB buffer to a drawable.  Pixels are specified as RGB triplets
+with 8 bits per channel.  An image will thus look like an RGBRGBRGBRGB
+sequence of 8-bit values.  This function does not let you specify dither
+offsets; applications that need to render partial regions of a buffer to
+build the final image should use &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-draw-rgb-image-dithalign&quot; title=&quot;xlib_draw_rgb_image_dithalign ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_draw_rgb_image_dithalign()&lt;/code&gt;&lt;/a&gt; instead.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_draw_rgb_image (
+    Drawable drawable,
+    GC gc,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dith,
+    unsigned char *rgb_buf,
+    int rowstride);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_draw_rgb_image_dithalign</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-draw-rgb-image-dithalign</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Renders an RGB buffer to a drawable.  Pixels are specified as RGB triplets
+with 8 bits per channel.  An image will thus look like an RGBRGBRGBRGB
+sequence of 8-bit values.  This function lets you specify a pair of dither
+offsets.  It should be used when you need to render regions of an RGB buffer
+separately to form the final image; the dither offsets let you align the
+dither mask appropriately.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_draw_rgb_image_dithalign (
+    Drawable drawable,
+    GC gc,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dith,
+    unsigned char *rgb_buf,
+    int rowstride,
+    int xdith,
+    int ydith);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_draw_rgb_32_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-draw-rgb-32-image</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">This function is analogous to &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-draw-rgb-image&quot; title=&quot;xlib_draw_rgb_image ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_draw_rgb_image()&lt;/code&gt;&lt;/a&gt;, but it lets you use
+32-bit RGB buffers with pixels specified as 0xRRGGBB00.  The
+least-significant 8 bits are actually discarded.  This function can lead to
+faster results than &lt;a class=&quot;link&quot; href=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#xlib-draw-rgb-image&quot; title=&quot;xlib_draw_rgb_image ()&quot;&gt;&lt;code class=&quot;function&quot;&gt;xlib_draw_rgb_image()&lt;/code&gt;&lt;/a&gt; since the pixels are aligned on
+32-bit boundaries.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_draw_rgb_32_image (
+    Drawable drawable,
+    GC gc,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dith,
+    unsigned char *buf,
+    int rowstride);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_draw_gray_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-draw-gray-image</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Renders a grayscale buffer to a drawable.  Pixels are specified as 8-bit
+intensity values.  An image will thus look as a GGGGGG sequence of 8-bit
+values.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_draw_gray_image (
+    Drawable drawable,
+    GC gc,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&gt;XlibRgbDither&lt;/a&gt; dith,
+    unsigned char *buf,
+    int rowstride);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_cmap_new</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-cmap-new</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">FIXME</Abstract>
+  <Declaration type="html">&lt;pre&gt;&lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbCmap&quot; href=&quot;XlibRgbCmap&quot; title=&gt;XlibRgbCmap&lt;/a&gt;* xlib_rgb_cmap_new (
+    guint32 *colors,
+    int n_colors);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_cmap_free</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-cmap-free</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Frees an XlibRGB colormap.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_cmap_free (
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbCmap&quot; href=&quot;XlibRgbCmap&quot; title=&gt;XlibRgbCmap&lt;/a&gt; *cmap);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_draw_indexed_image</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-draw-indexed-image</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">FIXME</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_draw_indexed_image (
+    Drawable drawable,
+    GC gc,
+    int x,
+    int y,
+    int width,
+    int height,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbDither&quot; href=&quot;enum XlibRgbDither&quot; title=&quot;link&quot;&gt;XlibRgbDither&lt;/a&gt; dith,
+    unsigned char *buf,
+    int rowstride,
+    &lt;a class=&quot;gdk-pixbuf-gdk-pixbuf-xlib-rgb.html#XlibRgbCmap&quot; href=&quot;XlibRgbCmap&quot; title=&gt;XlibRgbCmap&lt;/a&gt; *cmap);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_ditherable</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-ditherable</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries whether XlibRGB supports dithering for its chosen visual.</Abstract>
+  <Declaration type="html">&lt;pre&gt;Bool xlib_rgb_ditherable (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_set_verbose</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-set-verbose</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Enables/disables debug spew.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_set_verbose (
+    Bool verbose);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_set_install</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-set-install</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Sets whether we install an RGB colormap.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_set_install (
+    Bool install);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_set_min_colors</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-set-min-colors</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Sets the minimum number of colors in the color cube.</Abstract>
+  <Declaration type="html">&lt;pre&gt;void xlib_rgb_set_min_colors (
+    int min_colors);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_cmap</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-cmap</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the X colormap that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;Colormap xlib_rgb_get_cmap (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_visual</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-visual</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the visual that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;Visual* xlib_rgb_get_visual (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_visual_info</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-visual-info</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the visual info structure for the visual that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;XVisualInfo* xlib_rgb_get_visual_info (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_depth</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-depth</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the depth of the visual that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;int xlib_rgb_get_depth (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_display</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-display</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the X display that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;Display* xlib_rgb_get_display (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+ <Token>
+  <TokenIdentifier>
+   <Name>xlib_rgb_get_screen</Name>
+   <Type>func</Type>
+   <APILanguage>c</APILanguage>
+  </TokenIdentifier>
+  <Path>gdk-pixbuf-gdk-pixbuf-xlib-rgb.html</Path>
+  <Anchor>xlib-rgb-get-screen</Anchor>
+  <NodeRef refid="19"/>
+  <Abstract type="html">Queries the screen that XlibRGB is using.</Abstract>
+  <Declaration type="html">&lt;pre&gt;Screen* xlib_rgb_get_screen (
+    void);&lt;/pre&gt;</Declaration>
+  <DeclaredIn>
+   <HeaderPath>gdk-pixbuf/gdk-pixbuf.h</HeaderPath>
+  </DeclaredIn>
+ </Token>
+</Tokens>

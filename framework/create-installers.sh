@@ -29,7 +29,7 @@ do_abort()
     exit 1
 }
 
-for pmdoc in `ls -d ../installer/*/installer-*.pmdoc`; do
+for pmdoc in `ls -d ../installer/*/installer.pmdoc`; do
     dirname=`dirname $pmdoc`
     package_name=`head -1 $dirname/package-name`
     package_version=`head -1 $dirname/package-version`
