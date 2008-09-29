@@ -4,8 +4,6 @@
 
   - Fix GTK+ to make the localedir a runtime thing like for Windows.
 
-  - Find out way to work around dyld bug with environment variables.
-
 * Write Cocoa application/wrapper for creating stand-alone application
   bundles.
 
@@ -17,7 +15,7 @@
   symbols are useful for development, since you see function names,
   and can check the source.
 
-* Universal binaries.
+* Universal binaries? Lots of work.
 
 
 Package TODO:
@@ -27,3 +25,6 @@ Package TODO:
 * Probably put README in RTF so it looks nicer in the installer.
 
 * Try different "To" locations in the installer.
+
+* Split up glib and autotools setup so that the autotools stuff is
+  completely separate, and add more things to it.
