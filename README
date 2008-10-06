@@ -23,11 +23,13 @@ Steps to create a working SDK
 
    http://developer.imendio.com/projects/gtk-macosx/build-instructions
 
-   Note that you must have the extra framework setup file:
+   You also need the file:
 
-   http://developer.imendio.com/svn/gtk-osx-build/jhbuildrc-gtk-osx-cfw-10.4
+   http://people.imendio.com/richard/gtk-osx-build/jhbuildrc-gtk-osx-cfw-10.4
 
-   Symlink or copy this file into ~/.jhbuildrc-cfw-10.4.
+   Symlink or copy it into:
+
+   ~/.jhbuildrc-cfw-10.4
 
 2. Build jhbuild with the cfw-10.4 setup:
 
