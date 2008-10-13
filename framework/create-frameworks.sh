@@ -38,7 +38,7 @@ print_usage()
     echo "Usage: `basename $0` [-fnlh] [FRAMEWORK...]"
     echo "Options:"
     echo "  -f        - Do not rebuild, just recreate the frameworks"
-    echo "  -n        - Do not update modules (no network mode)"
+    echo "  -n        - Do not update modules (network-less mode)"
     echo "  -l        - Do not run 'make clean' before building"
     echo "  -h        - Display this help text"
     echo "            - FRAMEWORK... is an optional list of frameworks to create"
@@ -51,16 +51,38 @@ create_framework()
     shift 1
 
     if (echo "$modules" | grep -w $framework) >/dev/null; then
-        found_framework=yes
         modules=`echo $modules | sed -e 's/$framework//'`
+
+        # Special-case WebKit, "make clean" breaks it...
+        clean_save=$clean
+        if [ $* == WebKit ]; then
+            clean=
+        fi
 
         if [ $rebuild == yes ]; then
             rm "$PREFIX"/lib/*.la 2>/dev/null
             jhbuild buildone $update $clean $* || exit 1
         fi
 
+        clean=$clean_save
+
         rm -rf $framework.framework
+        rm -rf $framework-runtime.framework
+
         ./create-$framework-framework.sh $PREFIX || exit 1
+
+        cp -R $framework.framework $framework-runtime.framework || exit 1
+        rm -rf $framework-runtime.framework/Headers
+        rm -rf $framework-runtime.framework/Resources/dev
+
+        # Uninstall so the following modules don't link against the
+        # dylibs, but the frameworks instead.
+        for m in $*; do
+            srcdir=`jhbuild gtk-osx-get-srcdir $m`
+            if [ "x$srcdir" != x ]; then
+                jhbuild run sh -c "cd $srcdir && make uninstall"
+            fi
+        done
     fi
 
     if [ "x$JHB_PREPEND_FRAMEWORKS" == x ]; then
@@ -123,8 +145,9 @@ create_framework Cairo pixman cairo
 # gnome-icon-theme requires gettext, that's why we build it here.
 create_framework Gtk gnome-icon-theme atk pango gtk+ gtk-engines ige-mac-integration
 
-create_framework Libglade libglade
+#create_framework Libglade libglade
 
 #create_framework Loudmouth loudmouth
 
-#create_framework WebKitGtk WebKit
+create_framework WebKitGtk WebKit
+
