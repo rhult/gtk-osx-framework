@@ -164,9 +164,10 @@ resolve_dependencies()
     nfiles=0
 
     while $files_left; do
+	libs0="$framework/$framework_name"
 	libs1=`find $framework_name.framework/Resources/lib -name "*.dylib" -o -name "*.so" 2>/dev/null`
 	libs2=`find $framework_name.framework/Libraries -name "*.dylib" -o -name "*.so" 2>/dev/null`
-	deplibs=`otool -L $libs1 $libs2 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib | grep -v "$main_library" | sort | uniq`
+	deplibs=`otool -L $libs0 $libs1 $libs2 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib | grep -v "$main_library" | sort | uniq`
 
 	# Copy library and correct ID
 	for j in $deplibs; do
