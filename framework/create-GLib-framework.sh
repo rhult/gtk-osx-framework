@@ -122,6 +122,6 @@ cp -R "$old_prefix"/share/glib-2.0 "$framework"/Resources/dev/share/
 copy_intltool
 
 # Copy aclocal macros.
-copy_aclocal_macros glib-2.0.m4 glib-gettext.m4 intltool.m4
+copy_aclocal_macros glib-2.0.m4 glib-gettext.m4 intltool.m4 nls.m4
 
 echo "Done."
