@@ -67,8 +67,19 @@ copy_intltool()
     cp -R "$old_prefix"/share/intltool "$framework"/Resources/dev/share/
 }
 
+copy_pkgconfig()
+{
+    echo "Copying pkgconfig..."
+
+    dest="$framework"/Resources/dev/bin
+    mkdir -p "$dest"
+
+    full_path="$old_prefix"/bin/pkg-config
+    cp "$full_path" "$dest"
+}
+
 # Do initial setup.
-init GLib "$*" libglib-2.0.0.dylib
+init GLib "2.18-quartz" "$*" libglib-2.0.0.dylib
 copy_main_library
 
 # Copy in libraries manually since nothing links to them so they are
@@ -95,6 +106,9 @@ copy_headers \
     include/glib-2.0 gio \
     include libintl.h
 
+# Copy  pkg-config.
+copy_pkgconfig
+
 # Copy and update our "fake" pkgconfig files.
 copy_pc_files "gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-export-2.0.pc gmodule-no-export-2.0.pc gobject-2.0.pc gthread-2.0.pc"
 
@@ -102,16 +116,16 @@ copy_pc_files "gio-2.0.pc gio-unix-2.0.pc glib-2.0.pc gmodule-2.0.pc gmodule-exp
 build_framework_library
 
 # Special-case libintl so that dependencies don't pick it up.
-ln -s "$framework"/GLib "$framework"/Resources/dev/lib/libintl.dylib || do_exit 1
+ln -s "$framework"/GLib "$framework"/Versions/$version/Resources/dev/lib/libintl.8.dylib || do_exit 1
 
 # Copy glib executables.
 copy_dev_executables glib-genmarshal glib-gettextize glib-mkenums
-update_dev_file "$framework"/Resources/dev/bin/glib-gettextize
+update_dev_file "$framework"/Versions/$version/Resources/dev/bin/glib-gettextize
 
 # Gettext binaries are handled specially, since they are only used for
 # development but also needs libraries.
 copy_gettext_libraries
-fix_library_references_for_directory "$framework"/Resources/dev/lib
+fix_library_references_for_directory "$framework"/Versions/$version/Resources/dev/lib
 copy_gettext_executables
 
 # Copy gettext data.

@@ -45,6 +45,18 @@ print_usage()
     echo "              Valid framework names are: $all_modules"
 }
 
+uninstall_modules()
+{
+    # Uninstall so the following modules don't link against the
+    # dylibs, but the frameworks instead.
+    for m in $*; do
+        srcdir=`jhbuild gtk-osx-get-srcdir $m`
+        if [ "x$srcdir" != x ]; then
+            jhbuild run sh -c "cd $srcdir && make uninstall"
+        fi
+    done
+}
+
 create_framework()
 {
     framework=$1
@@ -55,9 +67,14 @@ create_framework()
 
         # Special-case WebKit, "make clean" breaks it...
         clean_save=$clean
-        if [ $* == WebKit ]; then
+        if [ "$*" == "WebKit" ]; then
             clean=
         fi
+
+        # Uninstall (from any previous attempts that failed) so the
+        # following modules don't link against the dylibs, but the
+        # frameworks instead.
+        uninstall_modules $*
 
         if [ $rebuild == yes ]; then
             rm "$PREFIX"/lib/*.la 2>/dev/null
@@ -67,22 +84,18 @@ create_framework()
         clean=$clean_save
 
         rm -rf $framework.framework
-        rm -rf $framework-runtime.framework
+        #rm -rf $framework-runtime.framework
 
         ./create-$framework-framework.sh $PREFIX || exit 1
 
-        cp -R $framework.framework $framework-runtime.framework || exit 1
-        rm -rf $framework-runtime.framework/Headers
-        rm -rf $framework-runtime.framework/Resources/dev
+        #cp -R $framework.framework $framework-runtime.framework || exit 1
+        #rm -rf $framework-runtime.framework/Headers
+        #rm -rf $framework-runtime.framework/Resources/dev
+        #strip ...
 
         # Uninstall so the following modules don't link against the
         # dylibs, but the frameworks instead.
-        for m in $*; do
-            srcdir=`jhbuild gtk-osx-get-srcdir $m`
-            if [ "x$srcdir" != x ]; then
-                jhbuild run sh -c "cd $srcdir && make uninstall"
-            fi
-        done
+        uninstall_modules $*
     fi
 
     if [ "x$JHB_PREPEND_FRAMEWORKS" == x ]; then

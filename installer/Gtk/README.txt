@@ -6,9 +6,10 @@ The frameworks contain the following components:
 
 GLib:
 
-  glib 2.18.1
+  glib 2.18.2
   gettext 0.16
   intltool 0.40.4
+  pkg-config 0.23
 
 Cairo:
 
@@ -18,7 +19,7 @@ Cairo:
 
 GTK+:
 
-  gtk+ 2.14.3
+  gtk+ 2.14.4
   pango 1.22.0
   atk 1.24.0
   ige-mac-integration 0.8.2

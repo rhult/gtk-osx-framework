@@ -8,14 +8,14 @@ PWD = $(shell pwd)
 ROOT = $(shell dirname $(PWD))
 
 GLIB_INCLUDES = -I$(ROOT)/GLib.framework/Headers/ -L$(ROOT)/GLib.framework/Libraries/
-GLIB_NAME = -install_name $(ROOT)/GLib.framework/GLib
+GLIB_NAME = -install_name $(ROOT)/GLib.framework/Versions/$(version)/GLib
 
 CAIRO_INCLUDES = -I$(ROOT)/Cairo.framework/Headers/ -L$(ROOT)/Cairo.framework/Libraries/
-CAIRO_NAME = -install_name $(ROOT)/Cairo.framework/Cairo
+CAIRO_NAME = -install_name $(ROOT)/Cairo.framework/Versions/$(version)/Cairo
 
 GTK_INCLUDES = -I$(ROOT)/Gtk.framework/Headers/ -L$(ROOT)/Gtk.framework/Libraries/
 GTK_LDFLAGS = -F$(ROOT)
-GTK_NAME = -install_name $(ROOT)/Gtk.framework/Gtk
+GTK_NAME = -install_name $(ROOT)/Gtk.framework/Versions/$(version)/Gtk
 
 all: GLib Cairo Gtk
 

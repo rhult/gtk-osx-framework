@@ -8,7 +8,7 @@
 source ./framework-helpers.sh
 
 # Do initial setup.
-init Cairo "$*" libcairo.2.dylib
+init Cairo "1.8-quartz" "$*" libcairo.2.dylib
 copy_main_library
 
 # Copy in any libraries we depend on.

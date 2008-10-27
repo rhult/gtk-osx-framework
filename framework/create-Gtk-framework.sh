@@ -8,7 +8,7 @@
 source ./framework-helpers.sh
 
 # Do initial setup.
-init Gtk "$*" libgtk-quartz-2.0.0.dylib
+init Gtk "2.14-quartz" "$*" libgtk-quartz-2.0.0.dylib
 copy_main_library
 
 # Copy header files.
@@ -31,7 +31,7 @@ cat <<EOF > "$framework/Resources/etc/pango/pangorc"
 ModuleFiles=./pango.modules
 EOF
 
-sed -e "s@$old_prefix/lib@$framework/Resources/lib@" < "$old_prefix"/etc/pango/pango.modules > "$framework"/Resources/etc/pango/pango.modules
+sed -e "s@$old_prefix/lib@$framework/Versions/$version/Resources/lib@" < "$old_prefix"/etc/pango/pango.modules > "$framework"/Resources/etc/pango/pango.modules
 
 # Note: Skip copying modules for now, we include the ATSUI module inside pango.
 # cp "$old_prefix"/lib/pango/1.6.0/modules/*so "$framework"/Resources/lib/pango/1.6.0/modules/
@@ -41,8 +41,8 @@ echo "Setting up GTK+ modules ..."
 mkdir -p "$framework"/Resources/etc/gtk-2.0
 mkdir -p "$framework"/Resources/lib/gtk-2.0/2.10.0/{engines,immodules,loaders,printbackends}
 
-sed -e "s@$old_prefix/lib@$framework/Resources/lib@" < "$old_prefix"/etc/gtk-2.0/gdk-pixbuf.loaders > "$framework"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
-sed -e "s@$old_prefix/lib@$framework/Resources/lib@" < "$old_prefix"/etc/gtk-2.0/gtk.immodules > "$framework"/Resources/etc/gtk-2.0/gtk.immodules
+sed -e "s@$old_prefix/lib@$framework/Versions/$version/Resources/lib@" < "$old_prefix"/etc/gtk-2.0/gdk-pixbuf.loaders > "$framework"/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
+sed -e "s@$old_prefix/lib@$framework/Versions/$version/Resources/lib@" < "$old_prefix"/etc/gtk-2.0/gtk.immodules > "$framework"/Resources/etc/gtk-2.0/gtk.immodules
 
 # Copy modules.
 cp "$old_prefix"/lib/gtk-2.0/2.10.0/engines/libclearlooks.so "$framework"/Resources/lib/gtk-2.0/2.10.0/engines
@@ -59,15 +59,15 @@ resolve_dependencies
 
 # Rename gdk_pixbuf to gdk-pixbuf to work with sublibraries.
 echo "Updating gdk-pixbuf library name ..."
-newid="$framework"/Libraries/libgdk-pixbuf-2.0.0.dylib
+newid="$framework"/Versions/$version/Libraries/libgdk-pixbuf-2.0.0.dylib
 mv "$framework"/Libraries/libgdk_pixbuf-2.0.0.dylib "$newid"
 install_name_tool -id "$newid" "$newid"
 
 files_left=true
 nfiles=0
 
-libs1=`find $framework_name.framework/Resources/lib -name "*.dylib" -o -name "*.so" 2>/dev/null`
-libs2=`find $framework_name.framework/Libraries -name "*.dylib" -o -name "*.so" 2>/dev/null`
+libs1=`find $framework_name.framework/Versions/$version/Resources/lib -name "*.dylib" -o -name "*.so" 2>/dev/null`
+libs2=`find $framework_name.framework/Versions/$version/Libraries -name "*.dylib" -o -name "*.so" 2>/dev/null`
 for lib in $libs1 $libs2; do
     match=`otool -L "$lib" 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib | grep libgdk_pixbuf-2.0.0`
     if [ "x$match" != x ]; then
@@ -79,13 +79,22 @@ done
 fix_library_references
 
 # Copy and update our "fake" pkgconfig files.
-copy_pc_files "atk.pc pango.pc pangocairo.pc gdk-2.0.pc gdk-quartz-2.0.pc gdk-pixbuf-2.0.pc gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc ige-mac-integration.pc"
+copy_pc_files "atk.pc pango.pc gdk-pixbuf-2.0.pc"
+copy_pc_files "pangocairo.pc"
+copy_pc_files "gdk-2.0.pc gdk-quartz-2.0.pc"
+copy_pc_files "gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc"
+copy_pc_files "ige-mac-integration.pc"
 
 # Create the library that will be the main framework library.
 build_framework_library
 
 # Copy executables.
-copy_dev_executables gtk-builder-convert gtk-demo gtk-query-immodules-2.0 gtk-update-icon-cache pango-querymodules
+copy_dev_executables \
+    gtk-builder-convert \
+    gtk-demo \
+    gtk-query-immodules-2.0 \
+    gtk-update-icon-cache \
+    pango-querymodules
 
 # Copy aclocal macros.
 copy_aclocal_macros gtk-2.0.m4
