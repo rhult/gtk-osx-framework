@@ -52,7 +52,7 @@ uninstall_modules()
     for m in $*; do
         srcdir=`jhbuild gtk-osx-get-srcdir $m`
         if [ "x$srcdir" != x ]; then
-            jhbuild run sh -c "cd $srcdir && make uninstall"
+            jhbuild run sh -c "cd $srcdir 2>/dev/null && make uninstall"
         fi
     done
 }
@@ -151,7 +151,9 @@ else
     modules=$all_modules
 fi
 
-create_framework GLib glib
+# We build gettext here instead of in bootstrap because it's part of
+# the GLib framework.
+create_framework GLib gettext-fw glib
 
 create_framework Cairo pixman cairo
 
@@ -162,5 +164,4 @@ create_framework Gtk gnome-icon-theme atk pango gtk+ gtk-engines ige-mac-integra
 
 #create_framework Loudmouth loudmouth
 
-create_framework WebKitGtk WebKit
-
+#create_framework WebKitGtk WebKit
