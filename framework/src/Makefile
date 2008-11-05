@@ -30,7 +30,6 @@ Gtk: Gtk.c
 
 GLIB_LIBS = \
 	-lintl.8			\
-	-liconv				\
 	-lglib-2.0.0			\
 	-lgio-2.0.0			\
 	-lgobject-2.0.0			\
