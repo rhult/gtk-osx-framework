@@ -34,6 +34,12 @@ copy_gettext_executables()
     dest="$framework"/Resources/dev/bin
     mkdir -p "$dest"
 
+    # Special-case gettext as we put the libraries only gettext uses
+    # in the dev tree, not the run-time library tree.
+
+    # Hard-code expat dependency and put it in the dev tree (needed for xgettext).
+    cp "$old_prefix"/lib/libexpat.1.dylib "$framework"/Resources/dev/lib/
+
     execs="msgattrib msgcmp msgconv msgexec msgfmt msginit msgunfmt msgcat msgcomm msgen msgfilter msggrep msgmerge msguniq xgettext ngettext"
     for exe in $execs; do
         full_path="$old_prefix"/bin/$exe
@@ -42,7 +48,11 @@ copy_gettext_executables()
         if [ "x`file "$full_path" | grep Mach-O\ executable`" != x ]; then
             fixlibs=`otool -L "$full_path" 2>/dev/null | fgrep compatibility | cut -d\( -f1 | grep "$old_prefix"/lib`
 	    for j in $fixlibs; do
-	        new=`echo $j | sed -e s@$old_prefix/lib/libgettextsrc-0.16.dylib@$framework/Resources/dev/lib/libgettextsrc-0.16.dylib@ -e s@$old_prefix/lib/libgettextlib-0.16.dylib@$framework/Resources/dev/lib/libgettextlib-0.16.dylib@ -e s@$old_prefix/lib@$new_prefix@`
+	        new=`echo $j | sed \
+-e s@$old_prefix/lib/libgettextsrc-@$framework/Resources/dev/lib/libgettextsrc-@ \
+-e s@$old_prefix/lib/libgettextlib-@$framework/Resources/dev/lib/libgettextlib-@ \
+-e s@$old_prefix/lib/libexpat.@$framework/Resources/dev/lib/libexpat.@ \
+-e s@$old_prefix/lib@$new_prefix@`
 	        install_name_tool -change "$j" "$new" "$dest"/$exe || do_exit 1
 	    done
         fi
@@ -136,6 +146,6 @@ cp -R "$old_prefix"/share/glib-2.0 "$framework"/Resources/dev/share/
 copy_intltool
 
 # Copy aclocal macros.
-copy_aclocal_macros glib-2.0.m4 glib-gettext.m4 intltool.m4 nls.m4
+copy_aclocal_macros glib-2.0.m4 glib-gettext.m4 intltool.m4 nls.m4 pkg.m4
 
 echo "Done."
