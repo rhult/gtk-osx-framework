@@ -8,7 +8,7 @@
 source ./framework-helpers.sh
 
 # Do initial setup.
-init Libglade "2.6-quartz" "$*" libglade-2.0.dylib
+init Libglade "2" "$*" libglade-2.0.dylib
 copy_single_main_library
 
 # Copy in any libraries we depend on.

@@ -8,7 +8,7 @@
 source ./framework-helpers.sh
 
 # Do initial setup.
-init WebKitGtk "1.0-quartz" "$*" libwebkit-1.0.dylib
+init WebKitGtk "1" "$*" libwebkit-1.0.dylib
 copy_single_main_library
 
 # Copy in any libraries we depend on.

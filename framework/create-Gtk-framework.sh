@@ -8,7 +8,7 @@
 source ./framework-helpers.sh
 
 # Do initial setup.
-init Gtk "2.14-quartz" "$*" libgtk-quartz-2.0.0.dylib
+init Gtk "2" "$*" libgtk-quartz-2.0.0.dylib
 copy_main_library
 
 # Copy header files.

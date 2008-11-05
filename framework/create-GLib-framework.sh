@@ -79,7 +79,7 @@ copy_pkgconfig()
 }
 
 # Do initial setup.
-init GLib "2.18-quartz" "$*" libglib-2.0.0.dylib
+init GLib "2" "$*" libglib-2.0.0.dylib
 copy_main_library
 
 # Copy in libraries manually since nothing links to them so they are
