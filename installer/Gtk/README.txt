@@ -13,19 +13,19 @@ GLib:
 
 Cairo:
 
-  cairo 1.8.0
+  cairo 1.8.2
   pixman 0.12
   libpng 1.2.29
 
 GTK+:
 
   gtk+ 2.14.4
-  pango 1.22.0
+  pango 1.22.2
   atk 1.24.0
   ige-mac-integration 0.8.2
   gnome-icon-theme 2.24.0
   hicolor-icon-theme 0.10
-  gtk-engines 2.16.0 (only Clearlooks)
+  gtk-engines 2.16.1 (only Clearlooks)
   libpng 1.2.29
   tiff 3.8.2
   jpeg 6b
