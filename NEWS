@@ -1,0 +1,22 @@
+2.14.4-1-test1:
+
+- Versioned frameworks.
+
+- Add pkg-config to GLib setup.
+
+- Improve gettext tools setup.
+
+- Remove duplicate libiconv and libintl libraries.
+
+- Update modules to latest stable releases, most notably:
+
+  - Cairo 1.8.2
+  - GLib 2.18.2
+  - GTK+ 2.14.4
+  - Pango 1.22.2
+
+- Add first version of API documentation for Xcode.
+
+- Get rid of post/pre flight scripts that made the installer not work
+  with network installation.
+
