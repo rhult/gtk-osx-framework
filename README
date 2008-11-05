@@ -46,7 +46,7 @@ Steps to create a working SDK
    ./create-frameworks.sh
 
    Once this is completed, a number of frameworks will be found in the
-   current directory.
+   framework directory.
 
 4. At this point, you can either install the frameworks on your system
    (for example to test them), or create package installers for
@@ -60,7 +60,7 @@ Steps to create a working SDK
 
        ./create-installers.sh
 
-       This will create mpkg files in the current directory.
+       This will create mpkg files in the framework directory.
 
 If the installer is installed, there will also be an Xcode template
 installed, that will turn up in the User Templates of Xcode, when you
@@ -90,16 +90,15 @@ Known issues
 
 * This is all still in the beta stage.
 
-* The binaries are not universal, but Intel only. Building proper
-  universal binaries of the GTK+ binaries is hard and not fully
-  automated yet.
+* The binaries are not universal, but Intel only. Universal builds is
+  not a high priority currently, so don't except it soon.
 
 * Translations are not yet included.
 
 * The binaries do still contain debugging information. This debugging
   information is only of use to get proper stack traces at this
-  moment. At some later point we might decide to ship with stripped
-  binaries.
+  moment. At some point stripped binaries will be created (run-time
+  frameworks).
 
 * A script/application to transform the application created with Xcode
   to a stand-alone binary (with the framework included inside) has not
