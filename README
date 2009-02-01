@@ -25,7 +25,7 @@ Steps to create a working SDK
 
    You also need the file:
 
-   http://github.com/rhult/gtk-osx-build/raw/HEAD/jhbuildrc-gtk-osx-cfw-10.4
+   http://github.com/rhult/gtk-osx-build/raw/master/jhbuildrc-gtk-osx-cfw-10.4
 
    Symlink or copy it into:
 
