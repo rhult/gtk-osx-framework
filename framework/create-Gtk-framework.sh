@@ -94,6 +94,8 @@ copy_dev_executables \
     gtk-demo \
     gtk-query-immodules-2.0 \
     gtk-update-icon-cache \
+    gdk-pixbuf-csource \
+    gdk-pixbuf-query-loaders \
     pango-querymodules
 
 # Copy aclocal macros.
