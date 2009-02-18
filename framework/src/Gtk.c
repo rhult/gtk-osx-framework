@@ -10,9 +10,10 @@
 #include <unistd.h>
 #include <mach-o/dyld.h>
 #include <Carbon/Carbon.h>
+#include <CoreFoundation/CoreFoundation.h>
 
 /* Relative location of the framework in an application bundle. */
-#define FRAMEWORK_OFFSET                        "../Frameworks/Gtk.framework"
+#define FRAMEWORK_OFFSET                        "./Contents/Frameworks/Gtk.framework"
 
 #define RELATIVE_PANGO_RC_FILE			"/Resources/etc/pango/pangorc"
 #define RELATIVE_GTK_RC_FILE			"/Resources/etc/gtk-2.0/gtkrc"
@@ -103,7 +104,6 @@ handle_quit_cb (const AppleEvent *inAppleEvent,
 initializer (int argc, char **argv, char **envp)
 {
   static int initialized = 0;
-  int i;
 
   if (initialized)
     return;
@@ -116,16 +116,13 @@ initializer (int argc, char **argv, char **envp)
     }
   else
     {
-      char *executable_path;
+      char executable_path[PATH_MAX];
+      CFURLRef url;
 
-      executable_path = strdup (argv[0]);
-      for (i = strlen (executable_path); i >= 0; i--)
-        {
-          if (executable_path[i] == '/')
-            break;
-
-          executable_path[i] = 0;
-        }
+      url = CFBundleCopyBundleURL (CFBundleGetMainBundle ());
+      if (!CFURLGetFileSystemRepresentation (url, true, (UInt8 *)executable_path, PATH_MAX))
+        assert(false);
+      CFRelease (url);
 
       bundle_prefix = malloc (strlen (executable_path) + 1 + strlen (FRAMEWORK_OFFSET) + 1);
       strcpy (bundle_prefix, executable_path);
