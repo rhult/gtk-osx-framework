@@ -68,7 +68,7 @@ is_running_from_app_bundle (void)
     {
       const char *name = _dyld_get_image_name (i);
 
-      if (strstr (name, "Gtk.framework/Gtk"))
+      if (strstr (name, "/Gtk.framework/"))
         {
           if (!strncmp (name, "/Library/", 9))
             return 0;
